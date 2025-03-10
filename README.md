@@ -16,6 +16,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0540-single-element-in-a-sorted-array](https://github.com/IshantSingh27/LeetCode/tree/master/0540-single-element-in-a-sorted-array) |
 | [0792-binary-search](https://github.com/IshantSingh27/LeetCode/tree/master/0792-binary-search) |
 | [0907-koko-eating-bananas](https://github.com/IshantSingh27/LeetCode/tree/master/0907-koko-eating-bananas) |
+| [1605-minimum-number-of-days-to-make-m-bouquets](https://github.com/IshantSingh27/LeetCode/tree/master/1605-minimum-number-of-days-to-make-m-bouquets) |
 ## Hash Table
 |  |
 | ------- |
@@ -54,6 +55,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0540-single-element-in-a-sorted-array](https://github.com/IshantSingh27/LeetCode/tree/master/0540-single-element-in-a-sorted-array) |
 | [0792-binary-search](https://github.com/IshantSingh27/LeetCode/tree/master/0792-binary-search) |
 | [0907-koko-eating-bananas](https://github.com/IshantSingh27/LeetCode/tree/master/0907-koko-eating-bananas) |
+| [1605-minimum-number-of-days-to-make-m-bouquets](https://github.com/IshantSingh27/LeetCode/tree/master/1605-minimum-number-of-days-to-make-m-bouquets) |
 ## Greedy
 |  |
 | ------- |
