@@ -16,6 +16,7 @@ public:
             }
         }
 
-        return arr[e] + ( k - ( arr[e] - (e + 1) ) );
+        // return arr[e] + ( k - ( arr[e] - (e + 1) ) );
+        return e + k + 1;
     }
 };
