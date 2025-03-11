@@ -8,10 +8,9 @@ public:
 
         while (s <= e) {
             int mid = s + (e - s) / 2;
-            int row = mid / m, col = mid % m;  // Convert 1D index to 2D indices
 
-            if (arr[row][col] == t) return true;
-            else if (arr[row][col] < t) {
+            if (arr[mid / m][mid % m] == t) return true;
+            else if (arr[mid / m][mid % m] < t) {
                 s = mid + 1;
             } else {
                 e = mid - 1;
