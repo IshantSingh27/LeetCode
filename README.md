@@ -106,6 +106,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Stack
 |  |
 | ------- |
+| [0144-binary-tree-preorder-traversal](https://github.com/IshantSingh27/LeetCode/tree/master/0144-binary-tree-preorder-traversal) |
 | [0234-palindrome-linked-list](https://github.com/IshantSingh27/LeetCode/tree/master/0234-palindrome-linked-list) |
 ## Sliding Window
 |  |
@@ -115,4 +116,16 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0480-sliding-window-median](https://github.com/IshantSingh27/LeetCode/tree/master/0480-sliding-window-median) |
+## Tree
+|  |
+| ------- |
+| [0144-binary-tree-preorder-traversal](https://github.com/IshantSingh27/LeetCode/tree/master/0144-binary-tree-preorder-traversal) |
+## Depth-First Search
+|  |
+| ------- |
+| [0144-binary-tree-preorder-traversal](https://github.com/IshantSingh27/LeetCode/tree/master/0144-binary-tree-preorder-traversal) |
+## Binary Tree
+|  |
+| ------- |
+| [0144-binary-tree-preorder-traversal](https://github.com/IshantSingh27/LeetCode/tree/master/0144-binary-tree-preorder-traversal) |
 <!---LeetCode Topics End-->
