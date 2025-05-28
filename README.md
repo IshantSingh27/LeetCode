@@ -23,6 +23,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1408-find-the-smallest-divisor-given-a-threshold](https://github.com/IshantSingh27/LeetCode/tree/master/1408-find-the-smallest-divisor-given-a-threshold) |
 | [1605-minimum-number-of-days-to-make-m-bouquets](https://github.com/IshantSingh27/LeetCode/tree/master/1605-minimum-number-of-days-to-make-m-bouquets) |
 | [1646-kth-missing-positive-number](https://github.com/IshantSingh27/LeetCode/tree/master/1646-kth-missing-positive-number) |
+| [1753-path-with-minimum-effort](https://github.com/IshantSingh27/LeetCode/tree/master/1753-path-with-minimum-effort) |
 ## Hash Table
 |  |
 | ------- |
@@ -53,6 +54,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0073-set-matrix-zeroes](https://github.com/IshantSingh27/LeetCode/tree/master/0073-set-matrix-zeroes) |
 | [0074-search-a-2d-matrix](https://github.com/IshantSingh27/LeetCode/tree/master/0074-search-a-2d-matrix) |
 | [0240-search-a-2d-matrix-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0240-search-a-2d-matrix-ii) |
+| [1753-path-with-minimum-effort](https://github.com/IshantSingh27/LeetCode/tree/master/1753-path-with-minimum-effort) |
 ## Math
 |  |
 | ------- |
@@ -78,6 +80,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1408-find-the-smallest-divisor-given-a-threshold](https://github.com/IshantSingh27/LeetCode/tree/master/1408-find-the-smallest-divisor-given-a-threshold) |
 | [1605-minimum-number-of-days-to-make-m-bouquets](https://github.com/IshantSingh27/LeetCode/tree/master/1605-minimum-number-of-days-to-make-m-bouquets) |
 | [1646-kth-missing-positive-number](https://github.com/IshantSingh27/LeetCode/tree/master/1646-kth-missing-positive-number) |
+| [1753-path-with-minimum-effort](https://github.com/IshantSingh27/LeetCode/tree/master/1753-path-with-minimum-effort) |
 ## Greedy
 |  |
 | ------- |
@@ -117,6 +120,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0480-sliding-window-median](https://github.com/IshantSingh27/LeetCode/tree/master/0480-sliding-window-median) |
+| [1753-path-with-minimum-effort](https://github.com/IshantSingh27/LeetCode/tree/master/1753-path-with-minimum-effort) |
 ## Tree
 |  |
 | ------- |
@@ -128,6 +132,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0094-binary-tree-inorder-traversal](https://github.com/IshantSingh27/LeetCode/tree/master/0094-binary-tree-inorder-traversal) |
 | [0144-binary-tree-preorder-traversal](https://github.com/IshantSingh27/LeetCode/tree/master/0144-binary-tree-preorder-traversal) |
 | [0207-course-schedule](https://github.com/IshantSingh27/LeetCode/tree/master/0207-course-schedule) |
+| [1753-path-with-minimum-effort](https://github.com/IshantSingh27/LeetCode/tree/master/1753-path-with-minimum-effort) |
 ## Binary Tree
 |  |
 | ------- |
@@ -137,6 +142,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0207-course-schedule](https://github.com/IshantSingh27/LeetCode/tree/master/0207-course-schedule) |
+| [1753-path-with-minimum-effort](https://github.com/IshantSingh27/LeetCode/tree/master/1753-path-with-minimum-effort) |
 ## Graph
 |  |
 | ------- |
@@ -145,4 +151,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0207-course-schedule](https://github.com/IshantSingh27/LeetCode/tree/master/0207-course-schedule) |
+## Union Find
+|  |
+| ------- |
+| [1753-path-with-minimum-effort](https://github.com/IshantSingh27/LeetCode/tree/master/1753-path-with-minimum-effort) |
 <!---LeetCode Topics End-->
