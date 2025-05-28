@@ -151,10 +151,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0207-course-schedule](https://github.com/IshantSingh27/LeetCode/tree/master/0207-course-schedule) |
 | [0803-cheapest-flights-within-k-stops](https://github.com/IshantSingh27/LeetCode/tree/master/0803-cheapest-flights-within-k-stops) |
+| [2090-number-of-ways-to-arrive-at-destination](https://github.com/IshantSingh27/LeetCode/tree/master/2090-number-of-ways-to-arrive-at-destination) |
 ## Topological Sort
 |  |
 | ------- |
 | [0207-course-schedule](https://github.com/IshantSingh27/LeetCode/tree/master/0207-course-schedule) |
+| [2090-number-of-ways-to-arrive-at-destination](https://github.com/IshantSingh27/LeetCode/tree/master/2090-number-of-ways-to-arrive-at-destination) |
 ## Union Find
 |  |
 | ------- |
@@ -163,8 +165,10 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0803-cheapest-flights-within-k-stops](https://github.com/IshantSingh27/LeetCode/tree/master/0803-cheapest-flights-within-k-stops) |
+| [2090-number-of-ways-to-arrive-at-destination](https://github.com/IshantSingh27/LeetCode/tree/master/2090-number-of-ways-to-arrive-at-destination) |
 ## Shortest Path
 |  |
 | ------- |
 | [0803-cheapest-flights-within-k-stops](https://github.com/IshantSingh27/LeetCode/tree/master/0803-cheapest-flights-within-k-stops) |
+| [2090-number-of-ways-to-arrive-at-destination](https://github.com/IshantSingh27/LeetCode/tree/master/2090-number-of-ways-to-arrive-at-destination) |
 <!---LeetCode Topics End-->
