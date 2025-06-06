@@ -13,17 +13,18 @@ public:
     }
     int climbStairs(int n) {
         vector<int> dp(n + 1 , -1);
-        // int ans = climb(0 , n , dp);
+        // int ans = climb(0 , n , dp); //MEMOIZATION
         // return ans;
 
-        dp[n] = 1; dp[n-1] = 1;
+        // dp[n] = 1; dp[n-1] = 1;
         int prev = 1 , prev1 = 1;
         for(int i=n-2 ; i>=0 ; i--){
-            // dp[i] = dp[i+1] + dp[i+2];
-            dp[i] = prev + prev1;
+            // dp[i] = dp[i+1] + dp[i+2];  //TABULATION
+            int curi = prev + prev1;   //SPACE OPTIMISATION
             prev1 = prev;
-            prev = dp[i];
+            prev = curi;
         }
+        // return dp[0];
         return prev;
     }
 };
