@@ -64,6 +64,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0048-rotate-image](https://github.com/IshantSingh27/LeetCode/tree/master/0048-rotate-image) |
+| [0062-unique-paths](https://github.com/IshantSingh27/LeetCode/tree/master/0062-unique-paths) |
 | [0070-climbing-stairs](https://github.com/IshantSingh27/LeetCode/tree/master/0070-climbing-stairs) |
 | [1448-maximum-69-number](https://github.com/IshantSingh27/LeetCode/tree/master/1448-maximum-69-number) |
 ## Simulation
@@ -182,6 +183,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Dynamic Programming
 |  |
 | ------- |
+| [0062-unique-paths](https://github.com/IshantSingh27/LeetCode/tree/master/0062-unique-paths) |
 | [0070-climbing-stairs](https://github.com/IshantSingh27/LeetCode/tree/master/0070-climbing-stairs) |
 | [0198-house-robber](https://github.com/IshantSingh27/LeetCode/tree/master/0198-house-robber) |
 | [0213-house-robber-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0213-house-robber-ii) |
@@ -203,4 +205,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0070-climbing-stairs](https://github.com/IshantSingh27/LeetCode/tree/master/0070-climbing-stairs) |
+## Combinatorics
+|  |
+| ------- |
+| [0062-unique-paths](https://github.com/IshantSingh27/LeetCode/tree/master/0062-unique-paths) |
 <!---LeetCode Topics End-->
