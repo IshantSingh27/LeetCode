@@ -15,8 +15,26 @@ public:
     }
     int coinChange(vector<int>& arr, int tar) {
         int n = arr.size();
-        vector<vector<int>> dp(n , vector<int>(tar + 1 , -1));
-        int ans = solve(n - 1 , tar , arr , dp);
+        // vector<vector<int>> dp(n , vector<int>(tar + 1 , -1));
+        // int ans = solve(n - 1 , tar , arr , dp);
+        // if(ans == 1e9) return -1;
+        // else return ans;
+        //TABULATION
+        vector<vector<int>> dp(n , vector<int>(tar + 1 , 1e9));
+        for(int i=0 ; i<=tar ; i++){
+            if(i % arr[0] == 0) dp[0][i] = i / arr[0];
+        }
+        for(int ind = 1 ; ind < n ; ind++){
+            for(int curTar = 0 ; curTar <= tar ; curTar++){
+                int notTake = 0 + dp[ind - 1][curTar];
+                int take = 1e9;
+                if(arr[ind] <= curTar){
+                    take = 1 + dp[ind][curTar - arr[ind]];
+                }
+                dp[ind][curTar] = min(take , notTake);
+            }
+        }
+        int ans = dp[n - 1][tar];
         if(ans == 1e9) return -1;
         else return ans;
     }
