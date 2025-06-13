@@ -7,27 +7,24 @@ public:
         }
         queue<pair<int , pair<int , int>>> q;
         q.push({0 , {src , 0}});
-        vector<int> dist(n , 1e9);
-        dist[src] = 0;
-
+        vector<int> cost(n , 1e9);
+        cost[src] = 0;
         while(!q.empty()){
-            auto fr = q.front();
-            int stop = fr.first;
-            int node = fr.second.first;
-            int cost = fr.second.second;
+            int stops = q.front().first;
+            int node = q.front().second.first;
+            int price = q.front().second.second;
             q.pop();
-
-            if(stop > k) continue;
+            if(stops > k) continue;
             for(auto it : adj[node]){
                 int adjnode = it.first;
-                int adjcost = it.second;
-                if(cost + adjcost < dist[adjnode]){
-                    dist[adjnode] = cost + adjcost;
-                    q.push({stop + 1 , {adjnode , dist[adjnode]}});
+                int adjprice = it.second;
+                if(price + adjprice < cost[adjnode]){
+                    cost[adjnode] = price + adjprice;
+                    q.push({stops + 1 , {adjnode , cost[adjnode]}});
                 }
             }
         }
-        if(dist[dst] == 1e9) return -1;
-        return dist[dst];
+        if(cost[dst] == 1e9) return -1;
+        else return cost[dst];
     }
 };
