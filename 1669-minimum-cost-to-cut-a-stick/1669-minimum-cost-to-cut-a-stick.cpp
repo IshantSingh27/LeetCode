@@ -20,7 +20,7 @@ public:
         //TABULATION
         vector<vector<int>> dp(m , vector<int>(m , 0)); //base case 0 hi karna hai
         for(int i = m - 2 ; i > 0 ; i--){
-            for(int j = i ; j <= m - 2 ; j++){ // obvio reverse se start hoga
+            for(int j = 1 ; j <= m - 2 ; j++){ // obvio reverse se start hoga
             if(i > j) continue;
                 int mini = 1e9;
                 for(int ind = i ; ind <= j ; ind++){
