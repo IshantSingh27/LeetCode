@@ -22,7 +22,20 @@ public:
     }
     int minCut(string arr) {
         int n = arr.size();
-        vector<int> dp(n , -1);
-        return solve(0 , n , arr , dp) - 1;
+        // vector<int> dp(n , -1);
+        // return solve(0 , n , arr , dp) - 1;
+        vector<int> dp(n + 1 , 0);
+        dp[n] = 0;
+        for(int i = n-1 ; i>=0 ; i--){
+            int mini = 1e9;
+            for(int j = i ; j < n ; j++){
+                if(palin(i , j , arr)){
+                    int cost = 1 + dp[j + 1];
+                    mini = min(mini , cost);
+                }
+            }
+            dp[i] = mini;
+        }
+        return dp[0] - 1;
     }
 };
