@@ -14,7 +14,20 @@ public:
         arr.push_back(1);
         arr.insert(arr.begin() , 1);
         int n = arr.size();
-        vector<vector<int>> dp(n , vector<int>(n , -1));
-        return solve(1 , n - 2 , arr , dp);
+        // vector<vector<int>> dp(n , vector<int>(n , -1));
+        // return solve(1 , n - 2 , arr , dp);
+        vector<vector<int>> dp(n , vector<int>(n , 0));
+        for(int i = n - 2 ; i >= 1 ; i--){
+            for(int j = 1 ; j <= n - 2 ; j++){
+                if(i > j) continue;
+                int maxi = -1e9;
+                for(int ind = i ; ind <= j ; ind++){
+                    int coin = (arr[i - 1] * arr[ind] * arr[j + 1]) + dp[i][ind - 1] + dp[ind +  1][j];
+                    maxi = max(maxi , coin);
+                }
+                dp[i][j] = maxi;
+            }
+        }
+        return dp[1][n - 2];
     }
 };
