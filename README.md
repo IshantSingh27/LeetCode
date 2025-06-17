@@ -35,6 +35,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0907-koko-eating-bananas](https://github.com/IshantSingh27/LeetCode/tree/master/0907-koko-eating-bananas) |
 | [0967-minimum-falling-path-sum](https://github.com/IshantSingh27/LeetCode/tree/master/0967-minimum-falling-path-sum) |
 | [1056-capacity-to-ship-packages-within-d-days](https://github.com/IshantSingh27/LeetCode/tree/master/1056-capacity-to-ship-packages-within-d-days) |
+| [1121-partition-array-for-maximum-sum](https://github.com/IshantSingh27/LeetCode/tree/master/1121-partition-array-for-maximum-sum) |
 | [1129-longest-string-chain](https://github.com/IshantSingh27/LeetCode/tree/master/1129-longest-string-chain) |
 | [1402-count-square-submatrices-with-all-ones](https://github.com/IshantSingh27/LeetCode/tree/master/1402-count-square-submatrices-with-all-ones) |
 | [1408-find-the-smallest-divisor-given-a-threshold](https://github.com/IshantSingh27/LeetCode/tree/master/1408-find-the-smallest-divisor-given-a-threshold) |
@@ -229,6 +230,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0673-number-of-longest-increasing-subsequence](https://github.com/IshantSingh27/LeetCode/tree/master/0673-number-of-longest-increasing-subsequence) |
 | [0803-cheapest-flights-within-k-stops](https://github.com/IshantSingh27/LeetCode/tree/master/0803-cheapest-flights-within-k-stops) |
 | [0967-minimum-falling-path-sum](https://github.com/IshantSingh27/LeetCode/tree/master/0967-minimum-falling-path-sum) |
+| [1121-partition-array-for-maximum-sum](https://github.com/IshantSingh27/LeetCode/tree/master/1121-partition-array-for-maximum-sum) |
 | [1129-longest-string-chain](https://github.com/IshantSingh27/LeetCode/tree/master/1129-longest-string-chain) |
 | [1250-longest-common-subsequence](https://github.com/IshantSingh27/LeetCode/tree/master/1250-longest-common-subsequence) |
 | [1402-count-square-submatrices-with-all-ones](https://github.com/IshantSingh27/LeetCode/tree/master/1402-count-square-submatrices-with-all-ones) |
