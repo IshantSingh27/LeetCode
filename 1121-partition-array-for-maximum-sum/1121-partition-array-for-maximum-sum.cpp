@@ -14,20 +14,20 @@ public:
     }
     int maxSumAfterPartitioning(vector<int>& arr, int k) {
         int n = arr.size();
-        vector<int> dp(n , -1);
-        return solve(0 , n , arr , dp , k);
+        // vector<int> dp(n , -1);
+        // return solve(0 , n , arr , dp , k);
         //TABULATION
-        // vector<int> dp(n + 1 , 0);
-        // for(int i = n-1 ; i >= 0 ; i--){
-        //     int maxcur = -1e9 , maxans = -1e9 , len = 0;
-        //     for(int j=i ; j < min(i + k , n) ; j++){
-        //         len++;
-        //         maxcur = max(maxcur , arr[j]);
-        //         int sum = (len * maxcur) + dp[j + 1];
-        //         maxans = max(maxans , sum);
-        //     }
-        //     dp[i] = maxans;
-        // }
-        // return dp[0];
+        vector<int> dp(n + 1 , 0);
+        for(int i = n-1 ; i >= 0 ; i--){
+            int maxcur = -1e9 , maxans = -1e9 , len = 0;
+            for(int j=i ; j < min(i + k , n) ; j++){
+                len++;
+                maxcur = max(maxcur , arr[j]);
+                int sum = (len * maxcur) + dp[j + 1];
+                maxans = max(maxans , sum);
+            }
+            dp[i] = maxans;
+        }
+        return dp[0];
     }
 };
