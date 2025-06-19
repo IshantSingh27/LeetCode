@@ -47,6 +47,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/IshantSingh27/LeetCode/tree/master/0001-two-sum) |
+| [0003-longest-substring-without-repeating-characters](https://github.com/IshantSingh27/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0073-set-matrix-zeroes](https://github.com/IshantSingh27/LeetCode/tree/master/0073-set-matrix-zeroes) |
 | [0141-linked-list-cycle](https://github.com/IshantSingh27/LeetCode/tree/master/0141-linked-list-cycle) |
 | [0142-linked-list-cycle-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0142-linked-list-cycle-ii) |
@@ -149,6 +150,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Sliding Window
 |  |
 | ------- |
+| [0003-longest-substring-without-repeating-characters](https://github.com/IshantSingh27/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0480-sliding-window-median](https://github.com/IshantSingh27/LeetCode/tree/master/0480-sliding-window-median) |
 ## Heap (Priority Queue)
 |  |
@@ -248,6 +250,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## String
 |  |
 | ------- |
+| [0003-longest-substring-without-repeating-characters](https://github.com/IshantSingh27/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0132-palindrome-partitioning-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0132-palindrome-partitioning-ii) |
 | [0583-delete-operation-for-two-strings](https://github.com/IshantSingh27/LeetCode/tree/master/0583-delete-operation-for-two-strings) |
 | [0721-accounts-merge](https://github.com/IshantSingh27/LeetCode/tree/master/0721-accounts-merge) |
