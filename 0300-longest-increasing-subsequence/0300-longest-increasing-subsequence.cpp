@@ -29,21 +29,35 @@ public:
     //     }
     //     return dp[0][0];
     // }
+    // int lengthOfLIS(vector<int>& arr) {
+    //     int n = arr.size();
+    //     vector<int> pre(n + 1 , 0);
+    //     for(int ind = n-1 ; ind >= 0 ; ind--){
+    //         vector<int> cur(n + 1 , 0);
+    //         for(int prev = ind - 1 ; prev >= -1 ; prev--){
+    //             int notTake = 0 + pre[prev + 1];
+    //             int take = 0;
+    //             if(prev == -1 || arr[ind] > arr[prev]){
+    //                 take = 1 + pre[ind + 1];
+    //             }
+    //             cur[prev + 1] = max(take , notTake);
+    //         }
+    //         pre = cur;
+    //     }
+    //     return pre[0];
+    // }
     int lengthOfLIS(vector<int>& arr) {
         int n = arr.size();
-        vector<int> pre(n + 1 , 0);
-        for(int ind = n-1 ; ind >= 0 ; ind--){
-            vector<int> cur(n + 1 , 0);
-            for(int prev = ind - 1 ; prev >= -1 ; prev--){
-                int notTake = 0 + pre[prev + 1];
-                int take = 0;
-                if(prev == -1 || arr[ind] > arr[prev]){
-                    take = 1 + pre[ind + 1];
+        int maxi = 1;
+        vector<int> dp(n , 1);
+        for(int ind = 0 ; ind < n ; ind++){
+            for(int prev = 0 ; prev <= ind ; prev++){
+                if(arr[ind] > arr[prev]){
+                    dp[ind] = max(dp[ind] , dp[prev] + 1);
                 }
-                cur[prev + 1] = max(take , notTake);
             }
-            pre = cur;
+            maxi = max(maxi , dp[ind]);
         }
-        return pre[0];
+        return maxi;
     }
 };
