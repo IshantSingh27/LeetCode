@@ -13,7 +13,7 @@ public:
                 }
                 l++;
             }
-            if(mp.size() <= 2){
+            else{
                 maxlen = max(maxlen , r - l + 1);
             }
             r++;
