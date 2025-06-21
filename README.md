@@ -57,6 +57,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0721-accounts-merge](https://github.com/IshantSingh27/LeetCode/tree/master/0721-accounts-merge) |
 | [0940-fruit-into-baskets](https://github.com/IshantSingh27/LeetCode/tree/master/0940-fruit-into-baskets) |
 | [1129-longest-string-chain](https://github.com/IshantSingh27/LeetCode/tree/master/1129-longest-string-chain) |
+| [1460-number-of-substrings-containing-all-three-characters](https://github.com/IshantSingh27/LeetCode/tree/master/1460-number-of-substrings-containing-all-three-characters) |
 ## Two Pointers
 |  |
 | ------- |
@@ -158,6 +159,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0480-sliding-window-median](https://github.com/IshantSingh27/LeetCode/tree/master/0480-sliding-window-median) |
 | [0940-fruit-into-baskets](https://github.com/IshantSingh27/LeetCode/tree/master/0940-fruit-into-baskets) |
 | [1046-max-consecutive-ones-iii](https://github.com/IshantSingh27/LeetCode/tree/master/1046-max-consecutive-ones-iii) |
+| [1460-number-of-substrings-containing-all-three-characters](https://github.com/IshantSingh27/LeetCode/tree/master/1460-number-of-substrings-containing-all-three-characters) |
 ## Heap (Priority Queue)
 |  |
 | ------- |
@@ -263,6 +265,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1129-longest-string-chain](https://github.com/IshantSingh27/LeetCode/tree/master/1129-longest-string-chain) |
 | [1250-longest-common-subsequence](https://github.com/IshantSingh27/LeetCode/tree/master/1250-longest-common-subsequence) |
 | [1437-minimum-insertion-steps-to-make-a-string-palindrome](https://github.com/IshantSingh27/LeetCode/tree/master/1437-minimum-insertion-steps-to-make-a-string-palindrome) |
+| [1460-number-of-substrings-containing-all-three-characters](https://github.com/IshantSingh27/LeetCode/tree/master/1460-number-of-substrings-containing-all-three-characters) |
 ## Memoization
 |  |
 | ------- |
