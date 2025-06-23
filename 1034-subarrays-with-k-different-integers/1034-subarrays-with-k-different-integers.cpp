@@ -1,6 +1,7 @@
 class Solution {
 public:
     int solve(vector<int>& arr, int k){
+        if(k < 0) return 0;
         int n = arr.size() , cnt = 0 , l = 0 , r = 0;
         map<int , int> mp;
         while(r < n){
