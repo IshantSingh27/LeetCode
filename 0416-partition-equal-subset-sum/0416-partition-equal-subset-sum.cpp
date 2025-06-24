@@ -20,7 +20,24 @@ public:
             sum += arr[i];
         }
         if(sum % 2 != 0) return false;
-        vector<vector<int>> dp(n , vector<int>( (sum / 2) + 1 , -1 ));
-        return solve(n - 1 , sum / 2 , arr , dp);
+        // vector<vector<int>> dp(n , vector<int>( (sum / 2) + 1 , -1 ));
+        // return solve(n - 1 , sum / 2 , arr , dp);
+        int k = sum / 2;
+        vector<int> prev(k + 1 , false) , cur(k + 1 , false);
+        prev[0] = false ; cur[0] = true;
+        if(arr[0] <= k) prev[arr[0]] = true;
+        for(int ind = 1 ; ind < n ; ind++){
+            for(int tar = 1 ; tar <= k ; tar++){
+                bool notTake = prev[tar];
+                bool take = 0;
+                if(arr[ind] <= tar){
+                    take = prev[tar - arr[ind]];
+                }
+        
+                cur[tar] = take || notTake;
+            }
+            prev = cur;
+        }
+        return prev[k];
     }
 };
