@@ -18,9 +18,45 @@ public:
         ans.push_back(root->val);
         in(root->right , ans);
     }
+    // vector<int> inorderTraversal(TreeNode* root) {
+    //     if(root == NULL) return {};
+    //     vector<int> ans;
+    //     // in(root , ans);
+    //     // return ans;
+    //     stack<TreeNode*> st;
+    //     TreeNode* temp = root;
+    //     while(temp != NULL || !st.empty()){
+    //         while(temp){
+    //             st.push(temp);
+    //             temp = temp->left;
+    //         }
+    //         temp = st.top();
+    //         st.pop();
+    //         ans.push_back(temp->val);
+    //         temp = temp->right;
+    //     }
+    //     return ans;
+    // }
     vector<int> inorderTraversal(TreeNode* root) {
+        if(root == NULL) return {};
         vector<int> ans;
-        in(root , ans);
+        // in(root , ans);
+        // return ans;
+        stack<TreeNode*> st;
+        TreeNode* temp = root;
+        while(true){
+            if(temp){
+                st.push(temp);
+                temp = temp->left;
+            }
+            else{
+                if(st.empty()) break;
+                temp = st.top();
+                st.pop();
+                ans.push_back(temp->val);
+                temp = temp->right; 
+            }
+        }
         return ans;
     }
 };
