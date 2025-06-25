@@ -16,26 +16,47 @@ public:
 
         return dp[ind][tar] = take + notTake;
     }
+    // int change(int k, vector<int>& arr) {
+    //     int n = arr.size();
+    //     // vector<vector<int>> dp(n , vector<int>(k + 1 , -1));
+    //     // return solve(n - 1 , k , arr , dp);
+    //     vector<vector<long long>> dp(n , vector<long long>(k + 1 , 0));
+    //     for(long long i=0 ; i<=k ; i++){
+    //         if(i % arr[0] == 0) dp[0][i] = 1;
+    //     }
+    //     long long mod = 1e12 + 7;
+
+    //     for(long long ind = 1 ; ind < n ; ind++){
+    //         for(long long tar = 0 ; tar <= k ; tar++){
+    //             long long notTake = dp[ind - 1][tar];
+    //             long long take = 0;
+    //             if(arr[ind] <= tar){
+    //                 take = dp[ind][tar - arr[ind]];
+    //             }
+    //             dp[ind][tar] = (take + notTake) % mod;
+    //         }
+    //     }
+    //     return dp[n - 1][k];
+    // }
     int change(int k, vector<int>& arr) {
         int n = arr.size();
-        // vector<vector<int>> dp(n , vector<int>(k + 1 , -1));
-        // return solve(n - 1 , k , arr , dp);
-        vector<vector<long long>> dp(n , vector<long long>(k + 1 , 0));
+        vector<long long> prev(k + 1 , 0) , cur(k + 1 , 0);
         for(long long i=0 ; i<=k ; i++){
-            if(i % arr[0] == 0) dp[0][i] = 1;
+            if(i % arr[0] == 0) prev[i] = 1;
         }
         long long mod = 1e12 + 7;
 
         for(long long ind = 1 ; ind < n ; ind++){
             for(long long tar = 0 ; tar <= k ; tar++){
-                long long notTake = dp[ind - 1][tar];
+                long long notTake = prev[tar];
                 long long take = 0;
                 if(arr[ind] <= tar){
-                    take = dp[ind][tar - arr[ind]];
+                    take = cur[tar - arr[ind]];
                 }
-                dp[ind][tar] = (take + notTake) % mod;
+                cur[tar] = (take + notTake) % mod;
             }
+            prev = cur;
         }
-        return dp[n - 1][k];
+        return prev[k];
     }
 };
