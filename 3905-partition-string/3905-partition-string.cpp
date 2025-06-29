@@ -1,18 +1,18 @@
 class Solution {
 public:
     vector<string> partitionString(string s) {
-        unordered_set<string> seen;
-    vector<string> result;
-    string curr = "";
+        unordered_map<string , int> mp;
+        vector<string> ans;
+        string cur = "";
 
-    for (char c : s) {
-        curr += c;
-        if (seen.count(curr)) continue;
-        result.push_back(curr);
-        seen.insert(curr);
-        curr = "";
-    }
+        for(char it : s){
+            cur += it;
+            if(mp.find(cur) != mp.end()) continue;
+            mp[cur]++;
+            ans.push_back(cur);
+            cur = "";
+        }
 
-    return result;
+        return ans;
     }
 };
