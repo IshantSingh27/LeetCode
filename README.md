@@ -143,6 +143,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Greedy
 |  |
 | ------- |
+| [0044-wildcard-matching](https://github.com/IshantSingh27/LeetCode/tree/master/0044-wildcard-matching) |
 | [0045-jump-game-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0045-jump-game-ii) |
 | [0055-jump-game](https://github.com/IshantSingh27/LeetCode/tree/master/0055-jump-game) |
 | [0455-assign-cookies](https://github.com/IshantSingh27/LeetCode/tree/master/0455-assign-cookies) |
@@ -167,6 +168,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Recursion
 |  |
 | ------- |
+| [0044-wildcard-matching](https://github.com/IshantSingh27/LeetCode/tree/master/0044-wildcard-matching) |
 | [0206-reverse-linked-list](https://github.com/IshantSingh27/LeetCode/tree/master/0206-reverse-linked-list) |
 | [0234-palindrome-linked-list](https://github.com/IshantSingh27/LeetCode/tree/master/0234-palindrome-linked-list) |
 ## Stack
@@ -289,6 +291,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Dynamic Programming
 |  |
 | ------- |
+| [0044-wildcard-matching](https://github.com/IshantSingh27/LeetCode/tree/master/0044-wildcard-matching) |
 | [0045-jump-game-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0045-jump-game-ii) |
 | [0055-jump-game](https://github.com/IshantSingh27/LeetCode/tree/master/0055-jump-game) |
 | [0062-unique-paths](https://github.com/IshantSingh27/LeetCode/tree/master/0062-unique-paths) |
@@ -333,6 +336,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/IshantSingh27/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0044-wildcard-matching](https://github.com/IshantSingh27/LeetCode/tree/master/0044-wildcard-matching) |
 | [0072-edit-distance](https://github.com/IshantSingh27/LeetCode/tree/master/0072-edit-distance) |
 | [0076-minimum-window-substring](https://github.com/IshantSingh27/LeetCode/tree/master/0076-minimum-window-substring) |
 | [0115-distinct-subsequences](https://github.com/IshantSingh27/LeetCode/tree/master/0115-distinct-subsequences) |
