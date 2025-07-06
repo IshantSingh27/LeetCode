@@ -44,17 +44,14 @@ public:
     //SPACE OPTIMISATION
     bool isMatch(string s, string p) {
         int n = p.size() , m = s.size();
-        vector<bool> prev(m + 1 , false) , cur(m + 1 , false);
+        vector<bool> prev(m + 1 , false) , cur(m + 1 , true);
         prev[0] = true; //s1 khatam ho gya s2 bach gya false hoga wo by default hai
         for(int i=1 ; i<=n ; i++){
-            bool chk = true;
             for (int k = 1; k <= i; k++) {
-                    if (p[k - 1] != '*') {
-                    chk = false;
-                    break;
+                if (p[k - 1] != '*') {
+                    cur[0] = false;
                 }
             }
-            cur[0] = chk;
             for(int j=1 ; j<=m ; j++){
                 if((p[i - 1] == s[j - 1]) || p[i - 1] == '?') cur[j] = prev[j - 1];
                 else if(p[i - 1] == '*') cur[j] = prev[j] || cur[j - 1];
