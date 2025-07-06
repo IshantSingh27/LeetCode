@@ -12,25 +12,45 @@ public:
             return dp[i][j] = 1 + min(add , min(deletion , replace));
         }
     }
+    // int minDistance(string s1, string s2) {
+    //     int n = s1.size() , m = s2.size();
+    //     // vector<vector<int>> dp(n , vector<int>(m , -1));
+    //     // return solve(n - 1 , m - 1 , s1 , s2 , dp);
+    //     //TABULATION
+    //     vector<vector<int>> dp(n + 1 , vector<int>(m + 1 , 0));
+    //     for(int i=1 ; i<=n ; i++) dp[i][0] = i; // delete remaining
+    //     for(int i=1 ; i<=m ; i++) dp[0][i] = i; // add remaining
+    //     for(int i=1 ; i<=n ; i++){
+    //         for(int j=1 ; j<=m ; j++){
+    //             if(s1[i - 1] == s2[j - 1]) dp[i][j] = 0 + dp[i-1][j-1];
+    //             else{
+    //                 int add = dp[i][j - 1];
+    //                 int deletion = dp[i - 1][j];
+    //                 int replace = dp[i - 1][j - 1];
+    //                 dp[i][j] = 1 + min(add , min(deletion , replace));
+    //             }
+    //         }
+    //     }
+    //     return dp[n][m];
+    // }
+    //SPACE OPTIMISATION
     int minDistance(string s1, string s2) {
         int n = s1.size() , m = s2.size();
-        // vector<vector<int>> dp(n , vector<int>(m , -1));
-        // return solve(n - 1 , m - 1 , s1 , s2 , dp);
-        //TABULATION
-        vector<vector<int>> dp(n + 1 , vector<int>(m + 1 , 0));
-        for(int i=1 ; i<=n ; i++) dp[i][0] = i; // add remaining
-        for(int i=1 ; i<=m ; i++) dp[0][i] = i; // delete remaining
+        vector<int> prev(m + 1 , 0) , cur(m + 1 , 0);
+        for(int i=1 ; i<=m ; i++) prev[i] = i; // add remaining
         for(int i=1 ; i<=n ; i++){
+            cur[0] = i;
             for(int j=1 ; j<=m ; j++){
-                if(s1[i - 1] == s2[j - 1]) dp[i][j] = 0 + dp[i-1][j-1];
+                if(s1[i - 1] == s2[j - 1]) cur[j] = 0 + prev[j-1];
                 else{
-                    int add = dp[i][j - 1];
-                    int deletion = dp[i - 1][j];
-                    int replace = dp[i - 1][j - 1];
-                    dp[i][j] = 1 + min(add , min(deletion , replace));
+                    int add = cur[j - 1];
+                    int deletion = prev[j];
+                    int replace = prev[j - 1];
+                    cur[j] = 1 + min(add , min(deletion , replace));
                 }
             }
+            prev = cur;
         }
-        return dp[n][m];
+        return prev[m];
     }
 };
