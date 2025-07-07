@@ -38,6 +38,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0518-coin-change-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0518-coin-change-ii) |
 | [0540-single-element-in-a-sorted-array](https://github.com/IshantSingh27/LeetCode/tree/master/0540-single-element-in-a-sorted-array) |
 | [0673-number-of-longest-increasing-subsequence](https://github.com/IshantSingh27/LeetCode/tree/master/0673-number-of-longest-increasing-subsequence) |
+| [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/IshantSingh27/LeetCode/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
 | [0721-accounts-merge](https://github.com/IshantSingh27/LeetCode/tree/master/0721-accounts-merge) |
 | [0792-binary-search](https://github.com/IshantSingh27/LeetCode/tree/master/0792-binary-search) |
 | [0890-lemonade-change](https://github.com/IshantSingh27/LeetCode/tree/master/0890-lemonade-change) |
@@ -153,6 +154,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0055-jump-game](https://github.com/IshantSingh27/LeetCode/tree/master/0055-jump-game) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0455-assign-cookies](https://github.com/IshantSingh27/LeetCode/tree/master/0455-assign-cookies) |
+| [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/IshantSingh27/LeetCode/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
 | [0890-lemonade-change](https://github.com/IshantSingh27/LeetCode/tree/master/0890-lemonade-change) |
 | [1448-maximum-69-number](https://github.com/IshantSingh27/LeetCode/tree/master/1448-maximum-69-number) |
 ## Divide and Conquer
@@ -325,6 +327,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0518-coin-change-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0518-coin-change-ii) |
 | [0583-delete-operation-for-two-strings](https://github.com/IshantSingh27/LeetCode/tree/master/0583-delete-operation-for-two-strings) |
 | [0673-number-of-longest-increasing-subsequence](https://github.com/IshantSingh27/LeetCode/tree/master/0673-number-of-longest-increasing-subsequence) |
+| [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/IshantSingh27/LeetCode/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
 | [0803-cheapest-flights-within-k-stops](https://github.com/IshantSingh27/LeetCode/tree/master/0803-cheapest-flights-within-k-stops) |
 | [0967-minimum-falling-path-sum](https://github.com/IshantSingh27/LeetCode/tree/master/0967-minimum-falling-path-sum) |
 | [1121-partition-array-for-maximum-sum](https://github.com/IshantSingh27/LeetCode/tree/master/1121-partition-array-for-maximum-sum) |
