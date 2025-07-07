@@ -19,7 +19,21 @@ public:
         arr.push_back(n);
         sort(arr.begin() , arr.end());
         int sz = arr.size();
-        vector<vector<int>> dp(sz , vector<int>(sz , -1));
-        return solve(1 , sz - 2 , arr , dp);
+        // vector<vector<int>> dp(sz , vector<int>(sz , -1));
+        // return solve(1 , sz - 2 , arr , dp);
+
+        vector<vector<int>> dp(sz , vector<int>(sz , 0));
+
+        for(int i = sz-2 ; i >= 1 ; i--){
+            for(int j = i ; j <= sz-2 ; j++){
+                int mini = 1e9;
+                for(int ind = i ; ind <= j ; ind++){
+                    int cost = arr[j + 1] - arr[i - 1] + dp[i][ind - 1] + dp[ind + 1][j];
+                    mini = min(cost , mini);
+                }
+                dp[i][j] = mini;
+            }
+        }
+        return dp[1][sz - 2];
     }
 };
