@@ -48,7 +48,9 @@ public:
                         int num = (row * n) + col;
                         int adjnum = (nrow * n) + ncol;
 
-                        ds.unionBySize(num , adjnum);
+                        if (ds.find(num) != ds.find(adjnum)) {
+                            ds.unionBySize(num, adjnum);
+                        }
                     }
                 }
             }
