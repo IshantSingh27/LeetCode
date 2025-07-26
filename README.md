@@ -12,6 +12,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0048-rotate-image](https://github.com/IshantSingh27/LeetCode/tree/master/0048-rotate-image) |
 | [0054-spiral-matrix](https://github.com/IshantSingh27/LeetCode/tree/master/0054-spiral-matrix) |
 | [0055-jump-game](https://github.com/IshantSingh27/LeetCode/tree/master/0055-jump-game) |
+| [0057-insert-interval](https://github.com/IshantSingh27/LeetCode/tree/master/0057-insert-interval) |
 | [0063-unique-paths-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0063-unique-paths-ii) |
 | [0064-minimum-path-sum](https://github.com/IshantSingh27/LeetCode/tree/master/0064-minimum-path-sum) |
 | [0073-set-matrix-zeroes](https://github.com/IshantSingh27/LeetCode/tree/master/0073-set-matrix-zeroes) |
