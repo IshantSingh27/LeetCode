@@ -17,6 +17,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0064-minimum-path-sum](https://github.com/IshantSingh27/LeetCode/tree/master/0064-minimum-path-sum) |
 | [0073-set-matrix-zeroes](https://github.com/IshantSingh27/LeetCode/tree/master/0073-set-matrix-zeroes) |
 | [0074-search-a-2d-matrix](https://github.com/IshantSingh27/LeetCode/tree/master/0074-search-a-2d-matrix) |
+| [0078-subsets](https://github.com/IshantSingh27/LeetCode/tree/master/0078-subsets) |
 | [0081-search-in-rotated-sorted-array-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0081-search-in-rotated-sorted-array-ii) |
 | [0120-triangle](https://github.com/IshantSingh27/LeetCode/tree/master/0120-triangle) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/IshantSingh27/LeetCode/tree/master/0121-best-time-to-buy-and-sell-stock) |
@@ -421,6 +422,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Backtracking
 |  |
 | ------- |
+| [0078-subsets](https://github.com/IshantSingh27/LeetCode/tree/master/0078-subsets) |
 | [0494-target-sum](https://github.com/IshantSingh27/LeetCode/tree/master/0494-target-sum) |
 ## Binary Indexed Tree
 |  |
@@ -448,6 +450,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Bit Manipulation
 |  |
 | ------- |
+| [0078-subsets](https://github.com/IshantSingh27/LeetCode/tree/master/0078-subsets) |
 | [0222-count-complete-tree-nodes](https://github.com/IshantSingh27/LeetCode/tree/master/0222-count-complete-tree-nodes) |
 | [0231-power-of-two](https://github.com/IshantSingh27/LeetCode/tree/master/0231-power-of-two) |
 | [2323-minimum-bit-flips-to-convert-number](https://github.com/IshantSingh27/LeetCode/tree/master/2323-minimum-bit-flips-to-convert-number) |
