@@ -19,17 +19,29 @@
 //         return ans;
 //     }
 // };
+// class Solution {
+// public:
+//     int singleNumber(vector<int>& arr) {
+//         int n = arr.size();
+//         if(n == 1) return arr[0];
+//         sort(arr.begin() , arr.end());
+
+//         for(int i=1 ; i<n ; i += 3){
+//             if(arr[i] != arr[i - 1]) return arr[i - 1];
+//         }
+
+//         return arr[n - 1];
+//     }
+// };
 class Solution {
 public:
     int singleNumber(vector<int>& arr) {
-        int n = arr.size();
-        if(n == 1) return arr[0];
-        sort(arr.begin() , arr.end());
-
-        for(int i=1 ; i<n ; i += 3){
-            if(arr[i] != arr[i - 1]) return arr[i - 1];
+        int n = arr.size() , ones = 0 , twos = 0;
+        for(int i=0 ; i<n ; i++){
+            ones = ((ones ^ arr[i]) & (~twos));
+            twos = ((twos ^ arr[i]) & (~ones));
         }
 
-        return arr[n - 1];
+        return ones;
     }
 };
