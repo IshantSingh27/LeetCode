@@ -70,6 +70,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1646-kth-missing-positive-number](https://github.com/IshantSingh27/LeetCode/tree/master/1646-kth-missing-positive-number) |
 | [1669-minimum-cost-to-cut-a-stick](https://github.com/IshantSingh27/LeetCode/tree/master/1669-minimum-cost-to-cut-a-stick) |
 | [1753-path-with-minimum-effort](https://github.com/IshantSingh27/LeetCode/tree/master/1753-path-with-minimum-effort) |
+| [1993-sum-of-all-subset-xor-totals](https://github.com/IshantSingh27/LeetCode/tree/master/1993-sum-of-all-subset-xor-totals) |
 ## Hash Table
 |  |
 | ------- |
@@ -142,6 +143,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1370-count-number-of-nice-subarrays](https://github.com/IshantSingh27/LeetCode/tree/master/1370-count-number-of-nice-subarrays) |
 | [1448-maximum-69-number](https://github.com/IshantSingh27/LeetCode/tree/master/1448-maximum-69-number) |
 | [1610-xor-operation-in-an-array](https://github.com/IshantSingh27/LeetCode/tree/master/1610-xor-operation-in-an-array) |
+| [1993-sum-of-all-subset-xor-totals](https://github.com/IshantSingh27/LeetCode/tree/master/1993-sum-of-all-subset-xor-totals) |
 ## Simulation
 |  |
 | ------- |
@@ -423,11 +425,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0062-unique-paths](https://github.com/IshantSingh27/LeetCode/tree/master/0062-unique-paths) |
+| [1993-sum-of-all-subset-xor-totals](https://github.com/IshantSingh27/LeetCode/tree/master/1993-sum-of-all-subset-xor-totals) |
 ## Backtracking
 |  |
 | ------- |
 | [0078-subsets](https://github.com/IshantSingh27/LeetCode/tree/master/0078-subsets) |
 | [0494-target-sum](https://github.com/IshantSingh27/LeetCode/tree/master/0494-target-sum) |
+| [1993-sum-of-all-subset-xor-totals](https://github.com/IshantSingh27/LeetCode/tree/master/1993-sum-of-all-subset-xor-totals) |
 ## Binary Indexed Tree
 |  |
 | ------- |
@@ -461,5 +465,10 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0231-power-of-two](https://github.com/IshantSingh27/LeetCode/tree/master/0231-power-of-two) |
 | [0260-single-number-iii](https://github.com/IshantSingh27/LeetCode/tree/master/0260-single-number-iii) |
 | [1610-xor-operation-in-an-array](https://github.com/IshantSingh27/LeetCode/tree/master/1610-xor-operation-in-an-array) |
+| [1993-sum-of-all-subset-xor-totals](https://github.com/IshantSingh27/LeetCode/tree/master/1993-sum-of-all-subset-xor-totals) |
 | [2323-minimum-bit-flips-to-convert-number](https://github.com/IshantSingh27/LeetCode/tree/master/2323-minimum-bit-flips-to-convert-number) |
+## Enumeration
+|  |
+| ------- |
+| [1993-sum-of-all-subset-xor-totals](https://github.com/IshantSingh27/LeetCode/tree/master/1993-sum-of-all-subset-xor-totals) |
 <!---LeetCode Topics End-->
