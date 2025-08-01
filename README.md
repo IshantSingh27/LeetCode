@@ -141,6 +141,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0368-largest-divisible-subset](https://github.com/IshantSingh27/LeetCode/tree/master/0368-largest-divisible-subset) |
 | [1370-count-number-of-nice-subarrays](https://github.com/IshantSingh27/LeetCode/tree/master/1370-count-number-of-nice-subarrays) |
 | [1448-maximum-69-number](https://github.com/IshantSingh27/LeetCode/tree/master/1448-maximum-69-number) |
+| [1610-xor-operation-in-an-array](https://github.com/IshantSingh27/LeetCode/tree/master/1610-xor-operation-in-an-array) |
 ## Simulation
 |  |
 | ------- |
@@ -459,5 +460,6 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0222-count-complete-tree-nodes](https://github.com/IshantSingh27/LeetCode/tree/master/0222-count-complete-tree-nodes) |
 | [0231-power-of-two](https://github.com/IshantSingh27/LeetCode/tree/master/0231-power-of-two) |
 | [0260-single-number-iii](https://github.com/IshantSingh27/LeetCode/tree/master/0260-single-number-iii) |
+| [1610-xor-operation-in-an-array](https://github.com/IshantSingh27/LeetCode/tree/master/1610-xor-operation-in-an-array) |
 | [2323-minimum-bit-flips-to-convert-number](https://github.com/IshantSingh27/LeetCode/tree/master/2323-minimum-bit-flips-to-convert-number) |
 <!---LeetCode Topics End-->
