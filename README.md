@@ -49,6 +49,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0518-coin-change-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0518-coin-change-ii) |
 | [0540-single-element-in-a-sorted-array](https://github.com/IshantSingh27/LeetCode/tree/master/0540-single-element-in-a-sorted-array) |
 | [0542-01-matrix](https://github.com/IshantSingh27/LeetCode/tree/master/0542-01-matrix) |
+| [0560-subarray-sum-equals-k](https://github.com/IshantSingh27/LeetCode/tree/master/0560-subarray-sum-equals-k) |
 | [0673-number-of-longest-increasing-subsequence](https://github.com/IshantSingh27/LeetCode/tree/master/0673-number-of-longest-increasing-subsequence) |
 | [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/IshantSingh27/LeetCode/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
 | [0721-accounts-merge](https://github.com/IshantSingh27/LeetCode/tree/master/0721-accounts-merge) |
@@ -88,6 +89,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0169-majority-element](https://github.com/IshantSingh27/LeetCode/tree/master/0169-majority-element) |
 | [0424-longest-repeating-character-replacement](https://github.com/IshantSingh27/LeetCode/tree/master/0424-longest-repeating-character-replacement) |
 | [0480-sliding-window-median](https://github.com/IshantSingh27/LeetCode/tree/master/0480-sliding-window-median) |
+| [0560-subarray-sum-equals-k](https://github.com/IshantSingh27/LeetCode/tree/master/0560-subarray-sum-equals-k) |
 | [0721-accounts-merge](https://github.com/IshantSingh27/LeetCode/tree/master/0721-accounts-merge) |
 | [0893-all-nodes-distance-k-in-binary-tree](https://github.com/IshantSingh27/LeetCode/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
 | [0940-fruit-into-baskets](https://github.com/IshantSingh27/LeetCode/tree/master/0940-fruit-into-baskets) |
@@ -461,6 +463,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Prefix Sum
 |  |
 | ------- |
+| [0560-subarray-sum-equals-k](https://github.com/IshantSingh27/LeetCode/tree/master/0560-subarray-sum-equals-k) |
 | [0966-binary-subarrays-with-sum](https://github.com/IshantSingh27/LeetCode/tree/master/0966-binary-subarrays-with-sum) |
 | [1046-max-consecutive-ones-iii](https://github.com/IshantSingh27/LeetCode/tree/master/1046-max-consecutive-ones-iii) |
 | [1370-count-number-of-nice-subarrays](https://github.com/IshantSingh27/LeetCode/tree/master/1370-count-number-of-nice-subarrays) |
