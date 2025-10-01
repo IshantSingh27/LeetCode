@@ -6,18 +6,12 @@ public:
 
         for(int i=0 ; i<s.size() ; i++){
             if(s[i] == '('){
-                if(depth == 0) depth++;
-                else{
-                    depth++;
-                    ans += s[i];
-                }
+                if(depth > 0) ans += s[i];
+                depth++;
             }
             else{
                 depth--;
-                if(depth == 0) continue;
-                else{
-                    ans += s[i];
-                }
+                if(depth > 0) ans += s[i];
             }
         }
 
