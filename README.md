@@ -5,6 +5,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/IshantSingh27/LeetCode/tree/master/0001-two-sum) |
+| [0014-longest-common-prefix](https://github.com/IshantSingh27/LeetCode/tree/master/0014-longest-common-prefix) |
 | [0015-3sum](https://github.com/IshantSingh27/LeetCode/tree/master/0015-3sum) |
 | [0018-4sum](https://github.com/IshantSingh27/LeetCode/tree/master/0018-4sum) |
 | [0031-next-permutation](https://github.com/IshantSingh27/LeetCode/tree/master/0031-next-permutation) |
@@ -434,6 +435,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/IshantSingh27/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0014-longest-common-prefix](https://github.com/IshantSingh27/LeetCode/tree/master/0014-longest-common-prefix) |
 | [0044-wildcard-matching](https://github.com/IshantSingh27/LeetCode/tree/master/0044-wildcard-matching) |
 | [0072-edit-distance](https://github.com/IshantSingh27/LeetCode/tree/master/0072-edit-distance) |
 | [0076-minimum-window-substring](https://github.com/IshantSingh27/LeetCode/tree/master/0076-minimum-window-substring) |
@@ -510,4 +512,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/IshantSingh27/LeetCode/tree/master/1993-sum-of-all-subset-xor-totals) |
+## Trie
+|  |
+| ------- |
+| [0014-longest-common-prefix](https://github.com/IshantSingh27/LeetCode/tree/master/0014-longest-common-prefix) |
 <!---LeetCode Topics End-->
