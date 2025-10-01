@@ -166,6 +166,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1448-maximum-69-number](https://github.com/IshantSingh27/LeetCode/tree/master/1448-maximum-69-number) |
 | [1610-xor-operation-in-an-array](https://github.com/IshantSingh27/LeetCode/tree/master/1610-xor-operation-in-an-array) |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/IshantSingh27/LeetCode/tree/master/1993-sum-of-all-subset-xor-totals) |
+| [2032-largest-odd-number-in-string](https://github.com/IshantSingh27/LeetCode/tree/master/2032-largest-odd-number-in-string) |
 ## Simulation
 |  |
 | ------- |
@@ -204,6 +205,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/IshantSingh27/LeetCode/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
 | [0890-lemonade-change](https://github.com/IshantSingh27/LeetCode/tree/master/0890-lemonade-change) |
 | [1448-maximum-69-number](https://github.com/IshantSingh27/LeetCode/tree/master/1448-maximum-69-number) |
+| [2032-largest-odd-number-in-string](https://github.com/IshantSingh27/LeetCode/tree/master/2032-largest-odd-number-in-string) |
 ## Divide and Conquer
 |  |
 | ------- |
@@ -449,6 +451,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1250-longest-common-subsequence](https://github.com/IshantSingh27/LeetCode/tree/master/1250-longest-common-subsequence) |
 | [1437-minimum-insertion-steps-to-make-a-string-palindrome](https://github.com/IshantSingh27/LeetCode/tree/master/1437-minimum-insertion-steps-to-make-a-string-palindrome) |
 | [1460-number-of-substrings-containing-all-three-characters](https://github.com/IshantSingh27/LeetCode/tree/master/1460-number-of-substrings-containing-all-three-characters) |
+| [2032-largest-odd-number-in-string](https://github.com/IshantSingh27/LeetCode/tree/master/2032-largest-odd-number-in-string) |
 ## Memoization
 |  |
 | ------- |
