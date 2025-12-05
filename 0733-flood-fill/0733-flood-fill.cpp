@@ -18,17 +18,9 @@ public:
 
     vector<vector<int>> floodFill(vector<vector<int>>& arr, int sr, int sc, int color) {
         int n = arr.size() , m = arr[0].size() , old = arr[sr][sc];
-        vector<vector<int>> vis(n , vector<int>(m , 0));
+        vector<vector<int>> vis = arr;
 
         dfs(sr , sc , arr , vis , color , old);
-
-        for(int i=0 ; i<n ; i++){
-            for(int j=0 ; j<m ; j++){
-                if(vis[i][j] == 0){
-                    vis[i][j] = arr[i][j];
-                }
-            }
-        }
 
         return vis;
     }
