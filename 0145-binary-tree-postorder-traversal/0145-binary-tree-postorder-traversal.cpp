@@ -25,23 +25,19 @@ public:
 
         // post(root , ans);
 
-        stack<int> st1;
         stack<TreeNode*> st2;
         st2.push(root);
 
         while(!st2.empty()){
             TreeNode* temp = st2.top();
             st2.pop();
-            st1.push(temp->val);
+            ans.push_back(temp->val);
 
             if(temp->left) st2.push(temp->left);
             if(temp->right) st2.push(temp->right);
         }
 
-        while(!st1.empty()){
-            ans.push_back(st1.top());
-            st1.pop();
-        }
+        reverse(ans.begin() , ans.end());
 
         return ans;
     }
