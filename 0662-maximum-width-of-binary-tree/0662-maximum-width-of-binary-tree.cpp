@@ -14,17 +14,17 @@ public:
     int widthOfBinaryTree(TreeNode* root) {
         if(root == NULL) return 0;
 
-        queue<pair<TreeNode* , long long>> q;
+        queue<pair<TreeNode* , long>> q;
         q.push({root , 0});
-        long long ans = 1;
+        long ans = 1;
 
         while(!q.empty()){
-            long long n = q.size();
-            long long minx = q.front().second , start = 0 , end = 0;
+            long n = q.size();
+            long minx = q.front().second , start = 0 , end = 0;
 
-            for(long long i=0 ; i<n ; i++){
+            for(long i=0 ; i<n ; i++){
                 TreeNode* node = q.front().first;
-                long long lvl = q.front().second - minx;
+                long lvl = q.front().second - minx;
                 q.pop();
 
                 if(i == 0) start = lvl;
