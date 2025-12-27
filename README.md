@@ -341,6 +341,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0733-flood-fill](https://github.com/IshantSingh27/LeetCode/tree/master/0733-flood-fill) |
 | [0744-network-delay-time](https://github.com/IshantSingh27/LeetCode/tree/master/0744-network-delay-time) |
 | [0801-is-graph-bipartite](https://github.com/IshantSingh27/LeetCode/tree/master/0801-is-graph-bipartite) |
+| [0802-find-eventual-safe-states](https://github.com/IshantSingh27/LeetCode/tree/master/0802-find-eventual-safe-states) |
 | [0803-cheapest-flights-within-k-stops](https://github.com/IshantSingh27/LeetCode/tree/master/0803-cheapest-flights-within-k-stops) |
 | [0854-making-a-large-island](https://github.com/IshantSingh27/LeetCode/tree/master/0854-making-a-large-island) |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/IshantSingh27/LeetCode/tree/master/0863-all-nodes-distance-k-in-binary-tree) |
@@ -397,6 +398,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0733-flood-fill](https://github.com/IshantSingh27/LeetCode/tree/master/0733-flood-fill) |
 | [0744-network-delay-time](https://github.com/IshantSingh27/LeetCode/tree/master/0744-network-delay-time) |
 | [0801-is-graph-bipartite](https://github.com/IshantSingh27/LeetCode/tree/master/0801-is-graph-bipartite) |
+| [0802-find-eventual-safe-states](https://github.com/IshantSingh27/LeetCode/tree/master/0802-find-eventual-safe-states) |
 | [0803-cheapest-flights-within-k-stops](https://github.com/IshantSingh27/LeetCode/tree/master/0803-cheapest-flights-within-k-stops) |
 | [0854-making-a-large-island](https://github.com/IshantSingh27/LeetCode/tree/master/0854-making-a-large-island) |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/IshantSingh27/LeetCode/tree/master/0863-all-nodes-distance-k-in-binary-tree) |
@@ -416,6 +418,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0547-number-of-provinces](https://github.com/IshantSingh27/LeetCode/tree/master/0547-number-of-provinces) |
 | [0744-network-delay-time](https://github.com/IshantSingh27/LeetCode/tree/master/0744-network-delay-time) |
 | [0801-is-graph-bipartite](https://github.com/IshantSingh27/LeetCode/tree/master/0801-is-graph-bipartite) |
+| [0802-find-eventual-safe-states](https://github.com/IshantSingh27/LeetCode/tree/master/0802-find-eventual-safe-states) |
 | [0803-cheapest-flights-within-k-stops](https://github.com/IshantSingh27/LeetCode/tree/master/0803-cheapest-flights-within-k-stops) |
 | [0984-most-stones-removed-with-same-row-or-column](https://github.com/IshantSingh27/LeetCode/tree/master/0984-most-stones-removed-with-same-row-or-column) |
 | [1300-critical-connections-in-a-network](https://github.com/IshantSingh27/LeetCode/tree/master/1300-critical-connections-in-a-network) |
@@ -427,6 +430,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0207-course-schedule](https://github.com/IshantSingh27/LeetCode/tree/master/0207-course-schedule) |
 | [0210-course-schedule-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0210-course-schedule-ii) |
+| [0802-find-eventual-safe-states](https://github.com/IshantSingh27/LeetCode/tree/master/0802-find-eventual-safe-states) |
 | [2090-number-of-ways-to-arrive-at-destination](https://github.com/IshantSingh27/LeetCode/tree/master/2090-number-of-ways-to-arrive-at-destination) |
 ## Union Find
 |  |
