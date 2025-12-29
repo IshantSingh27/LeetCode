@@ -437,6 +437,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1300-critical-connections-in-a-network](https://github.com/IshantSingh27/LeetCode/tree/master/1300-critical-connections-in-a-network) |
 | [1442-number-of-operations-to-make-network-connected](https://github.com/IshantSingh27/LeetCode/tree/master/1442-number-of-operations-to-make-network-connected) |
 | [1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/IshantSingh27/LeetCode/tree/master/1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
+| [1976-number-of-ways-to-arrive-at-destination](https://github.com/IshantSingh27/LeetCode/tree/master/1976-number-of-ways-to-arrive-at-destination) |
 | [2090-number-of-ways-to-arrive-at-destination](https://github.com/IshantSingh27/LeetCode/tree/master/2090-number-of-ways-to-arrive-at-destination) |
 ## Topological Sort
 |  |
@@ -444,6 +445,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0207-course-schedule](https://github.com/IshantSingh27/LeetCode/tree/master/0207-course-schedule) |
 | [0210-course-schedule-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0210-course-schedule-ii) |
 | [0802-find-eventual-safe-states](https://github.com/IshantSingh27/LeetCode/tree/master/0802-find-eventual-safe-states) |
+| [1976-number-of-ways-to-arrive-at-destination](https://github.com/IshantSingh27/LeetCode/tree/master/1976-number-of-ways-to-arrive-at-destination) |
 | [2090-number-of-ways-to-arrive-at-destination](https://github.com/IshantSingh27/LeetCode/tree/master/2090-number-of-ways-to-arrive-at-destination) |
 ## Union Find
 |  |
@@ -508,6 +510,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1437-minimum-insertion-steps-to-make-a-string-palindrome](https://github.com/IshantSingh27/LeetCode/tree/master/1437-minimum-insertion-steps-to-make-a-string-palindrome) |
 | [1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/IshantSingh27/LeetCode/tree/master/1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
 | [1669-minimum-cost-to-cut-a-stick](https://github.com/IshantSingh27/LeetCode/tree/master/1669-minimum-cost-to-cut-a-stick) |
+| [1976-number-of-ways-to-arrive-at-destination](https://github.com/IshantSingh27/LeetCode/tree/master/1976-number-of-ways-to-arrive-at-destination) |
 | [2090-number-of-ways-to-arrive-at-destination](https://github.com/IshantSingh27/LeetCode/tree/master/2090-number-of-ways-to-arrive-at-destination) |
 ## Shortest Path
 |  |
@@ -516,6 +519,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0787-cheapest-flights-within-k-stops](https://github.com/IshantSingh27/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
 | [0803-cheapest-flights-within-k-stops](https://github.com/IshantSingh27/LeetCode/tree/master/0803-cheapest-flights-within-k-stops) |
 | [1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/IshantSingh27/LeetCode/tree/master/1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
+| [1976-number-of-ways-to-arrive-at-destination](https://github.com/IshantSingh27/LeetCode/tree/master/1976-number-of-ways-to-arrive-at-destination) |
 | [2090-number-of-ways-to-arrive-at-destination](https://github.com/IshantSingh27/LeetCode/tree/master/2090-number-of-ways-to-arrive-at-destination) |
 ## String
 |  |
