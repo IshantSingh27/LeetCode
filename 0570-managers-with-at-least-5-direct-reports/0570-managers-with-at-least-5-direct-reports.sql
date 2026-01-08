@@ -5,5 +5,5 @@ where e.id in (
     select managerId
     from employee
     group by managerId
-    having count(managerId) >= 5
+    having count(*) >= 5
 )
