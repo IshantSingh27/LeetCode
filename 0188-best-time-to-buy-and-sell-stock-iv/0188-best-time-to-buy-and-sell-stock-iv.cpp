@@ -1,36 +1,24 @@
 class Solution {
 public:
+    int solve(int ind , int buy , int k , vector<vector<vector<int>>>& dp , vector<int>& arr){
+        if(ind == arr.size() || k == 0) return 0;
+
+        if(dp[ind][buy][k] != -1) return dp[ind][buy][k];
+
+        if(buy){
+            return dp[ind][buy][k] = 
+            max(solve(ind + 1 , buy , k , dp , arr) , solve(ind + 1 , !buy , k , dp , arr) - arr[ind]);
+        }
+        else{
+            return dp[ind][buy][k] =
+            max(solve(ind + 1 ,buy ,k ,dp ,arr), solve(ind + 1, !buy, k - 1, dp, arr) + arr[ind]);
+        }
+    }
+
     int maxProfit(int k, vector<int>& arr) {
         int n = arr.size();
-        vector<vector<int>> prev(2 , vector<int>(k + 1 , 0)) , cur(2 , vector<int>(k + 1 , 0));
+        vector<vector<vector<int>>> dp(n , vector<vector<int>>(2 , vector<int>(k + 1 , -1)));
 
-        // for(int j=0 ; j<=1 ; j++){
-        //     prev[j][0] = 0;
-        //     cur[j][0] = 0;
-        // }
-        // for(int i=0 ; i<=1 ; i++){
-        //     for(int j=0 ; j<=k ; j++){
-        //         prev[i][j] = 0;
-        //     }
-        // }
-
-        for(int ind=n-1 ; ind>=0 ; ind--){
-            for(int buy=0 ; buy<=1 ; buy++){
-                for(int cap=1 ; cap<=k ; cap++){
-                    int profit = 0;
-                    if(buy){
-                        profit = max(prev[0][cap] - arr[ind] , prev[1][cap] - 0);
-                    }
-                    else{
-                        profit = max(prev[1][cap - 1] + arr[ind] , prev[0][cap] + 0);
-                    }
-
-                    cur[buy][cap] = profit;
-                }
-            }
-            prev = cur;
-        }
-
-        return prev[1][k];
+        return solve(0 , 1 , k , dp , arr);
     }
 };
