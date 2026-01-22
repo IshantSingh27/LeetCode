@@ -94,6 +94,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1631-path-with-minimum-effort](https://github.com/IshantSingh27/LeetCode/tree/master/1631-path-with-minimum-effort) |
 | [1646-kth-missing-positive-number](https://github.com/IshantSingh27/LeetCode/tree/master/1646-kth-missing-positive-number) |
 | [1669-minimum-cost-to-cut-a-stick](https://github.com/IshantSingh27/LeetCode/tree/master/1669-minimum-cost-to-cut-a-stick) |
+| [1752-check-if-array-is-sorted-and-rotated](https://github.com/IshantSingh27/LeetCode/tree/master/1752-check-if-array-is-sorted-and-rotated) |
 | [1753-path-with-minimum-effort](https://github.com/IshantSingh27/LeetCode/tree/master/1753-path-with-minimum-effort) |
 | [1838-frequency-of-the-most-frequent-element](https://github.com/IshantSingh27/LeetCode/tree/master/1838-frequency-of-the-most-frequent-element) |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/IshantSingh27/LeetCode/tree/master/1993-sum-of-all-subset-xor-totals) |
