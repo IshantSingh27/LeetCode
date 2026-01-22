@@ -1,23 +1,15 @@
 class Solution {
 public:
     void moveZeroes(vector<int>& arr) {
-        int n = arr.size() , k = -1;
+        int n = arr.size() , k = 0;
         for(int i=0 ; i<n ; i++){
-            if(arr[i] == 0){
-                if(k == -1) k = i;
-                else continue;
+            if(arr[i] != 0){
+                arr[k] = arr[i];
+                k++;
             }
-            else{
-                if(k != -1){
-                    swap(arr[k] , arr[i]);
-                    if(i - 1 == k){
-                        k = i;
-                    }
-                    else{
-                        k++;
-                    }
-                }
-            }
+        }
+        for(int i=k ; i<n ; i++){
+            arr[i] = 0;
         }
     }
 };
