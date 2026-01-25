@@ -5,7 +5,7 @@ public:
         int n = nums.size();
 
         for(int i=0 ; i<n ; i++){
-            if(mp.find(tar - nums[i]) != mp.end()){
+            if(mp.count(tar - nums[i])){
                 return {i , mp[tar - nums[i]]};
             }
             else{
