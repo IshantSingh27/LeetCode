@@ -12,8 +12,7 @@ public:
             pq.pop();
             int y = pq.top();
             pq.pop();
-            cout<<"x : "<<x<<" y : "<<y<<endl;
-
+            
             if(x == y) continue;
             else{
                 pq.push(x - y);
