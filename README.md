@@ -87,6 +87,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1034-subarrays-with-k-different-integers](https://github.com/IshantSingh27/LeetCode/tree/master/1034-subarrays-with-k-different-integers) |
 | [1036-rotting-oranges](https://github.com/IshantSingh27/LeetCode/tree/master/1036-rotting-oranges) |
 | [1046-max-consecutive-ones-iii](https://github.com/IshantSingh27/LeetCode/tree/master/1046-max-consecutive-ones-iii) |
+| [1046-last-stone-weight](https://github.com/IshantSingh27/LeetCode/tree/master/1046-last-stone-weight) |
 | [1056-capacity-to-ship-packages-within-d-days](https://github.com/IshantSingh27/LeetCode/tree/master/1056-capacity-to-ship-packages-within-d-days) |
 | [1091-shortest-path-in-binary-matrix](https://github.com/IshantSingh27/LeetCode/tree/master/1091-shortest-path-in-binary-matrix) |
 | [1121-partition-array-for-maximum-sum](https://github.com/IshantSingh27/LeetCode/tree/master/1121-partition-array-for-maximum-sum) |
@@ -319,6 +320,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0744-network-delay-time](https://github.com/IshantSingh27/LeetCode/tree/master/0744-network-delay-time) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/IshantSingh27/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
 | [0803-cheapest-flights-within-k-stops](https://github.com/IshantSingh27/LeetCode/tree/master/0803-cheapest-flights-within-k-stops) |
+| [1046-last-stone-weight](https://github.com/IshantSingh27/LeetCode/tree/master/1046-last-stone-weight) |
 | [1631-path-with-minimum-effort](https://github.com/IshantSingh27/LeetCode/tree/master/1631-path-with-minimum-effort) |
 | [1753-path-with-minimum-effort](https://github.com/IshantSingh27/LeetCode/tree/master/1753-path-with-minimum-effort) |
 | [3650-minimum-cost-path-with-edge-reversals](https://github.com/IshantSingh27/LeetCode/tree/master/3650-minimum-cost-path-with-edge-reversals) |
