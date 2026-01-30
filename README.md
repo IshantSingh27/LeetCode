@@ -105,6 +105,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1838-frequency-of-the-most-frequent-element](https://github.com/IshantSingh27/LeetCode/tree/master/1838-frequency-of-the-most-frequent-element) |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/IshantSingh27/LeetCode/tree/master/1993-sum-of-all-subset-xor-totals) |
 | [2271-rearrange-array-elements-by-sign](https://github.com/IshantSingh27/LeetCode/tree/master/2271-rearrange-array-elements-by-sign) |
+| [2558-take-gifts-from-the-richest-pile](https://github.com/IshantSingh27/LeetCode/tree/master/2558-take-gifts-from-the-richest-pile) |
 ## Hash Table
 |  |
 | ------- |
@@ -221,6 +222,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0054-spiral-matrix](https://github.com/IshantSingh27/LeetCode/tree/master/0054-spiral-matrix) |
 | [0068-text-justification](https://github.com/IshantSingh27/LeetCode/tree/master/0068-text-justification) |
 | [2271-rearrange-array-elements-by-sign](https://github.com/IshantSingh27/LeetCode/tree/master/2271-rearrange-array-elements-by-sign) |
+| [2558-take-gifts-from-the-richest-pile](https://github.com/IshantSingh27/LeetCode/tree/master/2558-take-gifts-from-the-richest-pile) |
 ## Binary Search
 |  |
 | ------- |
@@ -323,6 +325,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1046-last-stone-weight](https://github.com/IshantSingh27/LeetCode/tree/master/1046-last-stone-weight) |
 | [1631-path-with-minimum-effort](https://github.com/IshantSingh27/LeetCode/tree/master/1631-path-with-minimum-effort) |
 | [1753-path-with-minimum-effort](https://github.com/IshantSingh27/LeetCode/tree/master/1753-path-with-minimum-effort) |
+| [2558-take-gifts-from-the-richest-pile](https://github.com/IshantSingh27/LeetCode/tree/master/2558-take-gifts-from-the-richest-pile) |
 | [3650-minimum-cost-path-with-edge-reversals](https://github.com/IshantSingh27/LeetCode/tree/master/3650-minimum-cost-path-with-edge-reversals) |
 ## Tree
 |  |
