@@ -15,10 +15,7 @@ public:
                 else ans = ans + mp[s[i]];
 
                 i++;
-                cout<<"ans : "<<ans<<endl;
         }
-                cout<<"ans : "<<ans<<endl;
-
                 if(i == n -1) ans = ans + mp[s[n - 1]]; 
 
                 return ans;
