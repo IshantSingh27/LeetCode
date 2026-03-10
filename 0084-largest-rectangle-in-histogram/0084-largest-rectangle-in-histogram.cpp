@@ -22,7 +22,7 @@ public:
             st.pop();
             int right = n;
             int left = -1;
-            if(!st.empty()) left = st.top();
+            if(!st.empty() && arr[st.top()] <= arr[ele]) left = st.top();
 
             ans = max(ans , (right - left - 1) * arr[ele]);
         }
