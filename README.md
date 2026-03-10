@@ -107,6 +107,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1753-path-with-minimum-effort](https://github.com/IshantSingh27/LeetCode/tree/master/1753-path-with-minimum-effort) |
 | [1838-frequency-of-the-most-frequent-element](https://github.com/IshantSingh27/LeetCode/tree/master/1838-frequency-of-the-most-frequent-element) |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/IshantSingh27/LeetCode/tree/master/1993-sum-of-all-subset-xor-totals) |
+| [2104-sum-of-subarray-ranges](https://github.com/IshantSingh27/LeetCode/tree/master/2104-sum-of-subarray-ranges) |
 | [2271-rearrange-array-elements-by-sign](https://github.com/IshantSingh27/LeetCode/tree/master/2271-rearrange-array-elements-by-sign) |
 | [2558-take-gifts-from-the-richest-pile](https://github.com/IshantSingh27/LeetCode/tree/master/2558-take-gifts-from-the-richest-pile) |
 ## Hash Table
@@ -316,6 +317,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1021-remove-outermost-parentheses](https://github.com/IshantSingh27/LeetCode/tree/master/1021-remove-outermost-parentheses) |
 | [1078-remove-outermost-parentheses](https://github.com/IshantSingh27/LeetCode/tree/master/1078-remove-outermost-parentheses) |
 | [1614-maximum-nesting-depth-of-the-parentheses](https://github.com/IshantSingh27/LeetCode/tree/master/1614-maximum-nesting-depth-of-the-parentheses) |
+| [2104-sum-of-subarray-ranges](https://github.com/IshantSingh27/LeetCode/tree/master/2104-sum-of-subarray-ranges) |
 ## Sliding Window
 |  |
 | ------- |
@@ -737,6 +739,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0496-next-greater-element-i](https://github.com/IshantSingh27/LeetCode/tree/master/0496-next-greater-element-i) |
 | [0503-next-greater-element-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0503-next-greater-element-ii) |
 | [0907-sum-of-subarray-minimums](https://github.com/IshantSingh27/LeetCode/tree/master/0907-sum-of-subarray-minimums) |
+| [2104-sum-of-subarray-ranges](https://github.com/IshantSingh27/LeetCode/tree/master/2104-sum-of-subarray-ranges) |
 ## String Matching
 |  |
 | ------- |
