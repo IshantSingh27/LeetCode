@@ -1,26 +1,28 @@
 class Solution {
 public:
     int myAtoi(string s) {
-        int i = 0 , sign = 1;
-        while(s[i] == ' ') i++;
-        if(s[i] == '-'){
-            sign = -1;
-            i++;
-        }
-        else if(s[i] == '+') i++;
-        cout<<"i : "<<i<<endl;
-
+        int i = 0, n = s.size(), sign = 1;
         long long ans = 0;
 
-        while(s[i] <= '9' && s[i] >= '0'){
-            ans = ans * 10 + (s[i] - '0');
-            if(ans > INT_MAX || ans < INT_MIN){
-                if(sign == 1) return INT_MAX;
-                else return INT_MIN;
-            }
+        // skip spaces
+        while(i < n && s[i] == ' ') i++;
+
+        // sign
+        if(i < n && (s[i] == '-' || s[i] == '+')){
+            sign = (s[i] == '-') ? -1 : 1;
             i++;
         }
 
-        return ans * sign;
+        // digits
+        while(i < n && isdigit(s[i])){
+            ans = ans * 10 + (s[i] - '0');
+
+            if(sign * ans > INT_MAX) return INT_MAX;
+            if(sign * ans < INT_MIN) return INT_MIN;
+
+            i++;
+        }
+
+        return sign * ans;
     }
 };
