@@ -26,7 +26,7 @@ public:
             st.pop();
         }
 
-        while(ans.size() > 0 && ans.back() == '0'){
+        while(!ans.empty() > 0 && ans.back() == '0'){
             ans.pop_back();
         }
 
