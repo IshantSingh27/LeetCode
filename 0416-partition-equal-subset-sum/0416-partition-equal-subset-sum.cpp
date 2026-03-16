@@ -30,23 +30,28 @@ public:
 
         // return solve(n - 1 , tar , arr , dp);
 
-        vector<vector<int>> dp(n , vector<int>(tar + 1 , 0));
+        // vector<vector<int>> dp(n , vector<int>(tar + 1 , 0));
 
-        for(int i=0 ; i<n ; i++){
-            dp[i][0] = true;
-        }
-        if(arr[0] <= tar) dp[0][arr[0]] = true;
+        // for(int i=0 ; i<n ; i++){
+        //     dp[i][0] = true;
+        // }
+        // if(arr[0] <= tar) dp[0][arr[0]] = true;
+
+        vector<int> prev(tar + 1 , 0) , cur(tar + 1 , 0);
+        prev[0] = true;
+        if(arr[0] <= tar) prev[arr[0]] = true;
 
         for(int ind=1 ; ind<n ; ind++){
             for(int k=1 ; k<=tar ; k++){
-                int nottake = dp[ind - 1][k];
+                int nottake = prev[k];
                 int take = false;
-                if(arr[ind] <= k) take = dp[ind - 1][k - arr[ind]];
+                if(arr[ind] <= k) take = prev[k - arr[ind]];
 
-                dp[ind][k] = take || nottake;
+                cur[k] = take || nottake;
             }
+            prev = cur;
         }
 
-        return dp[n - 1][tar];
+        return cur[tar];
     }
 };
