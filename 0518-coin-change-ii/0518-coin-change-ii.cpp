@@ -16,9 +16,34 @@ public:
     }
 
     int change(int k, vector<int>& arr) {
-        int n = arr.size();
-        vector<vector<int>> dp(n , vector<int>(k + 1 , -1));
+    int n = arr.size();
 
-        return solve(n - 1 , k , arr , dp);
+    vector<vector<long long>> dp(n , vector<long long>(k + 1 , 0));
+
+    if(arr[0] == 0){
+        dp[0][0] = 2;
+    } else {
+        dp[0][0] = 1;
+        for(int i = 1; i <= k; i++){
+            if(i % arr[0] == 0) dp[0][i] = 1;
+        }
     }
+
+    const int MOD = 1e18 + 7;
+
+    for(int i = 1 ; i < n ; i++){
+        for(int j = 0 ; j <= k ; j++){
+
+            long long nottake = dp[i - 1][j];
+
+            long long take = 0;
+            if(arr[i] <= j)
+                take = dp[i][j - arr[i]];
+
+            dp[i][j] = (take + nottake) % MOD;
+        }
+    }
+
+    return dp[n - 1][k];
+}
 };
