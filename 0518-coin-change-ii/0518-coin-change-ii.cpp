@@ -1,66 +1,24 @@
 class Solution {
 public:
-    int solve(int ind , int amt , vector<int>& arr , vector<vector<int>>& dp){
+    int solve(int ind , int k , vector<int>& arr , vector<vector<int>>& dp){
         if(ind == 0){
-            if(amt % arr[0] == 0) return 1;
-            else return 0;
+            if(k == 0 || k % arr[0] == 0) return 1;
+            return 0;
         }
 
-        if(dp[ind][amt] != -1) return dp[ind][amt];
+        if(dp[ind][k] != -1) return dp[ind][k];
 
-        int notTake = solve(ind - 1 , amt , arr , dp);
+        int nottake = solve(ind - 1 , k , arr , dp);
         int take = 0;
-        if(arr[ind] <= amt){
-            take = solve(ind , amt - arr[ind] , arr , dp);
-        }
+        if(arr[ind] <= k) take = solve(ind , k - arr[ind] , arr , dp);
 
-        return dp[ind][amt] = take + notTake;
+        return dp[ind][k] = take + nottake;
     }
-    // int change(int amt, vector<int>& arr) {
-    //     int n = arr.size();
-    //     // vector<vector<int>> dp(n , vector<int>(amt + 1 , -1));
-    //     // return solve(n - 1 , amt , arr , dp);
 
-    //     long long mod = 1e18 + 7;
-    //     vector<vector<long long>> dp(n , vector<long long>(amt + 1 , 0));
-
-    //     for(long long i=0 ; i<=amt ; i++){
-    //         if(i % arr[0] == 0) dp[0][i] = 1;
-    //     }
-
-    //     for(long long ind=1 ; ind<n ; ind++){
-    //         for(long long w=0 ; w<=amt ; w++){
-    //             long long notTake = dp[ind - 1][w];
-    //             long long take = 0;
-    //             if(arr[ind] <= w) take = dp[ind][w - arr[ind]];
-
-    //             dp[ind][w] = (take + notTake) % mod;
-    //         }
-    //     }
-
-    //     return dp[n - 1][amt];
-    // }
-    int change(int amt, vector<int>& arr) {
+    int change(int k, vector<int>& arr) {
         int n = arr.size();
-        long long mod = 1e18 + 7;
+        vector<vector<int>> dp(n , vector<int>(k + 1 , -1));
 
-        vector<long long> prev(amt + 1 , 0) , cur(amt + 1 , 0);
-
-        for(long long i=0 ; i<=amt ; i++){
-            if(i % arr[0] == 0) prev[i] = 1;
-        }
-
-        for(long long ind=1 ; ind<n ; ind++){
-            for(long long w=0 ; w<=amt ; w++){
-                long long notTake = prev[w];
-                long long take = 0;
-                if(arr[ind] <= w) take = cur[w - arr[ind]];
-
-                cur[w] = (take + notTake) % mod;
-            }
-            prev = cur;
-        }
-
-        return prev[amt];
+        return solve(n - 1 , k , arr , dp);
     }
 };
