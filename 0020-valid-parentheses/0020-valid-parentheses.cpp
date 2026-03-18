@@ -10,7 +10,7 @@ public:
             }
             else{
                 if(st.empty()) return false;
-                
+
                 if(s[i] == ')' && st.top() == '(' ||
                 s[i] == ']' && st.top() == '[' ||
                 s[i] == '}' && st.top() == '{'){
@@ -20,7 +20,6 @@ public:
             }
         }
 
-        if(st.empty()) return true;
-        else return false;
+        return st.empty();
     }
 };
