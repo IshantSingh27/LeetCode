@@ -1,28 +1,17 @@
 class Solution {
 public:
     int longestOnes(vector<int>& arr, int k) {
-        int n = arr.size() , i = 0 , j = 0 , ans = 0;
+        int n = arr.size() , left = 0 , zero = 0 , ans = 0;
 
-        while(i < n){
-            if(arr[i] == 1){
-                ans = max(ans , i - j + 1);
-                i++;
+        for(int right=0 ; right<n ; right++){
+            if(arr[right] == 0) zero++;
+
+            while(zero > k){
+                if(arr[left] == 0) zero--;
+                left++;
             }
-            else{
-                if(k > 0){
-                    k--;
-                    ans = max(ans , i - j + 1);
-                    i++;
-                    cout<<"here at index : "<<i<<endl;
-                }
-                else{
-                    while(arr[j] != 0){
-                        j++;
-                    }
-                    j++;
-                    k++;
-                }
-            }
+
+            ans = max(ans , right - left + 1);
         }
 
         return ans;
