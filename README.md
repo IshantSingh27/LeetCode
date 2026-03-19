@@ -56,6 +56,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0198-house-robber](https://github.com/IshantSingh27/LeetCode/tree/master/0198-house-robber) |
 | [0213-house-robber-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0213-house-robber-ii) |
 | [0229-majority-element-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0229-majority-element-ii) |
+| [0239-sliding-window-maximum](https://github.com/IshantSingh27/LeetCode/tree/master/0239-sliding-window-maximum) |
 | [0240-search-a-2d-matrix-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0240-search-a-2d-matrix-ii) |
 | [0260-single-number-iii](https://github.com/IshantSingh27/LeetCode/tree/master/0260-single-number-iii) |
 | [0268-missing-number](https://github.com/IshantSingh27/LeetCode/tree/master/0268-missing-number) |
@@ -338,6 +339,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/IshantSingh27/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0076-minimum-window-substring](https://github.com/IshantSingh27/LeetCode/tree/master/0076-minimum-window-substring) |
+| [0239-sliding-window-maximum](https://github.com/IshantSingh27/LeetCode/tree/master/0239-sliding-window-maximum) |
 | [0424-longest-repeating-character-replacement](https://github.com/IshantSingh27/LeetCode/tree/master/0424-longest-repeating-character-replacement) |
 | [0480-sliding-window-median](https://github.com/IshantSingh27/LeetCode/tree/master/0480-sliding-window-median) |
 | [0940-fruit-into-baskets](https://github.com/IshantSingh27/LeetCode/tree/master/0940-fruit-into-baskets) |
@@ -351,6 +353,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Heap (Priority Queue)
 |  |
 | ------- |
+| [0239-sliding-window-maximum](https://github.com/IshantSingh27/LeetCode/tree/master/0239-sliding-window-maximum) |
 | [0451-sort-characters-by-frequency](https://github.com/IshantSingh27/LeetCode/tree/master/0451-sort-characters-by-frequency) |
 | [0480-sliding-window-median](https://github.com/IshantSingh27/LeetCode/tree/master/0480-sliding-window-median) |
 | [0744-network-delay-time](https://github.com/IshantSingh27/LeetCode/tree/master/0744-network-delay-time) |
@@ -774,4 +777,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0451-sort-characters-by-frequency](https://github.com/IshantSingh27/LeetCode/tree/master/0451-sort-characters-by-frequency) |
+## Queue
+|  |
+| ------- |
+| [0239-sliding-window-maximum](https://github.com/IshantSingh27/LeetCode/tree/master/0239-sliding-window-maximum) |
+## Monotonic Queue
+|  |
+| ------- |
+| [0239-sliding-window-maximum](https://github.com/IshantSingh27/LeetCode/tree/master/0239-sliding-window-maximum) |
 <!---LeetCode Topics End-->
