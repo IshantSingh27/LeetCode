@@ -102,6 +102,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1091-shortest-path-in-binary-matrix](https://github.com/IshantSingh27/LeetCode/tree/master/1091-shortest-path-in-binary-matrix) |
 | [1121-partition-array-for-maximum-sum](https://github.com/IshantSingh27/LeetCode/tree/master/1121-partition-array-for-maximum-sum) |
 | [1129-longest-string-chain](https://github.com/IshantSingh27/LeetCode/tree/master/1129-longest-string-chain) |
+| [1248-count-number-of-nice-subarrays](https://github.com/IshantSingh27/LeetCode/tree/master/1248-count-number-of-nice-subarrays) |
 | [1370-count-number-of-nice-subarrays](https://github.com/IshantSingh27/LeetCode/tree/master/1370-count-number-of-nice-subarrays) |
 | [1402-count-square-submatrices-with-all-ones](https://github.com/IshantSingh27/LeetCode/tree/master/1402-count-square-submatrices-with-all-ones) |
 | [1408-find-the-smallest-divisor-given-a-threshold](https://github.com/IshantSingh27/LeetCode/tree/master/1408-find-the-smallest-divisor-given-a-threshold) |
@@ -150,6 +151,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/IshantSingh27/LeetCode/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1034-subarrays-with-k-different-integers](https://github.com/IshantSingh27/LeetCode/tree/master/1034-subarrays-with-k-different-integers) |
 | [1129-longest-string-chain](https://github.com/IshantSingh27/LeetCode/tree/master/1129-longest-string-chain) |
+| [1248-count-number-of-nice-subarrays](https://github.com/IshantSingh27/LeetCode/tree/master/1248-count-number-of-nice-subarrays) |
 | [1370-count-number-of-nice-subarrays](https://github.com/IshantSingh27/LeetCode/tree/master/1370-count-number-of-nice-subarrays) |
 | [1460-number-of-substrings-containing-all-three-characters](https://github.com/IshantSingh27/LeetCode/tree/master/1460-number-of-substrings-containing-all-three-characters) |
 | [1781-sum-of-beauty-of-all-substrings](https://github.com/IshantSingh27/LeetCode/tree/master/1781-sum-of-beauty-of-all-substrings) |
@@ -232,6 +234,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0231-power-of-two](https://github.com/IshantSingh27/LeetCode/tree/master/0231-power-of-two) |
 | [0268-missing-number](https://github.com/IshantSingh27/LeetCode/tree/master/0268-missing-number) |
 | [0368-largest-divisible-subset](https://github.com/IshantSingh27/LeetCode/tree/master/0368-largest-divisible-subset) |
+| [1248-count-number-of-nice-subarrays](https://github.com/IshantSingh27/LeetCode/tree/master/1248-count-number-of-nice-subarrays) |
 | [1370-count-number-of-nice-subarrays](https://github.com/IshantSingh27/LeetCode/tree/master/1370-count-number-of-nice-subarrays) |
 | [1448-maximum-69-number](https://github.com/IshantSingh27/LeetCode/tree/master/1448-maximum-69-number) |
 | [1610-xor-operation-in-an-array](https://github.com/IshantSingh27/LeetCode/tree/master/1610-xor-operation-in-an-array) |
@@ -352,6 +355,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1004-max-consecutive-ones-iii](https://github.com/IshantSingh27/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
 | [1034-subarrays-with-k-different-integers](https://github.com/IshantSingh27/LeetCode/tree/master/1034-subarrays-with-k-different-integers) |
 | [1046-max-consecutive-ones-iii](https://github.com/IshantSingh27/LeetCode/tree/master/1046-max-consecutive-ones-iii) |
+| [1248-count-number-of-nice-subarrays](https://github.com/IshantSingh27/LeetCode/tree/master/1248-count-number-of-nice-subarrays) |
 | [1370-count-number-of-nice-subarrays](https://github.com/IshantSingh27/LeetCode/tree/master/1370-count-number-of-nice-subarrays) |
 | [1460-number-of-substrings-containing-all-three-characters](https://github.com/IshantSingh27/LeetCode/tree/master/1460-number-of-substrings-containing-all-three-characters) |
 | [1538-maximum-points-you-can-obtain-from-cards](https://github.com/IshantSingh27/LeetCode/tree/master/1538-maximum-points-you-can-obtain-from-cards) |
@@ -684,6 +688,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0966-binary-subarrays-with-sum](https://github.com/IshantSingh27/LeetCode/tree/master/0966-binary-subarrays-with-sum) |
 | [1004-max-consecutive-ones-iii](https://github.com/IshantSingh27/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
 | [1046-max-consecutive-ones-iii](https://github.com/IshantSingh27/LeetCode/tree/master/1046-max-consecutive-ones-iii) |
+| [1248-count-number-of-nice-subarrays](https://github.com/IshantSingh27/LeetCode/tree/master/1248-count-number-of-nice-subarrays) |
 | [1370-count-number-of-nice-subarrays](https://github.com/IshantSingh27/LeetCode/tree/master/1370-count-number-of-nice-subarrays) |
 | [1538-maximum-points-you-can-obtain-from-cards](https://github.com/IshantSingh27/LeetCode/tree/master/1538-maximum-points-you-can-obtain-from-cards) |
 | [1838-frequency-of-the-most-frequent-element](https://github.com/IshantSingh27/LeetCode/tree/master/1838-frequency-of-the-most-frequent-element) |
