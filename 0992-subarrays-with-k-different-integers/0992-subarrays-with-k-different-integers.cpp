@@ -13,7 +13,7 @@ public:
                 l++;
             }
 
-            if(mp.size() <= k) cnt += r -l + 1;
+            cnt += r -l + 1;
             r++;
         }
 
