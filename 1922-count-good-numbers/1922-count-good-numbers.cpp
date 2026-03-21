@@ -1,7 +1,6 @@
 class Solution {
 public:
-    long long mod = 1e9 + 7;
-
+    int mod = 1e9 + 7;
     long long power(long long x , long long n){
         if(n == 0) return 1;
 
@@ -9,9 +8,7 @@ public:
 
         long long res = (half * half) % mod;
 
-        if(n % 2 == 1)
-            res = (res * x) % mod;
-
+        if(n % 2 == 1) res = (res * x) % mod;
         return res;
     }
 
