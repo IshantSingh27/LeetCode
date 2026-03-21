@@ -232,6 +232,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0013-roman-to-integer](https://github.com/IshantSingh27/LeetCode/tree/master/0013-roman-to-integer) |
 | [0029-divide-two-integers](https://github.com/IshantSingh27/LeetCode/tree/master/0029-divide-two-integers) |
 | [0048-rotate-image](https://github.com/IshantSingh27/LeetCode/tree/master/0048-rotate-image) |
+| [0050-powx-n](https://github.com/IshantSingh27/LeetCode/tree/master/0050-powx-n) |
 | [0062-unique-paths](https://github.com/IshantSingh27/LeetCode/tree/master/0062-unique-paths) |
 | [0070-climbing-stairs](https://github.com/IshantSingh27/LeetCode/tree/master/0070-climbing-stairs) |
 | [0189-rotate-array](https://github.com/IshantSingh27/LeetCode/tree/master/0189-rotate-array) |
@@ -319,6 +320,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0044-wildcard-matching](https://github.com/IshantSingh27/LeetCode/tree/master/0044-wildcard-matching) |
+| [0050-powx-n](https://github.com/IshantSingh27/LeetCode/tree/master/0050-powx-n) |
 | [0206-reverse-linked-list](https://github.com/IshantSingh27/LeetCode/tree/master/0206-reverse-linked-list) |
 | [0231-power-of-two](https://github.com/IshantSingh27/LeetCode/tree/master/0231-power-of-two) |
 | [0234-palindrome-linked-list](https://github.com/IshantSingh27/LeetCode/tree/master/0234-palindrome-linked-list) |
