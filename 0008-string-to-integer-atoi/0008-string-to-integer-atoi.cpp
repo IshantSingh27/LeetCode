@@ -1,28 +1,31 @@
 class Solution {
 public:
+    int solve(string& s , int i , long long& num , int sign){
+        if(i > s.size() || s[i] < '0' || s[i] > '9') return sign * num;
+
+        int digit = s[i] - '0';
+
+        if(num > (INT_MAX - digit) / 10){
+            if(sign == -1) return INT_MIN;
+            else return INT_MAX;
+        }
+
+        num = num * 10 + digit;
+
+        return solve(s , i + 1 , num , sign);
+    }
+
     int myAtoi(string s) {
-        int i = 0, n = s.size(), sign = 1;
-        long long ans = 0;
-
-        // skip spaces
-        while(i < n && s[i] == ' ') i++;
-
-        // sign
-        if(i < n && (s[i] == '-' || s[i] == '+')){
-            sign = (s[i] == '-') ? -1 : 1;
+        int i = 0 , sign = 1;
+        while(s[i] == ' '){
             i++;
         }
-
-        // digits
-        while(i < n && isdigit(s[i])){
-            ans = ans * 10 + (s[i] - '0');
-
-            if(sign * ans > INT_MAX) return INT_MAX;
-            if(sign * ans < INT_MIN) return INT_MIN;
-
+        if(i < s.size() && (s[i] == '-' || s[i] == '+')){
+            if(s[i] == '-') sign = -1;
             i++;
         }
+        long long num = 0;
 
-        return sign * ans;
+        return solve(s , i , num , sign);
     }
 };
