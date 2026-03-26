@@ -55,6 +55,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0189-rotate-array](https://github.com/IshantSingh27/LeetCode/tree/master/0189-rotate-array) |
 | [0198-house-robber](https://github.com/IshantSingh27/LeetCode/tree/master/0198-house-robber) |
 | [0213-house-robber-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0213-house-robber-ii) |
+| [0216-combination-sum-iii](https://github.com/IshantSingh27/LeetCode/tree/master/0216-combination-sum-iii) |
 | [0229-majority-element-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0229-majority-element-ii) |
 | [0239-sliding-window-maximum](https://github.com/IshantSingh27/LeetCode/tree/master/0239-sliding-window-maximum) |
 | [0240-search-a-2d-matrix-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0240-search-a-2d-matrix-ii) |
@@ -685,6 +686,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0078-subsets](https://github.com/IshantSingh27/LeetCode/tree/master/0078-subsets) |
 | [0090-subsets-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0090-subsets-ii) |
 | [0131-palindrome-partitioning](https://github.com/IshantSingh27/LeetCode/tree/master/0131-palindrome-partitioning) |
+| [0216-combination-sum-iii](https://github.com/IshantSingh27/LeetCode/tree/master/0216-combination-sum-iii) |
 | [0494-target-sum](https://github.com/IshantSingh27/LeetCode/tree/master/0494-target-sum) |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/IshantSingh27/LeetCode/tree/master/1993-sum-of-all-subset-xor-totals) |
 ## Binary Indexed Tree
