@@ -1,20 +1,19 @@
 class Solution {
 public:
-    void sol(int ind, vector<int>& arr, int tar, vector<int>& temp, vector<vector<int>>& ans){
+    void solve(int ind , int tar , vector<int>& temp , vector<int>& arr, vector<vector<int>>& ans){
         if(tar == 0){
             ans.push_back(temp);
-            return;
         }
 
         for(int i=ind ; i<arr.size() ; i++){
-            if(i != ind && arr[i] == arr[i - 1]) continue;
-            if(arr[i] > tar) break;
+            if(i > ind && arr[i] == arr[i - 1]) continue;
 
             if(arr[i] <= tar){
                 temp.push_back(arr[i]);
-                sol(i + 1 , arr , tar- arr[i] , temp , ans);
+                solve(i + 1 , tar - arr[i] , temp , arr , ans);
                 temp.pop_back();
             }
+            else break;
         }
     }
 
@@ -23,7 +22,8 @@ public:
         vector<int> temp;
 
         sort(arr.begin() , arr.end());
-        sol(0 , arr , tar , temp , ans);
+
+        solve(0 , tar , temp , arr , ans);
 
         return ans;
     }
