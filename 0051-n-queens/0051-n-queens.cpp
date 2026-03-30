@@ -1,52 +1,48 @@
 class Solution {
 public:
-    bool safe(int row , int col , vector<string>& bod , int n){
-        int crow = row , ccol = col;
-
-        while(row >= 0 && col >= 0){
-            if(bod[row][col] == 'Q') return false;
-            row--;
-            col--;
+    bool chk(int row , int col , int n , vector<string>& arr){
+        int i = row , j = col;
+        while(j >= 0){
+            if(arr[i][j] == 'Q') return false;
+            j--;
         }
-
-        row = crow;
-        col = ccol;
-        while(col >= 0){
-            if(bod[row][col] == 'Q') return false;
-            col--;
+        j = col;
+        while(i >= 0 && j >= 0){
+            if(arr[i][j] == 'Q') return false;
+            i--;
+            j--;
         }
-
-        row = crow;
-        col = ccol;
-        while(col >= 0 && row < n){
-            if(bod[row][col] == 'Q') return false;
-            row++;
-            col--;
+        i = row;
+        j = col;
+        while(i < n && j >= 0){
+            if(arr[i][j] == 'Q') return false;
+            i++;
+            j--;
         }
 
         return true;
     }
 
-    void sol(int col, vector<string>& bod, vector<vector<string>>& ans , int n){
+    void solve(int col , int n , vector<string>& arr , vector<vector<string>>& ans){
         if(col == n){
-            ans.push_back(bod);
+            ans.push_back(arr);
             return;
         }
 
-        for(int row=0 ; row<n ; row++){
-            if(safe(row , col , bod , n)){
-                bod[row][col] = 'Q';
-                sol(col + 1 , bod , ans , n);
-                bod[row][col] = '.';
+        for(int i=0 ; i<n ; i++){
+            if(chk(i , col , n , arr)){
+                arr[i][col] = 'Q';
+                solve(col + 1 , n , arr , ans);
+                arr[i][col] = '.';
             }
         }
     }
 
     vector<vector<string>> solveNQueens(int n) {
         vector<vector<string>> ans;
-        vector<string> bod(n , string(n , '.'));
+        vector<string> arr(n , string(n , '.'));
 
-        sol(0 , bod , ans , n);
+        solve(0 , n , arr , ans);
 
         return ans;
     }
