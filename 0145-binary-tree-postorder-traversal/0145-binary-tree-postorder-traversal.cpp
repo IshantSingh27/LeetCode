@@ -23,19 +23,42 @@ public:
         vector<int> ans;
         if(root == NULL) return ans;
         // pre(root , ans);
+        // stack<TreeNode*> st;
+        // st.push(root);
+        // while(!st.empty()){
+        //     TreeNode* temp = st.top();
+        //     st.pop();
+
+        //     ans.push_back(temp->val);
+
+        //     if(temp->left) st.push(temp->left);
+        //     if(temp->right) st.push(temp->right);
+        // }
+
+        // reverse(ans.begin() , ans.end());
+
         stack<TreeNode*> st;
-        st.push(root);
-        while(!st.empty()){
-            TreeNode* temp = st.top();
-            st.pop();
-
-            ans.push_back(temp->val);
-
-            if(temp->left) st.push(temp->left);
-            if(temp->right) st.push(temp->right);
+        TreeNode* temp = root;
+        while(temp != NULL || !st.empty()){
+            if(temp){
+                st.push(temp);
+                temp = temp->left;
+            }
+            else{
+                TreeNode* cur = st.top()->right;
+                if(cur == NULL){
+                    cur = st.top();
+                    st.pop();
+                    ans.push_back(cur->val);
+                    while(!st.empty() && cur == st.top()->right){
+                        cur = st.top();
+                        st.pop();
+                        ans.push_back(cur->val);
+                    }
+                }
+                else temp = cur;
+            }
         }
-
-        reverse(ans.begin() , ans.end());
 
         return ans;
     }
