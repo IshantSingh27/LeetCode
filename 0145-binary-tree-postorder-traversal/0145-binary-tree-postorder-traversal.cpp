@@ -11,55 +11,88 @@
  */
 class Solution {
 public:
-    void pre(TreeNode* root , vector<int>& ans){
-        if(root == NULL) return;
+    // void pre(TreeNode* root , vector<int>& ans){
+    //     if(root == NULL) return;
 
-        pre(root->left , ans);
-        pre(root->right , ans);
-        ans.push_back(root->val);
-    }
+    //     pre(root->left , ans);
+    //     pre(root->right , ans);
+    //     ans.push_back(root->val);
+    // }
+
+    // vector<int> postorderTraversal(TreeNode* root) {
+    //     vector<int> ans;
+    //     if(root == NULL) return ans;
+    //     // pre(root , ans);
+    //     // stack<TreeNode*> st;
+    //     // st.push(root);
+    //     // while(!st.empty()){
+    //     //     TreeNode* temp = st.top();
+    //     //     st.pop();
+
+    //     //     ans.push_back(temp->val);
+
+    //     //     if(temp->left) st.push(temp->left);
+    //     //     if(temp->right) st.push(temp->right);
+    //     // }
+
+    //     // reverse(ans.begin() , ans.end());
+
+    //     stack<TreeNode*> st;
+    //     TreeNode* temp = root;
+    //     while(temp != NULL || !st.empty()){
+    //         if(temp){
+    //             st.push(temp);
+    //             temp = temp->left;
+    //         }
+    //         else{
+    //             TreeNode* cur = st.top()->right;
+    //             if(cur == NULL){
+    //                 cur = st.top();
+    //                 st.pop();
+    //                 ans.push_back(cur->val);
+    //                 while(!st.empty() && cur == st.top()->right){
+    //                     cur = st.top();
+    //                     st.pop();
+    //                     ans.push_back(cur->val);
+    //                 }
+    //             }
+    //             else temp = cur;
+    //         }
+    //     }
+
+    //     return ans;
+    // }
 
     vector<int> postorderTraversal(TreeNode* root) {
-        vector<int> ans;
-        if(root == NULL) return ans;
-        // pre(root , ans);
-        // stack<TreeNode*> st;
-        // st.push(root);
-        // while(!st.empty()){
-        //     TreeNode* temp = st.top();
-        //     st.pop();
+        vector<int> pre , in , post;
+        if(root == NULL) return pre;
 
-        //     ans.push_back(temp->val);
+        stack<pair<TreeNode* , int>> st;
+        st.push({root , 1});
 
-        //     if(temp->left) st.push(temp->left);
-        //     if(temp->right) st.push(temp->right);
-        // }
+        while(!st.empty()){
+            auto it = st.top();
+            st.pop();
 
-        // reverse(ans.begin() , ans.end());
+            if(it.second == 1){
+                pre.push_back(it.first->val);
+                it.second++;
+                st.push(it);
 
-        stack<TreeNode*> st;
-        TreeNode* temp = root;
-        while(temp != NULL || !st.empty()){
-            if(temp){
-                st.push(temp);
-                temp = temp->left;
+                if(it.first->left) st.push({it.first->left , 1});
+            }
+            else if(it.second == 2){
+                in.push_back(it.first->val);
+                it.second++;
+                st.push(it);
+
+                if(it.first->right) st.push({it.first->right , 1});
             }
             else{
-                TreeNode* cur = st.top()->right;
-                if(cur == NULL){
-                    cur = st.top();
-                    st.pop();
-                    ans.push_back(cur->val);
-                    while(!st.empty() && cur == st.top()->right){
-                        cur = st.top();
-                        st.pop();
-                        ans.push_back(cur->val);
-                    }
-                }
-                else temp = cur;
+                post.push_back(it.first->val);
             }
         }
-
-        return ans;
+        
+        return post;
     }
 };
