@@ -14,19 +14,20 @@ public:
     int bal(TreeNode* root){
         if(root == NULL) return 0;
 
-        int lh = bal(root->left);
-        if(lh == -1) return -1;
+        int left = bal(root->left);
+        if(left == -1) return -1;
+        int right = bal(root->right);
+        if(right == -1) return -1;
 
-        int rh = bal(root->right);
-        if(rh == -1) return -1;
+        if(abs(left - right) > 1) return -1;
 
-        if(abs(lh - rh) > 1) return -1;
-        else return 1 + max(lh , rh);
+        return 1 + max(left , right);
     }
 
     bool isBalanced(TreeNode* root) {
-        if(bal(root) == -1) return false;
-        else return true;
+        int ans = bal(root);
 
+        if(ans == -1) return false;
+        else return true;
     }
 };
