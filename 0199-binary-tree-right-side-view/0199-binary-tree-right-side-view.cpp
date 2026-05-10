@@ -14,26 +14,26 @@ public:
     vector<int> rightSideView(TreeNode* root) {
         vector<int> ans;
         if(root == NULL) return ans;
-
         queue<pair<TreeNode* , int>> q;
-        q.push({root , 0});
         map<int , int> mp;
-
+        
+        q.push({root , 0});
+        
         while(!q.empty()){
-            TreeNode* node = q.front().first;
-            int lvl = q.front().second;
+            auto it = q.front();
             q.pop();
-
-            mp[lvl] = node->val;
-
-            if(node->left) q.push({node->left , lvl + 1});
-            if(node->right) q.push({node->right , lvl + 1});
+            
+            int y = it.second;
+            mp[y] = it.first->val;
+            
+            if(it.first->left) q.push({it.first->left , y + 1});
+            if(it.first->right) q.push({it.first->right , y + 1});
         }
-
+        
         for(auto it : mp){
             ans.push_back(it.second);
         }
-
+        
         return ans;
     }
 };
