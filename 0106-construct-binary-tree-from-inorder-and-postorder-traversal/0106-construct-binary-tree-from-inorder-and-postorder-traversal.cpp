@@ -11,26 +11,26 @@
  */
 class Solution {
 public:
-    TreeNode* build(vector<int>& in, int instart, int inend, vector<int>& post, int poststart, int postend,
-    unordered_map<long long , long long>& inmap){
-        if(instart > inend || poststart > postend) return NULL;
+    TreeNode* build(int postart , int poend , vector<int>& po , int instart , int inend ,
+    vector<int>& in , unordered_map<int , int>& inmap){
+        if(instart > inend || postart > poend) return NULL;
 
-        TreeNode* root = new TreeNode(post[postend]);
-        long long ind = inmap[post[postend]];
-        long long left = ind - instart;
+        TreeNode* root = new TreeNode(po[poend]);
+        int ind = inmap[po[poend]];
+        int left = ind - instart;
 
-        root->left = build(in , instart , ind - 1 , post , poststart , poststart + left - 1 , inmap);
-        root->right = build(in , ind + 1 , inend , post , poststart + left , postend - 1 , inmap);
+        root->left = build(postart , postart + left - 1 , po , instart , ind - 1 , in , inmap);
+        root->right = build(postart + left , poend - 1 , po , ind + 1 , inend , in , inmap);
 
         return root;
     }
 
-    TreeNode* buildTree(vector<int>& in, vector<int>& post) {
-        unordered_map<long long , long long> inmap;
-        for(long long i=0 ; i<in.size() ; i++){
+    TreeNode* buildTree(vector<int>& in, vector<int>& po) {
+        unordered_map<int , int> inmap;
+        for(int i=0 ; i<in.size() ; i++){
             inmap[in[i]] = i;
         }
 
-        return build(in , 0 , in.size() - 1 , post , 0 , post.size() - 1 , inmap);
+        return build(0 , po.size() - 1 , po , 0 , in.size() - 1 , in , inmap);
     }
 };
