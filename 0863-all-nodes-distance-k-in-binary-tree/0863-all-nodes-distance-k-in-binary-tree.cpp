@@ -9,55 +9,54 @@
  */
 class Solution {
 public:
-    void track(TreeNode* root , unordered_map<TreeNode* , TreeNode*>& parent){
+    void sol(TreeNode* root , unordered_map<TreeNode* , TreeNode*>& par){
         queue<TreeNode*> q;
         q.push(root);
 
         while(!q.empty()){
-            TreeNode* node = q.front();
+            TreeNode* temp = q.front();
             q.pop();
 
-            if(node->left){
-                parent[node->left] = node;
-                q.push(node->left);
+            if(temp->left){
+                par[temp->left] = temp;
+                q.push(temp->left);
             }
-            if(node->right){
-                parent[node->right] = node;
-                q.push(node->right);
+            if(temp->right){
+                par[temp->right] = temp;
+                q.push(temp->right);
             }
         }
     }
 
-    vector<int> distanceK(TreeNode* root, TreeNode* tar, int k) {
-        unordered_map<TreeNode* , TreeNode*> parent;
-        track(root , parent);
+    vector<int> distanceK(TreeNode* root, TreeNode* target, int k) {
+        unordered_map<TreeNode* , TreeNode*> par;
+        sol(root , par);
 
-        unordered_map<TreeNode* , bool> vis;
-        vis[tar] = true;
+        unordered_map<TreeNode* , bool> visit;
         queue<TreeNode*> q;
-        q.push(tar);
-        int cur = 0;
+        visit[target] = 1;
+        q.push(target);
+        int cnt = 0;
 
         while(!q.empty()){
             int n = q.size();
-
-            if(cur++ == k) break;
+            if(cnt++ == k) break;
 
             for(int i=0 ; i<n ; i++){
-                TreeNode* node = q.front();
+                TreeNode* temp = q.front();
                 q.pop();
 
-                if(node->left && !vis[node->left]){
-                    q.push(node->left);
-                    vis[node->left] = true;
+                if(temp->left && !visit[temp->left]){
+                    q.push(temp->left);
+                    visit[temp->left] = 1;
                 }
-                if(node->right && !vis[node->right]){
-                    q.push(node->right);
-                    vis[node->right] = true;
+                if(temp->right && !visit[temp->right]){
+                    q.push(temp->right);
+                    visit[temp->right] = 1;
                 }
-                if(parent[node] && !vis[parent[node]]){
-                    q.push(parent[node]);
-                    vis[parent[node]] = true;
+                if(par[temp] && !visit[par[temp]]){
+                    q.push(par[temp]);
+                    visit[par[temp]] = 1;
                 }
             }
         }
@@ -69,5 +68,6 @@ public:
         }
 
         return ans;
+
     }
 };
