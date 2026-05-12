@@ -11,46 +11,48 @@
  */
 class Solution {
 public:
-    TreeNode* find(TreeNode* root){
+    TreeNode* sol(TreeNode* root){
         if(root->right == NULL) return root;
 
-        return find(root->right);
+        else return sol(root->right);
     }
 
-    TreeNode* solve(TreeNode* root){
-        if(root->left == NULL) return root->right;
+    TreeNode* help(TreeNode* root){
         if(root->right == NULL) return root->left;
+        if(root->left == NULL) return root->right;
 
-        TreeNode* rootright = root->right;
-        TreeNode* lastright = find(root->left);
+        TreeNode* rightchild = root->right;
 
-        lastright->right = rootright;
+        TreeNode* leftchild = sol(root->left);
+
+        leftchild->right = rightchild;
 
         return root->left;
     }
 
-    TreeNode* deleteNode(TreeNode* root, int key) {
+    TreeNode* deleteNode(TreeNode* root, int k) {
         if(root == NULL) return NULL;
-        if(root->val == key) return solve(root);
+
+        if(root->val == k) return help(root);
 
         TreeNode* cur = root;
-        while(root != NULL){
-            if(root->val < key){
-                if(root->right && root->right->val == key){
-                    root->right = solve(root->right);
+        while(cur != NULL){
+            if(cur->val >= k){
+                if(cur->left && cur->left->val == k){
+                    cur->left = help(cur->left);
                     break;
                 }
-                else root = root->right;
+                else cur = cur->left;
             }
             else{
-                if(root->left && root->left->val == key){
-                    root->left = solve(root->left);
+                if(cur->right && cur->right->val == k){
+                    cur->right = help(cur->right);
                     break;
                 }
-                else root = root->left;
+                else cur = cur->right;
             }
         }
 
-        return cur;
+        return root;
     }
 };
