@@ -19,6 +19,7 @@ public:
         cnt++;
         if(cnt == k){
             ans = root->val;
+            return;
         }
 
         solve(root->right , cnt , k , ans);
