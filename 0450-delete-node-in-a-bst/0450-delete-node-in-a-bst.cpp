@@ -40,14 +40,14 @@ public:
             if(cur->val >= k){
                 if(cur->left && cur->left->val == k){
                     cur->left = help(cur->left);
-                    break;
+                    return root;
                 }
                 else cur = cur->left;
             }
             else{
                 if(cur->right && cur->right->val == k){
                     cur->right = help(cur->right);
-                    break;
+                    return root;
                 }
                 else cur = cur->right;
             }
