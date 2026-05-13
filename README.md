@@ -85,6 +85,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0735-asteroid-collision](https://github.com/IshantSingh27/LeetCode/tree/master/0735-asteroid-collision) |
 | [0792-binary-search](https://github.com/IshantSingh27/LeetCode/tree/master/0792-binary-search) |
 | [0854-making-a-large-island](https://github.com/IshantSingh27/LeetCode/tree/master/0854-making-a-large-island) |
+| [0860-lemonade-change](https://github.com/IshantSingh27/LeetCode/tree/master/0860-lemonade-change) |
 | [0890-lemonade-change](https://github.com/IshantSingh27/LeetCode/tree/master/0890-lemonade-change) |
 | [0907-koko-eating-bananas](https://github.com/IshantSingh27/LeetCode/tree/master/0907-koko-eating-bananas) |
 | [0907-sum-of-subarray-minimums](https://github.com/IshantSingh27/LeetCode/tree/master/0907-sum-of-subarray-minimums) |
@@ -293,6 +294,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0455-assign-cookies](https://github.com/IshantSingh27/LeetCode/tree/master/0455-assign-cookies) |
 | [0678-valid-parenthesis-string](https://github.com/IshantSingh27/LeetCode/tree/master/0678-valid-parenthesis-string) |
 | [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/IshantSingh27/LeetCode/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
+| [0860-lemonade-change](https://github.com/IshantSingh27/LeetCode/tree/master/0860-lemonade-change) |
 | [0890-lemonade-change](https://github.com/IshantSingh27/LeetCode/tree/master/0890-lemonade-change) |
 | [1448-maximum-69-number](https://github.com/IshantSingh27/LeetCode/tree/master/1448-maximum-69-number) |
 | [1838-frequency-of-the-most-frequent-element](https://github.com/IshantSingh27/LeetCode/tree/master/1838-frequency-of-the-most-frequent-element) |
