@@ -1,17 +1,29 @@
 class Solution {
 public:
     int jump(vector<int>& arr) {
-        int n = arr.size() , jump = 0 , end = 0 , maxi = 0;
+        int n = arr.size() , i = 0 , ans = 0;
 
-        for(int i=0 ; i<n-1 ; i++){
-            maxi = max(maxi , i + arr[i]);
+        if(n == 1) return ans;
 
-            if(i == end){
-                jump++;
-                end = maxi;
+        while(i < n){
+            int jump = 0 , j = arr[i] , ind = 0;
+
+            ans++;
+
+            if(i + j >= n - 1) return ans;
+
+            for(int k=1 ; k<=j ; k++){
+                if(arr[i + k] + i + k >= jump){
+                    jump = arr[i + k] + i + k;
+                    ind = i + k;
+                }
             }
+
+            if(ind == 0) return 0;
+
+            i = ind;
         }
 
-        return jump;
+        return 0;
     }
 };
