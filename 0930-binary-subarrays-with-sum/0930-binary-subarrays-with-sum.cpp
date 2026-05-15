@@ -1,10 +1,10 @@
 class Solution {
 public:
-    int solve(vector<int>& arr , int k){
-        while(k < 0) return 0;
-        int n = arr.size() , r = 0 , l = 0 , cnt = 0 , sum = 0;
+    int sol(vector<int>& arr, int k){
+        if(k < 0) return 0;
+        int l = 0 , r = 0 , cnt = 0 , sum = 0;
 
-        while(r < n){
+        while(r < arr.size()){
             sum += arr[r];
 
             while(sum > k){
@@ -12,15 +12,16 @@ public:
                 l++;
             }
 
-            if(sum <= k) cnt += r - l + 1;
+            if(sum <= k){
+                cnt += r - l + 1;
+            }
 
             r++;
         }
 
         return cnt;
     }
-
-    int numSubarraysWithSum(vector<int>& nums, int goal) {
-        return solve(nums , goal) - solve(nums , goal - 1);
+    int numSubarraysWithSum(vector<int>& arr, int k) {
+        return sol(arr , k) - sol(arr , k - 1);
     }
 };
