@@ -1,24 +1,28 @@
 class Solution {
 public:
-    int solve(vector<int>& arr, int k){
-        int n = arr.size() , l = 0 , r = 0 , cnt = 0 , ans = 0;
+    int sol(vector<int>& arr, int k){
+        if(k < 0) return 0;
 
-        while(r < n){
-            if(arr[r] % 2 != 0) cnt++;
+        int cntodd = 0 , r = 0 , l = 0 , cnt = 0;
+        while(r < arr.size()){
+            if(arr[r] % 2 != 0) cntodd++;
 
-            while(cnt > k){
-                if(arr[l] % 2 != 0) cnt--;
+            while(cntodd > k){
+                if(arr[l] % 2 != 0) cntodd--;
                 l++;
             }
 
-            ans += r - l + 1;
+            if(cntodd <= k){
+                cnt += r - l + 1;
+            }
+
             r++;
         }
 
-        return ans;
+        return cnt;
     }
 
-    int numberOfSubarrays(vector<int>& nums, int k) {
-        return solve(nums , k) - solve(nums , k - 1);
+    int numberOfSubarrays(vector<int>& arr, int k) {
+        return sol(arr , k) - sol(arr , k - 1);
     }
 };
