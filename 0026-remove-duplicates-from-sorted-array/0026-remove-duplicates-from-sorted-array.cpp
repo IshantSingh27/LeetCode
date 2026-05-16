@@ -1,14 +1,17 @@
 class Solution {
 public:
-    int removeDuplicates(vector<int>& arr) {
-        int ans = 1 , k = 1;
-        for(int i=1 ; i<arr.size() ; i++){
-            if(arr[i] != arr[i - 1]){
-                arr[k] = arr[i];
-                k++;
-                ans++;
+    int removeDuplicates(vector<int>& nums) {
+        int l = 1 , r = 1 , last = nums[0];
+        while(r < nums.size()){
+            if(nums[r] != last){
+                // cout<<nums[r]<<" | "<<nums[l]<<endl;
+                last = nums[r];
+                swap(nums[l] , nums[r]);
+                l++;
             }
+            r++;
         }
-        return ans;
+
+        return l;
     }
 };
