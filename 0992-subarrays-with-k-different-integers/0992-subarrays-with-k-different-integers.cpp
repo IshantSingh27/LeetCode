@@ -1,26 +1,27 @@
 class Solution {
 public:
-    int solve(vector<int>& arr, int k){
-        int n = arr.size() , r = 0 , l = 0 , cnt = 0;
+    int sol(vector<int>& arr, int k){
         unordered_map<int , int> mp;
+        int l = 0 , cnt = 0;
 
-        while(r < n){
-            mp[arr[r]]++;
+        for(int i=0 ; i<arr.size() ; i++){
+            mp[arr[i]]++;
 
-            while(mp.size() > k){
+            while(l < arr.size() && mp.size() > k){
                 mp[arr[l]]--;
                 if(mp[arr[l]] == 0) mp.erase(arr[l]);
                 l++;
             }
 
-            cnt += r -l + 1;
-            r++;
+            if(mp.size() <= k){
+                cnt += i - l + 1;
+            }
         }
 
         return cnt;
     }
 
-    int subarraysWithKDistinct(vector<int>& nums, int k) {
-        return solve(nums , k) - solve(nums , k - 1);
+    int subarraysWithKDistinct(vector<int>& arr, int k) {
+        return sol(arr , k) - sol(arr , k - 1);
     }
 };
