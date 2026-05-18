@@ -10,7 +10,7 @@ public:
 
             if(cnt < 0){
                 cur = arr[i];
-                cnt = 0;
+                cnt = 1;
             }
         }
 
