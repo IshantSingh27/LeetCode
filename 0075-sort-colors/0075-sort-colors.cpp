@@ -1,19 +1,26 @@
 class Solution {
 public:
     void sortColors(vector<int>& arr) {
-        int low = 0 , mid = 0 , high = arr.size() - 1;
+        int n = arr.size() , l = 0 , r = n - 1 , i = 0;
 
-        while(mid <= high){
-            if(arr[mid] == 0){
-                swap(arr[mid] , arr[low]);
-                low++;
-                mid++;
+        while(i <= r){
+            // cout<<"arr[i] : "<<arr[i]<<" | ";
+            if(arr[i] == 0){
+                // cout<<"here 1 ";
+                swap(arr[i] , arr[l]);
+                l++;
+                i++;
             }
-            else if(arr[mid] == 2){
-                swap(arr[mid] , arr[high]);
-                high--;
+            else if(arr[i] == 2){
+                swap(arr[i] , arr[r]);
+                r--;
             }
-            else mid++;
+            else i++;
+
+        //     for(int j=0 ; j<n ; j++){
+        //     cout<<arr[j]<<" ";
+        // }
+        // cout<<endl;
         }
     }
 };
