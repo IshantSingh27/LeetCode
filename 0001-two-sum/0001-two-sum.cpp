@@ -1,17 +1,27 @@
 class Solution {
 public:
-    vector<int> twoSum(vector<int>& nums, int tar) {
-        unordered_map<int , int> mp;
+    vector<int> twoSum(vector<int>& nums, int k) {
+        int n = nums.size();
+        vector<pair<int , int>> arr(n);
+        for(int i=0 ; i<n ; i++){
+            arr[i].first = nums[i];
+            arr[i].second = i;
+        }
+        sort(arr.begin() , arr.end());
+        int l = 0 , r = n - 1;
 
-        for(int i=0 ; i<nums.size() ; i++){
-            if(mp.count(tar - nums[i])){
-                return {mp[tar - nums[i]] , i};
+        while(l < r){
+            if(arr[r].first + arr[l].first == k){
+                return {arr[r].second , arr[l].second};
+            }
+            else if(arr[r].first + arr[l].first > k){
+                r--;
             }
             else{
-                mp[nums[i]] = i;
+                l++;
             }
         }
 
-        return {};
+        return {-1};
     }
 };
