@@ -1,25 +1,24 @@
 class Solution {
 public:
-    int majorityElement(vector<int>& nums) {
-        int cnt1 = 0 , ele1 = 0 , n = nums.size();
-
-        for(int i=0 ; i < n ; i++){
-            if(cnt1 == 0){
-                ele1 = nums[i];
-                cnt1++;
+    int majorityElement(vector<int>& arr) {
+        int cur = arr[0] , n = arr.size() , cnt = 1;
+        for(int i=1 ; i<n ; i++){
+            if(arr[i] != cur){
+                cnt--;
             }
-            else if(nums[i] == ele1) cnt1++;
-            else cnt1--;
+            else cnt++;
+
+            if(cnt < 0){
+                cur = arr[i];
+                cnt = 0;
+            }
         }
 
-        cnt1 = 0;
+        int ans = 0;
         for(int i=0 ; i<n ; i++){
-            if(nums[i] == ele1) cnt1++;
+            if(arr[i] == cur) ans++;
         }
-
-        // cout<<"cnt : "<<cnt1<<endl;
-
-        if(cnt1 > n / 2) return ele1;
+        if(ans > n/2) return cur;
         else return -1;
     }
 };
