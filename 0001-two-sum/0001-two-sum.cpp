@@ -1,24 +1,18 @@
 class Solution {
 public:
-    vector<int> twoSum(vector<int>& nums, int k) {
-        int n = nums.size();
-        vector<pair<int , int>> arr(n);
-        for(int i=0 ; i<n ; i++){
-            arr[i].first = nums[i];
-            arr[i].second = i;
-        }
-        sort(arr.begin() , arr.end());
-        int l = 0 , r = n - 1;
+    vector<int> twoSum(vector<int>& arr, int k) {
+        unordered_map<int , int> mp;
+        int n = arr.size();
 
-        while(l < r){
-            if(arr[r].first + arr[l].first == k){
-                return {arr[r].second , arr[l].second};
+        for(int i=0 ; i<n ; i++){
+            int rem = k - arr[i];
+
+            if(mp.find(rem) != mp.end()){
+                return {mp[rem] , i};
             }
-            else if(arr[r].first + arr[l].first > k){
-                r--;
-            }
-            else{
-                l++;
+
+            if(mp.find(arr[i]) == mp.end()){
+                mp[arr[i]] = i;
             }
         }
 
