@@ -1,14 +1,18 @@
 class Solution {
 public:
     int subarraySum(vector<int>& arr, int k) {
-        int n = arr.size() , presum = 0 , cnt = 0;
         unordered_map<int , int> mp;
-        mp[0] = 1;
+        mp[0] = 1; //so we do not need (presum == k) cnt++ as if equal then k = 0 so mp[0] = 1 added
+        int presum = 0 , n = arr.size() , cnt = 0;
 
         for(int i=0 ; i<n ; i++){
             presum += arr[i];
-            int rem = presum - k;
-            cnt += mp[rem];
+
+            int need = presum - k;
+            if(mp.find(need) != mp.end()){
+                cnt += mp[need];
+            }
+
             mp[presum]++;
         }
 
