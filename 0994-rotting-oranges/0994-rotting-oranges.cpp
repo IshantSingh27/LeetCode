@@ -23,7 +23,7 @@ public:
             int time = q.front().second;
             q.pop();
 
-            t = max(t , time);
+            t = time;
     
             for(int i=0 ; i<4 ; i++){
                 int nrow = row + drow[i];
