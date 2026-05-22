@@ -37,7 +37,7 @@ public:
             }
         }
 
-        if(ans < cnt){
+        if(ans != cnt){
             return -1;
         }
         else{
