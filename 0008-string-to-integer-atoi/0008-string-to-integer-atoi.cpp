@@ -1,31 +1,39 @@
 class Solution {
 public:
-    int solve(string& s , int i , long long& num , int sign){
-        if(i > s.size() || s[i] < '0' || s[i] > '9') return sign * num;
+    void solve(long long i , string& s , long long &num){
+        if(i >= s.size()) return;
 
-        int digit = s[i] - '0';
+        if(s[i] < '0' || s[i] > '9') return;
 
-        if(num > (INT_MAX - digit) / 10){
-            if(sign == -1) return INT_MIN;
-            else return INT_MAX;
+        num = (num * 10) + (s[i] - '0');
+
+        if(num > (long long)INT_MAX + 1){
+            num = (long long) INT_MAX + 1;
+            return;
         }
 
-        num = num * 10 + digit;
-
-        return solve(s , i + 1 , num , sign);
+        solve(i + 1 , s , num);
     }
 
     int myAtoi(string s) {
-        int i = 0 , sign = 1;
-        while(s[i] == ' '){
-            i++;
+        long long n = s.size() , i = 0 , sign = 1 , ans = 0;
+        while(i < n){
+            if(s[i] == ' ') i++;
+            else break;
         }
-        if(i < s.size() && (s[i] == '-' || s[i] == '+')){
+        if(i < n && (s[i] == '-' || s[i] == '+')){
             if(s[i] == '-') sign = -1;
             i++;
         }
-        long long num = 0;
+        while(i < n && s[i] == '0') i++;
 
-        return solve(s , i , num , sign);
+        solve(i , s , ans);
+
+        ans = ans * sign;
+
+        if(ans > INT_MAX) return INT_MAX;
+        else if(ans < INT_MIN) return INT_MIN;
+
+        return ans;
     }
 };
