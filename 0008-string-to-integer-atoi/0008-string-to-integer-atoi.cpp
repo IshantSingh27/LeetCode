@@ -8,7 +8,6 @@ public:
         num = (num * 10) + (s[i] - '0');
 
         if(num > (long long)INT_MAX + 1){
-            num = (long long) INT_MAX + 1;
             return;
         }
 
