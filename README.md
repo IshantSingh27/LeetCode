@@ -825,6 +825,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0130-surrounded-regions](https://github.com/IshantSingh27/LeetCode/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/IshantSingh27/LeetCode/tree/master/0200-number-of-islands) |
 | [0547-number-of-provinces](https://github.com/IshantSingh27/LeetCode/tree/master/0547-number-of-provinces) |
+| [0721-accounts-merge](https://github.com/IshantSingh27/LeetCode/tree/master/0721-accounts-merge) |
 | [0785-is-graph-bipartite](https://github.com/IshantSingh27/LeetCode/tree/master/0785-is-graph-bipartite) |
 | [0947-most-stones-removed-with-same-row-or-column](https://github.com/IshantSingh27/LeetCode/tree/master/0947-most-stones-removed-with-same-row-or-column) |
 | [1020-number-of-enclaves](https://github.com/IshantSingh27/LeetCode/tree/master/1020-number-of-enclaves) |
