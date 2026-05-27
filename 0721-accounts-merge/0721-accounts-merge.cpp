@@ -1,62 +1,37 @@
-class disjointSet{
-public:
-    vector<int> rank , parent , size;
-
-    disjointSet(int n){
-        rank.resize(n + 1 , 0);
-        parent.resize(n+1);
-        size.resize(n+1);
-        for(int i=0 ; i<=n ; i++){
-            parent[i] = i;
-            size[i] = 1;
+class disjoint{
+    public:
+    vector<int> par , size;
+    disjoint(int n){
+        par.resize(n);
+        size.resize(n , 1);
+        for(int i=0 ; i<n ; i++){
+            par[i] = i;
         }
     }
-
     int find(int x){
-        if(x == parent[x]) return x;
-
-        return parent[x] = find(parent[x]);
+        if(par[x] == x) return x;
+        else return par[x] = find(par[x]);
     }
-
-    void unionByRank(int x , int y){
+    void unionbysize(int x , int y){
         int px = find(x);
         int py = find(y);
-
         if(px == py) return;
-        if(rank[px] < rank[py]){
-            parent[px] = py;
-        }
-        else if(rank[py] < rank[px]){
-            parent[py] = px;
-        }
-        else{
-            parent[py] = px;
-            rank[px]++;
-        }
-    }
-
-    void unionBySize(int x , int y){
-        int px = find(x);
-        int py = find(y);
-
-        if(px == py) return;
-        if(size[px] < size[py]){
-            parent[px] = py;
+        else if(size[px] < size[py]){
             size[py] += size[px];
+            par[px] = py;
         }
         else{
-            parent[py] = px;
             size[px] += size[py];
+            par[py] =px;
         }
     }
 };
-
 class Solution {
 public:
     vector<vector<string>> accountsMerge(vector<vector<string>>& arr) {
         int n = arr.size();
-        disjointSet ds(n);
         unordered_map<string , int> mp;
+        disjoint ds(n + 1);
         for(int i=0 ; i<n ; i++){
             for(int j=1 ; j<arr[i].size() ; j++){
                 string mail = arr[i][j];
@@ -64,33 +39,26 @@ public:
                     mp[mail] = i;
                 }
                 else{
-                    ds.unionBySize(i , mp[mail]);
+                    ds.unionbysize(mp[mail] , i);
                 }
             }
         }
-
         vector<vector<string>> merger(n);
         for(auto it : mp){
-            string mail = it.first;
             int ind = ds.find(it.second);
-
-            merger[ind].push_back(mail);
+            merger[ind].push_back(it.first);
         }
-
         vector<vector<string>> ans;
         for(int i=0 ; i<n ; i++){
             if(merger[i].size() == 0) continue;
             sort(merger[i].begin() , merger[i].end());
-
             vector<string> temp;
             temp.push_back(arr[i][0]);
             for(auto it : merger[i]){
                 temp.push_back(it);
             }
-
             ans.push_back(temp);
         }
-
         return ans;
     }
 };
