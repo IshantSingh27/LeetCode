@@ -1,18 +1,23 @@
 class Solution {
 public:
-    void sol(int n , int open , string s , vector<string>& ans){
+    void sol(int n , int open , string& s , vector<string>& ans){
         if(n == 0){
+            string temp = s;
             while(open != 0){
-                s += ')';
+                temp += ')';
                 open--;
             }
-            ans.push_back(s);
+            ans.push_back(temp);
             return;
         }
 
-        sol(n - 1 , open + 1 , s + '(' , ans);
+        s.push_back('(');
+        sol(n - 1 , open + 1 , s , ans);
+        s.pop_back();
         if(open > 0){
-            sol(n , open - 1 , s + ')' , ans);
+            s.push_back(')');
+            sol(n , open - 1 , s , ans);
+            s.pop_back();
         }
         return;
     }
