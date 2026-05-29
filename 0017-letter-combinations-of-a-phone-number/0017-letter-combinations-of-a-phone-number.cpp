@@ -1,25 +1,22 @@
 class Solution {
 public:
-    void solve(int ind , vector<string>& mp , string temp , string s ,  vector<string>& ans){
+    void sol(int ind , string& temp , vector<string>& ans , string& s , vector<string>& mp){
         if(ind == s.size()){
             ans.push_back(temp);
             return;
-        }
+        } 
 
         for(int i=0 ; i<mp[s[ind] - '0'].size() ; i++){
-            solve(ind + 1 , mp , temp + mp[s[ind] - '0'][i] , s , ans);
+            temp.push_back(mp[s[ind] - '0'][i]);
+            sol(ind + 1 , temp , ans , s , mp);
+            temp.pop_back();
         }
     }
-
     vector<string> letterCombinations(string s) {
-        vector<string> mp = {"" , "" , "abc" ,  "def" , "ghi" ,
-        "jkl" , "mno" , "pqrs" , "tuv" , "wxyz"};
-
-        vector<string> ans;
+        vector<string> mp = {"" , "" , "abc" , "def" , "ghi" , "jkl" , "mno" , "pqrs" , "tuv" , "wxyz"};
         string temp;
-
-        solve(0 , mp , temp , s , ans);
-
+        vector<string> ans;
+        sol(0 , temp , ans , s , mp);
         return ans;
     }
 };
