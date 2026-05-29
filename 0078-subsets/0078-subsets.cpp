@@ -1,20 +1,18 @@
 class Solution {
 public:
-    vector<vector<int>> subsets(vector<int>& nums) {
-        int n = nums.size();
-        int subset = 1 << n;
-        vector<vector<int>> ans;
+    void sol(int ind , vector<int>& temp , vector<vector<int>>& ans , vector<int>& arr){
+        ans.push_back(temp);
 
-        for(int i=0 ; i<subset ; i++){
-            vector<int> temp;
-            for(int j=0 ; j<n ; j++){
-                if( (i & (1 << j)) != 0){
-                    temp.push_back(nums[j]);
-                }
-            }
-            ans.push_back(temp);
+        for(int i=ind ; i<arr.size() ; i++){
+            temp.push_back(arr[i]);
+            sol(i + 1 , temp , ans , arr);
+            temp.pop_back();
         }
-
+    }
+    vector<vector<int>> subsets(vector<int>& arr) {
+        vector<int> temp;
+        vector<vector<int>> ans;
+        sol(0 , temp , ans , arr);
         return ans;
     }
 };
