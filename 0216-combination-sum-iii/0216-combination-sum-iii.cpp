@@ -1,26 +1,24 @@
 class Solution {
 public:
-    void solve(int ind , int k , int n , vector<int>& temp , vector<vector<int>>& ans){
+    void sol(int ind , int sum , int n , vector<int>& temp , vector<vector<int>>& ans , int& k){
         if(k == 0){
-            if(n == 0) ans.push_back(temp);
+            if(sum == n) ans.push_back(temp);
             return;
         }
 
         for(int i=ind ; i<=9 ; i++){
-            if(i <= n){
-                temp.push_back(i);
-                solve(i + 1 , k - 1 , n - i , temp , ans);
-                temp.pop_back();
-            }
+            temp.push_back(i);
+            k--;
+            sol(i + 1 , sum + i , n , temp , ans , k);
+            k++;
+            temp.pop_back();
         }
     }
-
     vector<vector<int>> combinationSum3(int k, int n) {
-        vector<vector<int>> ans;
+        int sum = 0;
         vector<int> temp;
-
-        solve(1 , k , n , temp , ans);
-
+        vector<vector<int>> ans;
+        sol(1 , sum , n , temp , ans , k);
         return ans;
     }
 };
