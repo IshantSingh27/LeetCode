@@ -1,27 +1,25 @@
 class Solution {
 public:
-    void solve(int ind , int tar , vector<int>& temp , vector<int>& arr , vector<vector<int>>& ans){
-        if(ind == arr.size()){
-            if(tar == 0) ans.push_back(temp);
+    void sol(int i , int tar , vector<int>& temp , vector<vector<int>>& ans , vector<int>& arr){
+        if(tar == 0){
+            ans.push_back(temp);
             return;
         }
 
-        solve(ind + 1 , tar , temp , arr , ans);
-        if(tar >= arr[ind]){
+        for(int ind = i ; ind<arr.size() ; ind++){
+            if(arr[ind] > tar) break;
+            
             temp.push_back(arr[ind]);
-            solve(ind , tar - arr[ind] , temp , arr , ans);
+            sol(ind , tar - arr[ind] , temp , ans , arr);
             temp.pop_back();
         }
-        return;
     }
-
     vector<vector<int>> combinationSum(vector<int>& arr, int tar) {
+        sort(arr.begin(), arr.end());
         int n = arr.size();
         vector<vector<int>> ans;
         vector<int> temp;
-
-        solve(0 , tar , temp , arr , ans);
-
+        sol(0 , tar , temp , ans , arr);
         return ans;
     }
 };
