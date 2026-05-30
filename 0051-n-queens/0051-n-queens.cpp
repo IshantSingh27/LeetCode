@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool check(int row , int col , int n , vector<string> temp){
+    bool check(int row , int col , int n , vector<string>& temp){
         if(row == 0) return true;
 
         for(int i=0 ; i<row ; i++){
