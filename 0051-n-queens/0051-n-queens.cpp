@@ -29,14 +29,16 @@ public:
             return true;
         }
 
+        bool found = false;
         for(int j=0 ; j<n ; j++){
             if(check(i , j , n , temp)){
+                found = true;
                 temp[i][j] = 'Q';
-                if(!sol(i + 1 , n , temp , ans)) return false;
+                sol(i + 1 , n , temp , ans);
                 temp[i][j] = '.';
             }
         }
-        return true;
+        return found;
     }
     vector<vector<string>> solveNQueens(int n) {
         vector<vector<string>> ans;
