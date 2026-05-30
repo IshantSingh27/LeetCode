@@ -23,22 +23,19 @@ public:
 
         return true;
     }
-    bool sol(int i , int  n , vector<string>& temp , vector<vector<string>>& ans){
+    void sol(int i , int  n , vector<string>& temp , vector<vector<string>>& ans){
         if(i == n){
             ans.push_back(temp);
-            return true;
+            return;
         }
 
-        bool found = false;
         for(int j=0 ; j<n ; j++){
             if(check(i , j , n , temp)){
-                found = true;
                 temp[i][j] = 'Q';
                 sol(i + 1 , n , temp , ans);
                 temp[i][j] = '.';
             }
         }
-        return found;
     }
     vector<vector<string>> solveNQueens(int n) {
         vector<vector<string>> ans;
