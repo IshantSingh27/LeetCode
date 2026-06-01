@@ -10,17 +10,20 @@
  */
 class Solution {
 public:
+    void rev(ListNode* &temp , ListNode* &cur , ListNode* &head){
+        if(head == NULL) return;
+
+        temp = head->next;
+        head->next = cur;
+        cur = head;
+        head = temp;
+        rev(temp , cur , head);
+    }
     ListNode* reverseList(ListNode* head) {
         if(head == NULL) return NULL;
         ListNode* temp;
         ListNode* cur = NULL;
-        while(head != NULL){
-            temp = head->next;
-            head->next = cur;
-            cur = head;
-            head = temp;
-        }
-
+        rev(temp , cur , head);
         return cur;
     }
 };
