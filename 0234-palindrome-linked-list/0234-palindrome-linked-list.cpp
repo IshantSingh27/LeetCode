@@ -1,43 +1,41 @@
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
 class Solution {
 public:
-    ListNode* revlink(ListNode* head){
-        if(head == NULL || head->next == NULL) return head;
-
-        ListNode* b1 = NULL;
-        ListNode* a = head;
-        ListNode* b2 = head->next;
-
-        while(a != NULL){
-            a->next = b1;
-            b1 = a;
-            a = b2;
-            if(b2 != NULL) b2 = b2->next;
-        }
-
-        return b1;
-    }
-
     bool isPalindrome(ListNode* head) {
-        if(head == NULL || head->next == NULL) return true;
-
         ListNode* slow = head;
         ListNode* fast = head;
-
-        while(fast != NULL && fast->next != NULL){
-            slow = slow->next;
-            fast = fast->next->next;
+        while(fast != NULL){
+            fast = fast->next;
+            if(fast != NULL){
+                fast = fast->next;
+                slow = slow->next;
+            }
         }
 
-        ListNode* revhead = revlink(slow);
-        ListNode* t1 = head;
-        ListNode* t2 = revhead;
-
-        while(t2 != NULL){  // Only traverse the second half
-            if(t1->val != t2->val) return false;
-            t1 = t1->next;
-            t2 = t2->next;
+        ListNode* temp;
+        ListNode* cur = NULL;
+        while(slow != NULL){
+            temp = slow->next;
+            slow->next = cur;
+            cur = slow;
+            slow = temp;
         }
-        
+
+        while(cur != NULL){
+            if(head->val != cur->val) return false;
+            head = head->next;
+            cur = cur->next;
+        }
+
         return true;
     }
 };
