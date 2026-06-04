@@ -23,27 +23,47 @@ public:
         // int ans = sol(n - 1 , k , arr , dp);
         // if(ans == 1e8) return -1;
         // else return ans;
-        vector<vector<int>> dp(n , vector<int>(k + 1 , 1e5));
-        for(int i=0 ; i<n ; i++){
-            dp[i][0] = 0;
-        }
-        for(int i=1 ; i<=k ; i++){
-            if(i % arr[0] == 0) dp[0][i] = i / arr[0]; 
+        // vector<vector<int>> dp(n , vector<int>(k + 1 , 1e5));
+        // for(int i=0 ; i<n ; i++){
+        //     dp[i][0] = 0;
+        // }
+        // for(int i=1 ; i<=k ; i++){
+        //     if(i % arr[0] == 0) dp[0][i] = i / arr[0]; 
+        // }
+
+        // for(int i=1 ; i<n ; i++){
+        //     for(int j=0 ; j<=k ; j++){
+        //         int nottake = dp[i - 1][j];
+        //         int take = 1e8;
+        //         if(arr[i] <= j){
+        //             take = 1 + dp[i][j - arr[i]];
+        //         }
+
+        //         dp[i][j] = min(take , nottake);
+        //     }
+        // }
+
+        // if(dp[n - 1][k] == 1e5) return -1;
+        // else return dp[n - 1][k];
+
+        vector<int> prev(k + 1 , 1e5);
+        for(int i=0 ; i<=k ; i++){
+            if(i % arr[0] == 0) prev[i] = i / arr[0]; 
         }
 
         for(int i=1 ; i<n ; i++){
             for(int j=0 ; j<=k ; j++){
-                int nottake = dp[i - 1][j];
+                int nottake = prev[j];
                 int take = 1e8;
                 if(arr[i] <= j){
-                    take = 1 + dp[i][j - arr[i]];
+                    take = 1 + prev[j - arr[i]];
                 }
 
-                dp[i][j] = min(take , nottake);
+                prev[j] = min(take , nottake);
             }
         }
 
-        if(dp[n - 1][k] == 1e5) return -1;
-        else return dp[n - 1][k];
+        if(prev[k] == 1e5) return -1;
+        else return prev[k];
     }
 };
