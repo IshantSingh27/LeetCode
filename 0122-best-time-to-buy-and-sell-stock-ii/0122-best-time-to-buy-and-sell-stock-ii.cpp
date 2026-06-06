@@ -1,64 +1,25 @@
 class Solution {
 public:
-    int solve(int ind , int buy , vector<int>& arr , vector<vector<int>>& dp){
-        if(ind == arr.size()) return 0;
+    int sol(int ind , int buy , vector<int>& arr , vector<vector<int>>& dp){
+        if(ind == arr.size()){
+            return 0;
+        }
 
         if(dp[ind][buy] != -1) return dp[ind][buy];
 
         int profit = 0;
         if(buy){
-            profit = max(solve(ind + 1 , 0 , arr , dp) - arr[ind] , solve(ind + 1 , 1 , arr , dp) - 0);
+            profit =  max(sol(ind + 1 , buy , arr , dp) , sol(ind + 1 , 0 , arr , dp) - arr[ind]);
         }
         else{
-            profit = max(solve(ind + 1 , 1 , arr , dp) + arr[ind] , solve(ind + 1 , 0 , arr , dp) + 0);
+            profit = max(sol(ind , 1 , arr , dp) + arr[ind] , sol(ind + 1 , buy , arr , dp));
         }
 
         return dp[ind][buy] = profit;
     }
-    // int maxProfit(vector<int>& arr) {
-    //     int n = arr.size();
-    //     // vector<vector<int>> dp(n , vector<int>(2 , -1));
-
-    //     // return solve(0 , 1 , arr , dp);
-
-    //     vector<vector<int>> dp(n + 1 , vector<int>(2 , 0));
-    //     // dp[n][0] = dp[n][1] = 0;
-
-    //     for(int ind=n-1 ; ind>=0 ; ind--){
-    //         for(int buy=0 ; buy<=1 ; buy++){
-    //             int profit = 0;
-    //             if(buy){
-    //                 profit = max(dp[ind + 1][0] - arr[ind] , dp[ind + 1][1] - 0);
-    //             }
-    //             else{
-    //                 profit = max(dp[ind + 1][1] + arr[ind] , dp[ind + 1][0] + 0);
-    //             }
-    //             dp[ind][buy] = profit;  
-    //         }
-    //     }
-
-    //     return dp[0][1];
-    // }
-
     int maxProfit(vector<int>& arr) {
         int n = arr.size();
-        vector<int> prev(2 , 0) , cur(2 , 0);
-        // dp[n][0] = dp[n][1] = 0;
-
-        for(int ind=n-1 ; ind>=0 ; ind--){
-            for(int buy=0 ; buy<=1 ; buy++){
-                int profit = 0;
-                if(buy){
-                    profit = max(prev[0] - arr[ind] , prev[1] - 0);
-                }
-                else{
-                    profit = max(prev[1] + arr[ind] , prev[0] + 0);
-                }
-                cur[buy] = profit;  
-            }
-            prev = cur;
-        }
-
-        return prev[1];
+        vector<vector<int>> dp(n , vector<int>(2 , -1));
+        return sol(0 , 1 , arr , dp);
     }
 };
