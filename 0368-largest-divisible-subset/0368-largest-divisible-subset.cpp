@@ -1,33 +1,37 @@
 class Solution {
 public:
     vector<int> largestDivisibleSubset(vector<int>& arr) {
-       sort(arr.begin() , arr.end());
-       int n = arr.size() , ans = 1 , last = 0;
-
-        vector<int> dp(n , 1) , parent(n , 0);
-
-        for(int i = 0 ; i < n ; i++){
-            parent[i] = i;
-            for(int j = 0 ; j < i ; j++){
-                if(arr[i] % arr[j] == 0 && dp[j] + 1 > dp[i]){
-                    dp[i] = dp[j] + 1;
-                    parent[i] = j;
+        int n = arr.size();
+        vector<int> dp(n , 1) , par(n , 1);
+        int ans = 1 , last = -1;
+        sort(arr.begin() , arr.end());
+        
+        for(int i=0 ; i<n ; i++){
+            par[i] = i;
+            for(int j=0 ; j<i ; j++){
+                if((arr[i] % arr[j] == 0) && dp[i] <= 1 + dp[j]){
+                    dp[i] = 1 + dp[j];
+                    par[i] = j;
                 }
             }
-            if(dp[i] > ans){
+            if(ans < dp[i]){
                 ans = dp[i];
                 last = i;
             }
         }
-
+        
         vector<int> res;
-        while(parent[last] != last){
+        if(last == -1){
+            res.push_back(arr[0]);
+            return res;
+        }
+        while(par[last] != last){
             res.push_back(arr[last]);
-            last = parent[last];
+            last = par[last];
         }
         res.push_back(arr[last]);
         reverse(res.begin() , res.end());
-
+        
         return res;
     }
 };
