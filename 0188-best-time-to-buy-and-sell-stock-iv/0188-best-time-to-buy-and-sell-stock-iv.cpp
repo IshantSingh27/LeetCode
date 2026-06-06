@@ -1,24 +1,39 @@
 class Solution {
 public:
-    int solve(int ind , int buy , int k , vector<vector<vector<int>>>& dp , vector<int>& arr){
+    int sol(int ind , int buy , int k , vector<int>& arr , vector<vector<vector<int>>>& dp){
         if(ind == arr.size() || k == 0) return 0;
 
         if(dp[ind][buy][k] != -1) return dp[ind][buy][k];
 
+        int profit = 0;
         if(buy){
-            return dp[ind][buy][k] = 
-            max(solve(ind + 1 , buy , k , dp , arr) , solve(ind + 1 , !buy , k , dp , arr) - arr[ind]);
+            profit =  max(sol(ind + 1 , buy , k ,  arr , dp) , sol(ind + 1 , 0 , k , arr , dp) - arr[ind]);
         }
         else{
-            return dp[ind][buy][k] =
-            max(solve(ind + 1 ,buy ,k ,dp ,arr), solve(ind + 1, !buy, k - 1, dp, arr) + arr[ind]);
+            profit = max(sol(ind , 1 , k - 1 , arr , dp) + arr[ind] , sol(ind + 1 , buy , k , arr , dp));
         }
-    }
 
+        return dp[ind][buy][k] = profit;
+    }
     int maxProfit(int k, vector<int>& arr) {
         int n = arr.size();
         vector<vector<vector<int>>> dp(n , vector<vector<int>>(2 , vector<int>(k + 1 , -1)));
+        return sol(0 , 1 , k , arr , dp);
 
-        return solve(0 , 1 , k , dp , arr);
+        // vector<vector<vector<int>>> dp(n + 1 , vector<vector<int>>(2 , vector<int>(k + 1 , 0)));
+
+        // for(int i=n-1 ; i>=0 ; i--){
+        //     for(int j=0 ; j<2 ; j++){
+        //         for(int k=2 ; k>0 ; k--){
+        //             int profit = 0;
+        //             if(j){
+        //                 profit = max(dp[i + 1][j][k] , dp[i + 1][0][k] - arr[i]);
+        //             }
+        //             else profit = max(dp[i + 1][j][k] , dp[i + 1][1][k - 1] + arr[i]);
+        //             dp[i][j][k] = profit;
+        //         }
+        //     }
+        // }
+        // return dp[0][1][2];
     }
 };
