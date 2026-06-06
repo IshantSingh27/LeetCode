@@ -17,7 +17,38 @@ public:
     }
     int maxProfit(vector<int>& arr) {
         int n = arr.size();
-        vector<vector<vector<int>>> dp(n , vector<vector<int>>(2 , vector<int>(3 , -1)));
-        return sol(0 , 1 , 2 , arr , dp);
+        // vector<vector<vector<int>>> dp(n , vector<vector<int>>(2 , vector<int>(3 , -1)));
+        // return sol(0 , 1 , 2 , arr , dp);
+
+        vector<vector<vector<int>>> dp(n + 1 , vector<vector<int>>(2 , vector<int>(3 , 0)));
+
+        for(int i=n-1 ; i>=0 ; i--){
+            for(int j=0 ; j<2 ; j++){
+                for(int k=2 ; k>0 ; k--){
+                    int profit = 0;
+                    if(j){
+                        profit = max(dp[i + 1][j][k] , dp[i + 1][0][k] - arr[i]);
+                    }
+                    else profit = max(dp[i + 1][j][k] , dp[i + 1][1][k - 1] + arr[i]);
+                    dp[i][j][k] = profit;
+                }
+            }
+        }
+        return dp[0][1][2];
+
+        // vector<int> prev(2 , 0) , cur(2 , 0);
+
+        // for(int i=n-1 ; i>=0 ; i--){
+        //     for(int j=0 ; j<2 ; j++){
+        //         int profit = 0;
+        //         if(j){
+        //             profit = max(prev[j] , prev[0] - arr[i]);
+        //         }
+        //         else profit = max(prev[j] , prev[1] + arr[i]);
+        //         cur[j] = profit;
+        //     }
+        //     prev = cur;
+        // }
+        // return prev[1];
     }
 };
