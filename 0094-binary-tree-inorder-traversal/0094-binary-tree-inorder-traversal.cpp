@@ -11,66 +11,28 @@
  */
 class Solution {
 public:
-    void pre(TreeNode* root , vector<int>& ans){
-        if(root == NULL) return;
-
-        pre(root->left , ans);
-        ans.push_back(root->val);
-        pre(root->right , ans);
-    }
-
-    // vector<int> inorderTraversal(TreeNode* root) {
-    //     vector<int> ans;
-    //     if(root == NULL) return ans;
-    //     // pre(root , ans);
-    //     stack<TreeNode*> st;
-    //     TreeNode* temp = root;
-
-    //     while(temp != NULL || !st.empty()){
-    //         while(temp){
-    //             st.push(temp);
-    //             temp = temp->left;
-    //         }
-
-    //         temp = st.top();
-    //         st.pop();
-
-    //         ans.push_back(temp->val);
-
-    //         temp = temp->right;
-    //     }
-
-    //     return ans;
-    // }
-
     vector<int> inorderTraversal(TreeNode* root) {
-        TreeNode* cur = root;
-        vector<int> in;
-        if(root == NULL) return in;
-
-        while(cur != NULL){
-            if(cur->left == NULL){
-                in.push_back(cur->val);
-                cur = cur->right;
+        vector<int> ans;
+        if(root == NULL) return ans;
+        stack<TreeNode*> st;
+        st.push(root);
+        while(!st.empty()){
+            while(root->left != NULL){
+                st.push(root->left);
+                root = root->left;
             }
-            else{
-                TreeNode* prev = cur->left;
-                while(prev->right && prev->right != cur){
-                    prev = prev->right;
-                }
+            
+            TreeNode* node = st.top();
+            st.pop();
 
-                if(prev->right == NULL){
-                    prev->right = cur;
-                    cur = cur->left;
-                }
-                else{
-                    prev->right = NULL;
-                    in.push_back(cur->val);
-                    cur = cur->right;
-                }
+            ans.push_back(node->val);
+
+            if(node->right){
+                st.push(node->right);
+                root = node->right;
             }
         }
 
-        return in;
+        return ans;
     }
 };
