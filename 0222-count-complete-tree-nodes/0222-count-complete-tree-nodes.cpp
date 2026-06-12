@@ -12,8 +12,6 @@
 class Solution {
 public:
     int lh(TreeNode* root){
-        if(root == NULL) return 0;
-
         int cnt = 0;
 
         while(root){
@@ -24,8 +22,6 @@ public:
         return cnt;
     }
     int rh(TreeNode* root){
-        if(root == NULL) return 0;
-
         int cnt = 0;
 
         while(root){
