@@ -12,9 +12,11 @@
 class Solution {
 public:
     int lh(TreeNode* root){
+        if(root == NULL) return 0;
+
         int cnt = 0;
 
-        while(root != NULL){
+        while(root){
             cnt++;
             root = root->left;
         }
@@ -22,16 +24,17 @@ public:
         return cnt;
     }
     int rh(TreeNode* root){
+        if(root == NULL) return 0;
+
         int cnt = 0;
 
-        while(root != NULL){
+        while(root){
             cnt++;
             root = root->right;
         }
 
         return cnt;
     }
-
     int countNodes(TreeNode* root) {
         if(root == NULL) return 0;
 
@@ -40,6 +43,6 @@ public:
 
         if(left == right) return pow(2 , left) - 1;
 
-        return 1 + countNodes(root->left) + countNodes(root->right);
+        else return 1 + countNodes(root->left) + countNodes(root->right);
     }
 };
