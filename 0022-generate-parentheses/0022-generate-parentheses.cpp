@@ -1,25 +1,25 @@
 class Solution {
 public:
-    void sol(int n , int open , string& s , vector<string>& ans){
+    void sol(int n , int one , string& s , vector<string>& ans){
         if(n == 0){
-            string temp = s;
-            while(open != 0){
-                temp += ')';
-                open--;
+            string t = s;
+            while(one > 0){
+                t.push_back(')');
+                one--;
             }
-            ans.push_back(temp);
+            ans.push_back(t);
             return;
         }
 
         s.push_back('(');
-        sol(n - 1 , open + 1 , s , ans);
+        sol(n - 1 , one + 1 , s , ans);
         s.pop_back();
-        if(open > 0){
+
+        if(one > 0){
             s.push_back(')');
-            sol(n , open - 1 , s , ans);
+            sol(n , one - 1 , s , ans);
             s.pop_back();
         }
-        return;
     }
     vector<string> generateParenthesis(int n) {
         vector<string> ans;
