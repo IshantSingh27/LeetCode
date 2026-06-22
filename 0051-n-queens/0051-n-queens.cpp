@@ -1,50 +1,57 @@
 class Solution {
 public:
-    bool check(int row , int col , int n , vector<string>& temp){
-        if(row == 0) return true;
-
-        for(int i=0 ; i<row ; i++){
-            if(temp[i][col] == 'Q') return false;
-        }
-
-        int i = row - 1 , j = col + 1;
-        while(i >= 0 && j < n){
+    bool chk(int row , int col , vector<string>& temp){
+        int i = row , j = col;
+        while(i >= 0){
             if(temp[i][j] == 'Q') return false;
             i--;
-            j++;
         }
 
-        i = row - 1 , j = col - 1;
-        while(i >= 0 && j >= 0){
+        i = row;
+        while(i >=0  && j >= 0){
             if(temp[i][j] == 'Q') return false;
             i--;
             j--;
         }
 
+        i = row;
+        j = col;
+        while(i >= 0 && j >= 0){
+            if(temp[i][j] == 'Q') return false;
+            i--;
+            j++;
+        }
+
         return true;
     }
-    void sol(int i , int  n , vector<string>& temp , vector<vector<string>>& ans){
-        if(i == n){
+    void sol(int row , int n , vector<string>& temp , vector<vector<string>>& ans){
+        if(row == n){
             ans.push_back(temp);
             return;
         }
 
-        for(int j=0 ; j<n ; j++){
-            if(check(i , j , n , temp)){
-                temp[i][j] = 'Q';
-                sol(i + 1 , n , temp , ans);
-                temp[i][j] = '.';
+        for(int i=0 ; i<n ; i++){
+            if(chk(row , i , temp)){
+                temp[row][i] = 'Q';
+                sol(row + 1 , n , temp , ans);
+                temp[row][i] = '.';
             }
         }
+
+        return;
     }
     vector<vector<string>> solveNQueens(int n) {
         vector<vector<string>> ans;
-        vector<string> temp(n);
+        vector<string> temp;
+
         for(int i=0 ; i<n ; i++){
-            for(int j=0 ; j<n ; j++){
-                temp[i] += '.';
+            string s;
+            for(int i=0 ; i<n ; i++){
+                s.push_back('.');
             }
+            temp.push_back(s);
         }
+
         sol(0 , n , temp , ans);
         return ans;
     }
