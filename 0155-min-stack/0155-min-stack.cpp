@@ -1,96 +1,47 @@
-// class MinStack {
-// public:
-// stack<pair<int , int>> st;
-// int mini = INT_MAX;
-//     MinStack() {
-        
-//     }
-    
-//     void push(int val) {
-//         if(st.empty()){
-//             mini = val;
-//             st.push({val , mini});
-//         }
-//         else{
-//             mini = min(mini , val);
-//             st.push({val , mini});
-//         }
-//     }
-    
-//     void pop() {
-//         if(st.empty()) return;
-//         st.pop();
-//         if(st.empty()){
-//             mini = INT_MAX;
-//             return;
-//         }
-//         mini = st.top().second;
-//     }
-    
-//     int top() {
-//         return st.top().first;
-//     }
-    
-//     int getMin() {
-//         return st.top().second;
-//     }
-// };
-
-// /**
-//  * Your MinStack object will be instantiated and called as such:
-//  * MinStack* obj = new MinStack();
-//  * obj->push(val);
-//  * obj->pop();
-//  * int param_3 = obj->top();
-//  * int param_4 = obj->getMin();
-//  */
 class MinStack {
 public:
-stack<long long> st;
-long long mini = INT_MAX;
+    stack<pair<int  ,int>> st;
+    int mini;
     MinStack() {
-        
+        mini = INT_MAX;
     }
     
     void push(int val) {
         if(st.empty()){
             mini = val;
-            st.push(val);
+            st.push({val , mini});
         }
         else{
-            if(val > mini) st.push(val);
-            else{
-                st.push(2LL * val - mini);
-                mini = val;
-            }
+            mini = min(mini , val);
+            st.push({val , mini});
         }
     }
     
     void pop() {
-        if(st.empty()) return;
-        long long n = st.top();
         st.pop();
         if(st.empty()){
             mini = INT_MAX;
-            return;
         }
-        if(n < mini) mini = (2LL * mini - n);
+        else{
+            mini = st.top().second;
+        }
     }
     
     int top() {
-        if(st.top() < mini) return mini;
-        return st.top();
+        if(!st.empty()) return st.top().first;
+        return -1;
     }
     
     int getMin() {
-        return mini;
+        if(!st.empty()) return st.top().second;
+        return INT_MAX;
     }
 };
 
 /**
  * Your MinStack object will be instantiated and called as such:
  * MinStack* obj = new MinStack();
- * obj->push(val);
+ * obj->push(value);
  * obj->pop();
  * int param_3 = obj->top();
  * int param_4 = obj->getMin();
