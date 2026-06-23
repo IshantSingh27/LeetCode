@@ -18,6 +18,7 @@ public:
     }
     
     void pop() {
+        if(st.empty()) return;
         st.pop();
         if(st.empty()){
             mini = INT_MAX;
