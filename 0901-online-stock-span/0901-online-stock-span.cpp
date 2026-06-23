@@ -13,15 +13,11 @@ int ind;
         }
 
         int ans = 1;
-        if(!st.empty()){
-            ans = ind - st.top().second;
-            st.push({val , ind});
-            return ans;
-        }
-        else{
-            st.push({val , ind});
-            return ind + 1;
-        }
+        if(!st.empty()) ans = ind - st.top().second;
+        else ans = ind + 1;
+        st.push({val , ind});
+
+        return ans;
     }
 };
 
