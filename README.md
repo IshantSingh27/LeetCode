@@ -828,6 +828,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1211-queries-quality-and-percentage](https://github.com/IshantSingh27/LeetCode/tree/master/1211-queries-quality-and-percentage) |
 | [1251-average-selling-price](https://github.com/IshantSingh27/LeetCode/tree/master/1251-average-selling-price) |
 | [1280-students-and-examinations](https://github.com/IshantSingh27/LeetCode/tree/master/1280-students-and-examinations) |
+| [1378-replace-employee-id-with-the-unique-identifier](https://github.com/IshantSingh27/LeetCode/tree/master/1378-replace-employee-id-with-the-unique-identifier) |
 | [1581-customer-who-visited-but-did-not-make-any-transactions](https://github.com/IshantSingh27/LeetCode/tree/master/1581-customer-who-visited-but-did-not-make-any-transactions) |
 | [1683-invalid-tweets](https://github.com/IshantSingh27/LeetCode/tree/master/1683-invalid-tweets) |
 | [1729-find-followers-count](https://github.com/IshantSingh27/LeetCode/tree/master/1729-find-followers-count) |
