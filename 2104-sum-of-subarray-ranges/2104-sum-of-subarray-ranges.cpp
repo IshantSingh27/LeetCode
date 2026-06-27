@@ -1,16 +1,17 @@
 class Solution {
 public:
-    vector<int> nextsmall(vector<int>& arr){
+    // Next Smaller Element (<=)
+    vector<int> nextSmaller(vector<int>& arr) {
         int n = arr.size();
-        vector<int> ans(n);
+        vector<int> ans(n, n);
         stack<int> st;
 
-        for(int i=n-1 ; i>=0 ; i--){
-            while(!st.empty() && arr[st.top()] >= arr[i]){
+        for (int i = n - 1; i >= 0; i--) {
+            while (!st.empty() && arr[st.top()] >= arr[i])
                 st.pop();
-            }
-            if(st.empty()) ans[i] = n;
-            else ans[i] = st.top();
+
+            if (!st.empty())
+                ans[i] = st.top();
 
             st.push(i);
         }
@@ -18,17 +19,18 @@ public:
         return ans;
     }
 
-    vector<int> prevsmall(vector<int>& arr){
+    // Previous Smaller Element (<)
+    vector<int> prevSmaller(vector<int>& arr) {
         int n = arr.size();
-        vector<int> ans(n);
+        vector<int> ans(n, -1);
         stack<int> st;
 
-        for(int i=0 ; i<n ; i++){
-            while(!st.empty() && arr[st.top()] > arr[i]){
+        for (int i = 0; i < n; i++) {
+            while (!st.empty() && arr[st.top()] > arr[i])
                 st.pop();
-            }
-            if(st.empty()) ans[i] = -1;
-            else ans[i] = st.top();
+
+            if (!st.empty())
+                ans[i] = st.top();
 
             st.push(i);
         }
@@ -36,17 +38,18 @@ public:
         return ans;
     }
 
-    vector<int> nextgreat(vector<int>& arr){
+    // Next Greater Element (>=)
+    vector<int> nextGreater(vector<int>& arr) {
         int n = arr.size();
-        vector<int> ans(n);
+        vector<int> ans(n, n);
         stack<int> st;
 
-        for(int i=n-1 ; i>=0 ; i--){
-            while(!st.empty() && arr[st.top()] <= arr[i]){
+        for (int i = n - 1; i >= 0; i--) {
+            while (!st.empty() && arr[st.top()] <= arr[i])
                 st.pop();
-            }
-            if(st.empty()) ans[i] = n;
-            else ans[i] = st.top();
+
+            if (!st.empty())
+                ans[i] = st.top();
 
             st.push(i);
         }
@@ -54,17 +57,18 @@ public:
         return ans;
     }
 
-    vector<int> prevgreat(vector<int>& arr){
+    // Previous Greater Element (>)
+    vector<int> prevGreater(vector<int>& arr) {
         int n = arr.size();
-        vector<int> ans(n);
+        vector<int> ans(n, -1);
         stack<int> st;
 
-        for(int i=0 ; i<n ; i++){
-            while(!st.empty() && arr[st.top()] < arr[i]){
+        for (int i = 0; i < n; i++) {
+            while (!st.empty() && arr[st.top()] < arr[i])
                 st.pop();
-            }
-            if(st.empty()) ans[i] = -1;
-            else ans[i] = st.top();
+
+            if (!st.empty())
+                ans[i] = st.top();
 
             st.push(i);
         }
@@ -72,28 +76,39 @@ public:
         return ans;
     }
 
-    long long subArrayRanges(vector<int>& arr) {
-        vector<int> nse = nextsmall(arr);
-        vector<int> pse = prevsmall(arr);
-        long long n = arr.size() , tot = 0 , mod = 1e18 + 7;
+    long long sumSubarrayMins(vector<int>& arr) {
+        vector<int> next = nextSmaller(arr);
+        vector<int> prev = prevSmaller(arr);
 
-        for(int i=0 ; i<n ; i++){
-            long long right = (nse[i] - i);
-            long long left = (i - pse[i]);
-            tot = (tot + ((right * left) % mod * arr[i] * 1LL) % mod) % mod;
+        long long ans = 0;
+
+        for (int i = 0; i < arr.size(); i++) {
+            long long left = i - prev[i];
+            long long right = next[i] - i;
+
+            ans += left * right * 1LL * arr[i];
         }
 
-        vector<int> nge = nextgreat(arr);
-        vector<int> pge = prevgreat(arr);
-        long long tot1 = 0;
-
-        for(int i=0 ; i<n ; i++){
-            long long right = (nge[i] - i);
-            long long left = (i - pge[i]);
-            tot1 = (tot1 + ((right * left) % mod * arr[i] * 1LL) % mod) % mod;
-        }
-
-        long long ans = tot1 - tot;
         return ans;
+    }
+
+    long long sumSubarrayMaxs(vector<int>& arr) {
+        vector<int> next = nextGreater(arr);
+        vector<int> prev = prevGreater(arr);
+
+        long long ans = 0;
+
+        for (int i = 0; i < arr.size(); i++) {
+            long long left = i - prev[i];
+            long long right = next[i] - i;
+
+            ans += left * right * 1LL * arr[i];
+        }
+
+        return ans;
+    }
+
+    long long subArrayRanges(vector<int>& nums) {
+        return sumSubarrayMaxs(nums) - sumSubarrayMins(nums);
     }
 };
