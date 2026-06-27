@@ -1,52 +1,52 @@
 class Solution {
 public:
     int largestRectangleArea(vector<int>& arr) {
-        int n = arr.size() , ans = 0;
         stack<int> st;
-        for(int i=0 ; i<n ; i++){
+        int ans = 0;
+        for(int i=0 ; i<arr.size() ; i++){
             while(!st.empty() && arr[st.top()] >= arr[i]){
-                int ele = arr[st.top()];
+                int ele = st.top();
                 st.pop();
 
                 int left = -1 , right = i;
-                if(!st.empty()) left = st.top();
-                ans = max(ans , ((right - left) - 1) * ele);
+                if(!st.empty()){
+                    left = st.top();
+                }
+
+                ans = max(ans , (right - left - 1) * arr[ele]);
             }
             st.push(i);
         }
 
         while(!st.empty()){
-            int ele = arr[st.top()];
+            int ele = st.top();
             st.pop();
-            int right = n , left = -1;
+            int right = arr.size() , left = -1;
             if(!st.empty()) left = st.top();
-            ans = max(ans , ((right - left) - 1) * ele);
-        }
 
+            ans = max(ans , (right - left - 1) * arr[ele]);   
+        }
         return ans;
     }
 
-    int maximalRectangle(vector<vector<char>>& arr) {
-        int n = arr.size() , m = arr[0].size();
-        vector<vector<int>> pre(n , vector<int>(m , 0));
-
-        for(int j=0 ; j<m ; j++){
-            int sum = 0;
-            for(int i=0 ; i<n ; i++){
-                if(arr[i][j] == '0') sum = 0;
+    int maximalRectangle(vector<vector<char>>& nums) {
+        int n = nums.size() , m = nums[0].size();
+        vector<vector<int>> arr(n , vector<int>(m , 0));
+        for(int i=0 ; i<n ; i++){
+            for(int j=0 ; j<m ; j++){
+                if(nums[i][j] == '1'){
+                    arr[i][j] = 1;
+                    if(i > 0) arr[i][j] += arr[i-1][j];
+                }
                 else{
-                    sum += 1;
-                    pre[i][j] = sum;
+                    arr[i][j] = 0;
                 }
             }
         }
-
         int ans = 0;
         for(int i=0 ; i<n ; i++){
-            int cur = largestRectangleArea(pre[i]);
-            ans = max(ans , cur);
+            ans = max(ans , largestRectangleArea(arr[i]));
         }
-
         return ans;
     }
 };
