@@ -1,40 +1,18 @@
 class Solution {
 public:
-    vector<int> gen(int row){
-        vector<int> ans;
-        ans.push_back(1);
-
-        int cur = 1;
-        for(int col=1 ; col<row - 1; col++){
-            cout<<col<<endl;
-            cur = cur * (row - col);
-            cur = cur / col;
-
-            ans.push_back(cur);
-        }
-
-        ans.push_back(1);
-        return ans;
-    }
-    // vector<vector<int>> generate(int row) {
-    //     vector<vector<int>> ans;
-    //     ans.push_back({1});
-
-    //     for(int i=2 ; i<=row ; i++){
-    //         ans.push_back(gen(i));
-    //     }
-
-    //     return ans;
-    // }
-    vector<vector<int>> generate(int row) {
+    vector<vector<int>> generate(int n) {
         vector<vector<int>> ans;
-        
-        for(int i=0 ; i<row ; i++){
-            vector<int> cur(i + 1 , 1);
-            for(int j=1 ; j<i ; j++){
-                cur[j] = ans[i - 1][j - 1] + ans[i - 1][j];
+        ans.push_back({1});
+        if(n == 1) return ans;
+        ans.push_back({1 , 1});
+        if(n == 2) return ans;
+
+        for(int i=3 ; i<=n ; i++){
+            vector<int> temp(i , 1);
+            for(int j=1 ; j<i - 1 ; j++){
+                temp[j] = ans[i - 2][j - 1] + ans[i - 2][j];
             }
-            ans.push_back(cur);
+            ans.push_back(temp);
         }
 
         return ans;
