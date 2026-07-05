@@ -1,18 +1,15 @@
 class Solution {
 public:
     int maxProduct(vector<int>& arr) {
-        int pre = 1 , suff = 1 , ans = INT_MIN;
-
-        for(int i=0 ; i<arr.size() ; i++){
+        int pre = 1 , post = 1 , n = arr.size() , ans = -1e9;
+        for(int i=0 ; i<n ; i++){
             if(pre == 0) pre = 1;
-            if(suff == 0) suff = 1;
-
-            pre = pre * arr[i];
-            suff = suff * arr[arr.size() - i - 1];
-
-            ans = max(ans , max(pre , suff));
+            if(post == 0) post = 1;
+            pre *= arr[i];
+            post *= arr[n - i - 1];
+            ans = max(ans , max(pre , post));
+            // cout<<"pre: "<<pre<<" post: "<<post<<endl;
         }
-
         return ans;
     }
 };
