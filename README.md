@@ -72,6 +72,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0455-assign-cookies](https://github.com/IshantSingh27/LeetCode/tree/master/0455-assign-cookies) |
 | [0480-sliding-window-median](https://github.com/IshantSingh27/LeetCode/tree/master/0480-sliding-window-median) |
 | [0485-max-consecutive-ones](https://github.com/IshantSingh27/LeetCode/tree/master/0485-max-consecutive-ones) |
+| [0493-reverse-pairs](https://github.com/IshantSingh27/LeetCode/tree/master/0493-reverse-pairs) |
 | [0494-target-sum](https://github.com/IshantSingh27/LeetCode/tree/master/0494-target-sum) |
 | [0496-next-greater-element-i](https://github.com/IshantSingh27/LeetCode/tree/master/0496-next-greater-element-i) |
 | [0503-next-greater-element-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0503-next-greater-element-ii) |
@@ -283,6 +284,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0240-search-a-2d-matrix-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0240-search-a-2d-matrix-ii) |
 | [0268-missing-number](https://github.com/IshantSingh27/LeetCode/tree/master/0268-missing-number) |
 | [0300-longest-increasing-subsequence](https://github.com/IshantSingh27/LeetCode/tree/master/0300-longest-increasing-subsequence) |
+| [0493-reverse-pairs](https://github.com/IshantSingh27/LeetCode/tree/master/0493-reverse-pairs) |
 | [0540-single-element-in-a-sorted-array](https://github.com/IshantSingh27/LeetCode/tree/master/0540-single-element-in-a-sorted-array) |
 | [0792-binary-search](https://github.com/IshantSingh27/LeetCode/tree/master/0792-binary-search) |
 | [0907-koko-eating-bananas](https://github.com/IshantSingh27/LeetCode/tree/master/0907-koko-eating-bananas) |
@@ -322,6 +324,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0148-sort-list](https://github.com/IshantSingh27/LeetCode/tree/master/0148-sort-list) |
 | [0169-majority-element](https://github.com/IshantSingh27/LeetCode/tree/master/0169-majority-element) |
 | [0240-search-a-2d-matrix-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0240-search-a-2d-matrix-ii) |
+| [0493-reverse-pairs](https://github.com/IshantSingh27/LeetCode/tree/master/0493-reverse-pairs) |
 ## Linked List
 |  |
 | ------- |
@@ -745,10 +748,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Binary Indexed Tree
 |  |
 | ------- |
+| [0493-reverse-pairs](https://github.com/IshantSingh27/LeetCode/tree/master/0493-reverse-pairs) |
 | [0673-number-of-longest-increasing-subsequence](https://github.com/IshantSingh27/LeetCode/tree/master/0673-number-of-longest-increasing-subsequence) |
 ## Segment Tree
 |  |
 | ------- |
+| [0493-reverse-pairs](https://github.com/IshantSingh27/LeetCode/tree/master/0493-reverse-pairs) |
 | [0673-number-of-longest-increasing-subsequence](https://github.com/IshantSingh27/LeetCode/tree/master/0673-number-of-longest-increasing-subsequence) |
 ## Prefix Sum
 |  |
@@ -912,8 +917,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0148-sort-list](https://github.com/IshantSingh27/LeetCode/tree/master/0148-sort-list) |
+| [0493-reverse-pairs](https://github.com/IshantSingh27/LeetCode/tree/master/0493-reverse-pairs) |
 ## Data Stream
 |  |
 | ------- |
 | [0901-online-stock-span](https://github.com/IshantSingh27/LeetCode/tree/master/0901-online-stock-span) |
+## Ordered Set
+|  |
+| ------- |
+| [0493-reverse-pairs](https://github.com/IshantSingh27/LeetCode/tree/master/0493-reverse-pairs) |
 <!---LeetCode Topics End-->
