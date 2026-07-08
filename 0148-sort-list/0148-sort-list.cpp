@@ -11,46 +11,48 @@
 class Solution {
 public:
     ListNode* find(ListNode* head){
-        ListNode* fast = head->next;
-        ListNode* slow = head;
-
-        while(fast && fast->next){
-            fast = fast->next->next;
-            slow = slow->next;
+        ListNode* fast = head , *slow = head;
+        while(fast != NULL){
+            fast = fast->next;
+            if(fast != NULL){
+                fast = fast->next;
+            }
+            if(fast != NULL) slow = slow->next;
         }
-
         return slow;
     }
-    ListNode* merge(ListNode* h1 , ListNode* h2){
-        ListNode* dummy = new ListNode(-1);
-        ListNode* temp = dummy;
-        while(h1 && h2){
-            if(h1->val < h2->val){
-                temp->next = h1;
-                h1 = h1->next;
+    ListNode* merger(ListNode* left , ListNode* right){
+        ListNode* dummy = new ListNode(-1) , *cur = dummy;
+        while(left != NULL && right != NULL){
+            if(left->val < right->val){
+                cur->next = left;
+                left = left->next;
             }
             else{
-                temp->next = h2;
-                h2 = h2->next;
+                cur->next = right;
+                right = right->next;
             }
-            temp = temp->next;
+            cur = cur->next;
         }
-        if(h1) temp->next = h1;
-        else temp->next = h2;
+        if(left != NULL){
+            cur->next = left;
+        }
+        if(right != NULL){
+            cur->next = right;
+        }
 
         return dummy->next;
     }
     ListNode* sortList(ListNode* head) {
         if(head == NULL || head->next == NULL) return head;
-
         ListNode* middle = find(head);
-        ListNode* left = head;
         ListNode* right = middle->next;
         middle->next = NULL;
+        ListNode* left = head;
 
-        ListNode* lefthead = sortList(left);
-        ListNode* righthead = sortList(right);
+        left = sortList(left);
+        right = sortList(right);
 
-        return merge(lefthead , righthead);
+        return merger(left , right);
     }
 };
