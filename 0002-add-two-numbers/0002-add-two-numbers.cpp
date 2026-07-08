@@ -10,27 +10,32 @@
  */
 class Solution {
 public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        int carry = 0;
-        ListNode* dummy = new ListNode();
+    ListNode* addTwoNumbers(ListNode* h1, ListNode* h2) {
+        ListNode* dummy = new ListNode(-1);
         ListNode* temp = dummy;
-        while(l1 != NULL || l2 != NULL || carry != 0){
-            int sum = 0;
-            if(l1){
-                sum += l1->val;
-                l1 = l1->next;
-            }
-            if(l2){
-                sum += l2->val;
-                l2 = l2->next;
-            }
-            if(carry != 0) sum += carry;
+        int carry = 0;
 
-            carry = sum / 10;
-            ListNode* node = new ListNode(sum % 10);
-            temp->next = node;
+        while(h1 != NULL || h2 != NULL || carry != 0){
+            int sum = 0;
+            if(h1 != NULL){
+                sum += h1->val;
+                h1 = h1->next;
+            }
+            if(h2 != NULL){
+                sum += h2->val;
+                h2 = h2->next;
+            }
+            sum += carry;
+
+            int digit = sum % 10;
+            ListNode* cur = new ListNode(digit);
+            temp->next = cur;
             temp = temp->next;
+
+            if(sum / 10 > 0) carry = (sum / 10) % 10;
+            else carry = 0;
         }
+
         return dummy->next;
     }
 };
