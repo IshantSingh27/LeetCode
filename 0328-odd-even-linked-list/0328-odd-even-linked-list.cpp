@@ -10,19 +10,18 @@
  */
 class Solution {
 public:
-    ListNode* oddEvenList(ListNode* head) {
-        if(head ==NULL || head->next == NULL) return head;
-        ListNode* odd = head;
-        ListNode* even = head->next;
-        ListNode* ehead = even;
-        while(even && even->next){
-            odd->next = even->next;
+    ListNode* oddEvenList(ListNode* odd) {
+        if(odd == NULL) return odd;
+        ListNode* ev = odd->next , *ohead = odd , *ehead = odd->next;
+        if(ev == NULL) return odd;
+        while(ev != NULL && ev->next != NULL){
+            odd->next = ev->next;
             odd = odd->next;
 
-            even->next = odd->next;
-            even = even->next;
+            ev->next = odd->next;
+            ev = ev->next;
         }
         odd->next = ehead;
-        return head;
+        return ohead;
     }
 };
