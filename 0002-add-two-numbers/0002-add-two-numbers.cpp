@@ -32,8 +32,7 @@ public:
             temp->next = cur;
             temp = temp->next;
 
-            if(sum / 10 > 0) carry = (sum / 10) % 10;
-            else carry = 0;
+            carry = sum / 10;
         }
 
         return dummy->next;
