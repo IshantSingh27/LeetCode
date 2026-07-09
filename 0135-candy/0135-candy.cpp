@@ -5,19 +5,17 @@ public:
         vector<int> left(n , 1);
 
         for(int i=1 ; i<n ; i++){
-            if(arr[i - 1] < arr[i]) left[i] = left[i - 1] + 1;
+            if(arr[i] > arr[i - 1]){
+                left[i] = left[i - 1] + 1;
+            }
         }
 
-        int right = 1 , cur = 0 , sum = max(1 , left[n - 1]);
-        for(int i=n-2 ; i>=0 ; i--){
+        int right = max(1 , left[n - 1]) , sum = right;
+        for(int i = n - 2 ; i>=0 ; i--){
             if(arr[i] > arr[i + 1]){
-                int cur = right + 1;
-                right  = cur;
+                right = right + 1;
             }
-            else{
-                right = 1;
-            }
-
+            else right = 1;
             sum += max(left[i] , right);
         }
 
