@@ -703,6 +703,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0020-valid-parentheses](https://github.com/IshantSingh27/LeetCode/tree/master/0020-valid-parentheses) |
 | [0022-generate-parentheses](https://github.com/IshantSingh27/LeetCode/tree/master/0022-generate-parentheses) |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/IshantSingh27/LeetCode/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
+| [0038-count-and-say](https://github.com/IshantSingh27/LeetCode/tree/master/0038-count-and-say) |
 | [0044-wildcard-matching](https://github.com/IshantSingh27/LeetCode/tree/master/0044-wildcard-matching) |
 | [0068-text-justification](https://github.com/IshantSingh27/LeetCode/tree/master/0068-text-justification) |
 | [0072-edit-distance](https://github.com/IshantSingh27/LeetCode/tree/master/0072-edit-distance) |
