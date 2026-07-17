@@ -1,23 +1,21 @@
 class Solution {
 public:
-    int trap(vector<int>& arr) {
-        int l = 0 , r = arr.size() - 1 , lmax = 0 , rmax = 0 , tot = 0;
+    int trap(vector<int>& height) {
+        int n = height.size() , ans = 0 , l = 0 , r = n - 1 , lmax = 0 , rmax = 0;
+
         while(l < r){
-            if(arr[l] <= arr[r]){
-                if(arr[l] < lmax){
-                    tot += lmax - arr[l];
-                }
-                else lmax = arr[l];
+            if(height[l] < height[r]){
+                if(lmax > height[l]) ans += lmax - height[l];
+                else lmax = height[l];
                 l++;
             }
             else{
-                if(arr[r] < rmax){
-                    tot += rmax - arr[r];
-                }
-                else rmax = arr[r];
+                if(rmax > height[r]) ans += rmax - height[r];
+                else rmax = height[r];
                 r--;
             }
         }
-        return tot;
+
+        return ans;
     }
 };
