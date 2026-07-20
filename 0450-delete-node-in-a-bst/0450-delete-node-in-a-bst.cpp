@@ -11,48 +11,44 @@
  */
 class Solution {
 public:
-    TreeNode* sol(TreeNode* root){
+    TreeNode* find(TreeNode* root){
         if(root->right == NULL) return root;
-
-        else return sol(root->right);
+        else return find(root->right);
     }
-
-    TreeNode* help(TreeNode* root){
-        if(root->right == NULL) return root->left;
+    TreeNode* helper(TreeNode* root){
         if(root->left == NULL) return root->right;
+        if(root->right == NULL) return root->left;
 
         TreeNode* rightchild = root->right;
-
-        TreeNode* leftchild = sol(root->left);
-
-        leftchild->right = rightchild;
+        TreeNode* lastright = find(root->left);
+        lastright->right = rightchild;
 
         return root->left;
     }
-
     TreeNode* deleteNode(TreeNode* root, int k) {
-        if(root == NULL) return NULL;
-
-        if(root->val == k) return help(root);
-
+        if(root == NULL) return root;
+        if(root->val == k) return helper(root);
         TreeNode* cur = root;
         while(cur != NULL){
-            if(cur->val >= k){
-                if(cur->left && cur->left->val == k){
-                    cur->left = help(cur->left);
-                    return root;
+            if(cur->val > k){
+                if(cur->left != NULL && cur->left->val == k){
+                    cur->left = helper(cur->left);
+                    break;
                 }
-                else cur = cur->left;
+                else{
+                    cur = cur->left;
+                }
             }
             else{
-                if(cur->right && cur->right->val == k){
-                    cur->right = help(cur->right);
-                    return root;
+                if(cur->right != NULL && cur->right->val == k){
+                    cur->right = helper(cur->right);
+                    break;
                 }
-                else cur = cur->right;
+                else{
+                    cur = cur->right;
+                }
             }
         }
-
         return root;
     }
 };
