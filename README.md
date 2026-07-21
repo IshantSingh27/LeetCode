@@ -99,6 +99,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0992-subarrays-with-k-different-integers](https://github.com/IshantSingh27/LeetCode/tree/master/0992-subarrays-with-k-different-integers) |
 | [0994-rotting-oranges](https://github.com/IshantSingh27/LeetCode/tree/master/0994-rotting-oranges) |
 | [1004-max-consecutive-ones-iii](https://github.com/IshantSingh27/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
+| [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/IshantSingh27/LeetCode/tree/master/1008-construct-binary-search-tree-from-preorder-traversal) |
 | [1020-number-of-enclaves](https://github.com/IshantSingh27/LeetCode/tree/master/1020-number-of-enclaves) |
 | [1034-subarrays-with-k-different-integers](https://github.com/IshantSingh27/LeetCode/tree/master/1034-subarrays-with-k-different-integers) |
 | [1036-rotting-oranges](https://github.com/IshantSingh27/LeetCode/tree/master/1036-rotting-oranges) |
@@ -386,6 +387,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0901-online-stock-span](https://github.com/IshantSingh27/LeetCode/tree/master/0901-online-stock-span) |
 | [0907-sum-of-subarray-minimums](https://github.com/IshantSingh27/LeetCode/tree/master/0907-sum-of-subarray-minimums) |
 | [0921-minimum-add-to-make-parentheses-valid](https://github.com/IshantSingh27/LeetCode/tree/master/0921-minimum-add-to-make-parentheses-valid) |
+| [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/IshantSingh27/LeetCode/tree/master/1008-construct-binary-search-tree-from-preorder-traversal) |
 | [1021-remove-outermost-parentheses](https://github.com/IshantSingh27/LeetCode/tree/master/1021-remove-outermost-parentheses) |
 | [1078-remove-outermost-parentheses](https://github.com/IshantSingh27/LeetCode/tree/master/1078-remove-outermost-parentheses) |
 | [1614-maximum-nesting-depth-of-the-parentheses](https://github.com/IshantSingh27/LeetCode/tree/master/1614-maximum-nesting-depth-of-the-parentheses) |
@@ -459,6 +461,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/IshantSingh27/LeetCode/tree/master/0863-all-nodes-distance-k-in-binary-tree) |
 | [0893-all-nodes-distance-k-in-binary-tree](https://github.com/IshantSingh27/LeetCode/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/IshantSingh27/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
+| [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/IshantSingh27/LeetCode/tree/master/1008-construct-binary-search-tree-from-preorder-traversal) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/IshantSingh27/LeetCode/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 ## Depth-First Search
 |  |
@@ -540,6 +543,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/IshantSingh27/LeetCode/tree/master/0863-all-nodes-distance-k-in-binary-tree) |
 | [0893-all-nodes-distance-k-in-binary-tree](https://github.com/IshantSingh27/LeetCode/tree/master/0893-all-nodes-distance-k-in-binary-tree) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/IshantSingh27/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
+| [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/IshantSingh27/LeetCode/tree/master/1008-construct-binary-search-tree-from-preorder-traversal) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/IshantSingh27/LeetCode/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 ## Breadth-First Search
 |  |
@@ -834,6 +838,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0450-delete-node-in-a-bst](https://github.com/IshantSingh27/LeetCode/tree/master/0450-delete-node-in-a-bst) |
 | [0700-search-in-a-binary-search-tree](https://github.com/IshantSingh27/LeetCode/tree/master/0700-search-in-a-binary-search-tree) |
 | [0701-insert-into-a-binary-search-tree](https://github.com/IshantSingh27/LeetCode/tree/master/0701-insert-into-a-binary-search-tree) |
+| [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/IshantSingh27/LeetCode/tree/master/1008-construct-binary-search-tree-from-preorder-traversal) |
 ## Database
 |  |
 | ------- |
@@ -917,6 +922,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0503-next-greater-element-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0503-next-greater-element-ii) |
 | [0901-online-stock-span](https://github.com/IshantSingh27/LeetCode/tree/master/0901-online-stock-span) |
 | [0907-sum-of-subarray-minimums](https://github.com/IshantSingh27/LeetCode/tree/master/0907-sum-of-subarray-minimums) |
+| [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/IshantSingh27/LeetCode/tree/master/1008-construct-binary-search-tree-from-preorder-traversal) |
 | [2104-sum-of-subarray-ranges](https://github.com/IshantSingh27/LeetCode/tree/master/2104-sum-of-subarray-ranges) |
 ## String Matching
 |  |
