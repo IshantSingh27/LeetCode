@@ -15,7 +15,7 @@ public:
             return root;
         }
 
-        if(root->val < p->val && root->val < q->val) return lca(root->right , p , q);
+        if(root->val < p->val) return lca(root->right , p , q);
 
         else return lca(root->left , p , q);
     }
