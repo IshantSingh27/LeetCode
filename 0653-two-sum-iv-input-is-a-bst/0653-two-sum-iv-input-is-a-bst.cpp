@@ -9,69 +9,58 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class BSTIT{
+ class bstit{
+    public:
     stack<TreeNode*> st;
     bool rev;
-
-    void pushall(TreeNode* root){
-        if(!rev){
-            while(root != NULL){
-                st.push(root);
-                root = root->left;
-            }
-        }
-        else{
-            while(root != NULL){
-                st.push(root);
-                root = root->right;
-            }
-        }
-    }
-
-    public:
-    BSTIT(TreeNode* root , bool reverse){
+    bstit(TreeNode* root , bool reverse){
         rev = reverse;
         pushall(root);
     }
-
     int next(){
-        TreeNode* node = st.top();
-        st.pop();
+        if(!st.empty()){
+            TreeNode* temp = st.top();
+            st.pop();
 
-        if(!rev){
-            if(node->right){
-                pushall(node->right);
-            }
-        }
-        else{
-            if(node->left){
-                pushall(node->left);
-            }
-        }
+            if(rev) pushall(temp->left);
+            else pushall(temp->right);
 
-        return node->val;
+            return temp->val;
+        }
+        return -1;
     }
-};
-
+    bool hasnext(){
+        return !st.empty();
+    }
+    void pushall(TreeNode* root){
+        while(root != NULL){
+            st.push(root);
+            if(rev){
+                root = root->right;
+            }
+            else root = root->left;
+        }
+    }
+ };
 class Solution {
 public:
     bool findTarget(TreeNode* root, int k) {
         if(root == NULL) return false;
 
-        BSTIT s(root , false);
-        BSTIT e(root , true);
+        bstit l(root , false);
+        bstit r(root , true);
 
-        int i = s.next();
-        int j = e.next();
-
+        int i = l.next() , j = r.next();
         while(i < j){
             if(i + j == k) return true;
 
             if(i + j < k){
-                i = s.next();
+                if(l.hasnext()) i = l.next();
+                else break;
             }
-            else if(i + j > k){
-                j = e.next();
+            else{
+                if(r.hasnext()) j = r.next();
+                else break;
             }
         }
 
