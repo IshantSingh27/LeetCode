@@ -196,6 +196,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0189-rotate-array](https://github.com/IshantSingh27/LeetCode/tree/master/0189-rotate-array) |
 | [0234-palindrome-linked-list](https://github.com/IshantSingh27/LeetCode/tree/master/0234-palindrome-linked-list) |
 | [0283-move-zeroes](https://github.com/IshantSingh27/LeetCode/tree/master/0283-move-zeroes) |
+| [0295-find-median-from-data-stream](https://github.com/IshantSingh27/LeetCode/tree/master/0295-find-median-from-data-stream) |
 | [0455-assign-cookies](https://github.com/IshantSingh27/LeetCode/tree/master/0455-assign-cookies) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/IshantSingh27/LeetCode/tree/master/0653-two-sum-iv-input-is-a-bst) |
 | [0876-middle-of-the-linked-list](https://github.com/IshantSingh27/LeetCode/tree/master/0876-middle-of-the-linked-list) |
@@ -217,6 +218,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0169-majority-element](https://github.com/IshantSingh27/LeetCode/tree/master/0169-majority-element) |
 | [0229-majority-element-ii](https://github.com/IshantSingh27/LeetCode/tree/master/0229-majority-element-ii) |
 | [0268-missing-number](https://github.com/IshantSingh27/LeetCode/tree/master/0268-missing-number) |
+| [0295-find-median-from-data-stream](https://github.com/IshantSingh27/LeetCode/tree/master/0295-find-median-from-data-stream) |
 | [0347-top-k-frequent-elements](https://github.com/IshantSingh27/LeetCode/tree/master/0347-top-k-frequent-elements) |
 | [0368-largest-divisible-subset](https://github.com/IshantSingh27/LeetCode/tree/master/0368-largest-divisible-subset) |
 | [0435-non-overlapping-intervals](https://github.com/IshantSingh27/LeetCode/tree/master/0435-non-overlapping-intervals) |
@@ -424,6 +426,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0239-sliding-window-maximum](https://github.com/IshantSingh27/LeetCode/tree/master/0239-sliding-window-maximum) |
+| [0295-find-median-from-data-stream](https://github.com/IshantSingh27/LeetCode/tree/master/0295-find-median-from-data-stream) |
 | [0347-top-k-frequent-elements](https://github.com/IshantSingh27/LeetCode/tree/master/0347-top-k-frequent-elements) |
 | [0451-sort-characters-by-frequency](https://github.com/IshantSingh27/LeetCode/tree/master/0451-sort-characters-by-frequency) |
 | [0480-sliding-window-median](https://github.com/IshantSingh27/LeetCode/tree/master/0480-sliding-window-median) |
@@ -922,6 +925,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0155-min-stack](https://github.com/IshantSingh27/LeetCode/tree/master/0155-min-stack) |
 | [0208-implement-trie-prefix-tree](https://github.com/IshantSingh27/LeetCode/tree/master/0208-implement-trie-prefix-tree) |
+| [0295-find-median-from-data-stream](https://github.com/IshantSingh27/LeetCode/tree/master/0295-find-median-from-data-stream) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/IshantSingh27/LeetCode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0901-online-stock-span](https://github.com/IshantSingh27/LeetCode/tree/master/0901-online-stock-span) |
 ## Monotonic Stack
@@ -964,6 +968,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Data Stream
 |  |
 | ------- |
+| [0295-find-median-from-data-stream](https://github.com/IshantSingh27/LeetCode/tree/master/0295-find-median-from-data-stream) |
 | [0901-online-stock-span](https://github.com/IshantSingh27/LeetCode/tree/master/0901-online-stock-span) |
 ## Ordered Set
 |  |
