@@ -6,16 +6,15 @@ public:
         else if(arr[0] > arr[1]) return 0;
         else if(arr[n - 1] > arr[n - 2]) return n - 1;
 
-        int s = 1 , e = n - 2 , mid = s + (e - s) / 2;;
-        while(s < e){
+        int s = 1 , e = n - 2;
+        while(s <= e){
+            int mid = s + (e - s) / 2;
             if(arr[mid] > arr[mid + 1] && arr[mid] > arr[mid - 1]) return mid;
 
             if(arr[mid] < arr[mid + 1] && arr[mid] > arr[mid - 1]) s = mid + 1;
             else e = mid - 1;
-
-            mid = s + (e - s) / 2;
         }
 
-        return mid;
+        return -1;
     }
 };
