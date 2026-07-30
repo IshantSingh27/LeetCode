@@ -10,31 +10,31 @@
  * };
  */
 class Solution {
-    TreeNode* first;
-    TreeNode* last;
-    TreeNode* prev;
-    TreeNode* middle;
+private:
+TreeNode *prev , *first , *middle , *last;
 public:
     void in(TreeNode* root){
         if(root == NULL) return;
 
         in(root->left);
-
-        if(prev != NULL && root->val < prev->val){
-            if(first == NULL){
+        if(prev != NULL){
+            if(first == NULL && prev->val > root->val){
                 first = prev;
                 middle = root;
             }
-            else last = root;
+            else if(prev->val > root->val){
+                last = root;
+                return;
+            }
+        }
+        else{
+            prev = root;
         }
         prev = root;
-
         in(root->right);
     }
-
     void recoverTree(TreeNode* root) {
-        if(root == NULL) return;
-
+        first = middle = prev = last = NULL;
         in(root);
 
         if(last == NULL){
