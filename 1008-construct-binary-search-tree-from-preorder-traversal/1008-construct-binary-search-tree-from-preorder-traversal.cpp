@@ -19,7 +19,7 @@ public:
         root->left = sol(pre , i , root->val);
         root->right = sol(pre , i , ub);
 
-        return root;  
+        return root;
     }
     TreeNode* bstFromPreorder(vector<int>& pre) {
         int i = 0;
