@@ -12,13 +12,13 @@
 class Solution {
 public:
     vector<int> inorderTraversal(TreeNode* root) {
-        vector<int> in;
-        if(root == NULL) return in;
-
+        if(root == NULL) return {};
+        vector<int> ans;
         TreeNode* cur = root;
+
         while(cur != NULL){
             if(cur->left == NULL){
-                in.push_back(cur->val);
+                ans.push_back(cur->val);
                 cur = cur->right;
             }
             else{
@@ -28,16 +28,15 @@ public:
                 }
                 if(prev->right == NULL){
                     prev->right = cur;
-                    cur = cur->left; 
+                    cur = cur->left;
                 }
                 else{
+                    ans.push_back(cur->val);
                     prev->right = NULL;
-                    in.push_back(cur->val);
                     cur = cur->right;
                 }
             }
         }
-
-        return in;
+        return ans;
     }
 };
