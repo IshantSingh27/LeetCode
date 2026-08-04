@@ -449,6 +449,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1046-last-stone-weight](https://github.com/IshantSingh27/LeetCode/tree/master/1046-last-stone-weight) |
 | [1631-path-with-minimum-effort](https://github.com/IshantSingh27/LeetCode/tree/master/1631-path-with-minimum-effort) |
 | [1753-path-with-minimum-effort](https://github.com/IshantSingh27/LeetCode/tree/master/1753-path-with-minimum-effort) |
+| [2203-minimum-weighted-subgraph-with-the-required-paths](https://github.com/IshantSingh27/LeetCode/tree/master/2203-minimum-weighted-subgraph-with-the-required-paths) |
 | [2558-take-gifts-from-the-richest-pile](https://github.com/IshantSingh27/LeetCode/tree/master/2558-take-gifts-from-the-richest-pile) |
 | [3650-minimum-cost-path-with-edge-reversals](https://github.com/IshantSingh27/LeetCode/tree/master/3650-minimum-cost-path-with-edge-reversals) |
 ## Tree
@@ -727,6 +728,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/IshantSingh27/LeetCode/tree/master/1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
 | [1976-number-of-ways-to-arrive-at-destination](https://github.com/IshantSingh27/LeetCode/tree/master/1976-number-of-ways-to-arrive-at-destination) |
 | [2090-number-of-ways-to-arrive-at-destination](https://github.com/IshantSingh27/LeetCode/tree/master/2090-number-of-ways-to-arrive-at-destination) |
+| [2203-minimum-weighted-subgraph-with-the-required-paths](https://github.com/IshantSingh27/LeetCode/tree/master/2203-minimum-weighted-subgraph-with-the-required-paths) |
 | [3650-minimum-cost-path-with-edge-reversals](https://github.com/IshantSingh27/LeetCode/tree/master/3650-minimum-cost-path-with-edge-reversals) |
 ## String
 |  |
@@ -938,6 +940,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1319-number-of-operations-to-make-network-connected](https://github.com/IshantSingh27/LeetCode/tree/master/1319-number-of-operations-to-make-network-connected) |
 | [1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/IshantSingh27/LeetCode/tree/master/1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
 | [1976-number-of-ways-to-arrive-at-destination](https://github.com/IshantSingh27/LeetCode/tree/master/1976-number-of-ways-to-arrive-at-destination) |
+| [2203-minimum-weighted-subgraph-with-the-required-paths](https://github.com/IshantSingh27/LeetCode/tree/master/2203-minimum-weighted-subgraph-with-the-required-paths) |
 | [3650-minimum-cost-path-with-edge-reversals](https://github.com/IshantSingh27/LeetCode/tree/master/3650-minimum-cost-path-with-edge-reversals) |
 ## Design
 |  |
