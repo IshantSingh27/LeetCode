@@ -1,55 +1,44 @@
 class Solution {
 public:
-    int maximumWidth(vector<int>& planks) {
-         unordered_map<long long, int> freq;
+    int maximumWidth(vector<int>& arr) {
+        sort(arr.begin() , arr.end());
 
-        for (int x : planks) {
+        unordered_map<int , int> freq;
+        for(auto x : arr){
             freq[x]++;
         }
 
-        vector<long long> values;
-
-        for (auto &[x, cnt] : freq) {
-            values.push_back(x);
+        vector<int> val;
+        for(auto& [x , f] : freq){
+            val.push_back(x);
         }
 
-        int k = values.size();
+        int n = val.size();
+        unordered_map<int , int> paircount;
+        for(int i=0 ; i<n ; i++){
+            int x = val[i];
 
-        // pairCount[H] = maximum number of planks
-        // that can be created by combining pairs with sum H
-        unordered_map<long long, int> pairCount;
+            paircount[x + x] += freq[x] / 2;
 
-        // Consider every pair of DISTINCT height values
-        for (int i = 0; i < k; i++) {
+            for(int j=i+1 ; j<n ; j++){
+                int y = val[j] , h = x + y;
 
-            // x + x
-            long long x = values[i];
-
-            pairCount[2 * x] += freq[x] / 2;
-
-            // x + y
-            for (int j = i + 1; j < k; j++) {
-
-                long long y = values[j];
-
-                long long H = x + y;
-
-                int pairs = min(freq[x], freq[y]);
-
-                pairCount[H] += pairs;
+                int cur = min(freq[x] , freq[y]);
+                
+                paircount[h] += cur;
             }
         }
 
         int ans = 0;
 
-        // Existing single planks
-        for (auto &[H, cnt] : freq) {
-            ans = max(ans, cnt + pairCount[H]);
+        for(auto& [x , f] : freq){
+            int cur = paircount[x];
+
+            ans = max(ans , cur + f);
         }
 
-        // Heights that exist only through pairing
-        for (auto &[H, pairs] : pairCount) {
-            ans = max(ans, pairs);
+        for(auto& [x , f] : paircount){
+            ans = max(ans , f);
         }
 
         return ans;
