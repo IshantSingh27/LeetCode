@@ -1,56 +1,33 @@
 class Solution {
 public:
     long long weightedSum(vector<int>& parent, vector<int>& nums) {
+        long long n = nums.size() , sum = 0 , h = 1;
+        vector<long long> depth(n , 0);
 
-        int n = parent.size();
+        for(long long i=0 ; i<n ; i++){
+            if(depth[i] != 0) continue;
 
-        // depth[i] = depth of node i
-        // root has depth 1
-        vector<long long> depth(n, 0);
-
-        long long h = 1;
-
-        for (int i = 0; i < n; i++) {
-
-            if (depth[i] != 0) {
-                h = max(h, depth[i]);
-                continue;
+            vector<long long> path;
+            long long j = i;
+            while(depth[j] == 0 && parent[j] != -1){
+                path.push_back(j);
+                j = parent[j];
             }
 
-            // Store nodes whose depth we need to calculate
-            vector<int> path;
+            if(parent[j] == -1 && depth[j] == 0) depth[j] = 1;
 
-            int node = i;
-
-            // Move upward until we reach a node
-            // whose depth is already known or root.
-            while (depth[node] == 0 && parent[node] != -1) {
-                path.push_back(node);
-                node = parent[node];
+            for(long long k=path.size() - 1 ; k>=0 ; k--){
+                depth[path[k]] = depth[parent[path[k]]] + 1;
             }
 
-            // If root is reached
-            if (parent[node] == -1 && depth[node] == 0) {
-                depth[node] = 1;
-            }
-
-            // Work backwards and assign depths
-            for (int j = path.size() - 1; j >= 0; j--) {
-                depth[path[j]] = depth[parent[path[j]]] + 1;
-            }
-
-            h = max(h, depth[i]);
+            h = max(h , depth[i]);
         }
-
-        // Your original formula
         h++;
 
-        long long ans = 0;
-
-        for (int i = 0; i < n; i++) {
-            ans += 1LL * nums[i] * (h - depth[i]);
+        for(long long i=0 ; i<n ; i++){
+            sum += 1LL * nums[i] * (h - depth[i]);
         }
 
-        return ans;
+        return sum;
     }
 };
