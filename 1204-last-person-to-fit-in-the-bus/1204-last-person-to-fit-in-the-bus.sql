@@ -1,5 +1,4 @@
-# Write your MySQL query statement below
-select person_name
+select person_name 
 from Queue as q1
 where (
     select sum(weight)
