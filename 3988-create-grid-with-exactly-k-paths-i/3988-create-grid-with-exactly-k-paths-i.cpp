@@ -1,82 +1,57 @@
 class Solution {
 public:
-    vector<string> createGrid(int m, int n, int k) {
+    vector<string> createGrid(int n, int m, int k) {
+        if(k == 1){
+            vector<string> ans(n , string(m , '#'));
 
-        // k = 1 is always possible.
-        // Make one simple path:
-        // first row -> last column
-        if (k == 1) {
-            vector<string> grid(m, string(n, '#'));
+            for(int i=0 ; i<m ; i++){
+                ans[0][i] = '.';
+            }
 
-            // First row
-            for (int j = 0; j < n; j++)
-                grid[0][j] = '.';
+            for(int i=0 ; i<n ; i++){
+                ans[i][m - 1] = '.';
+            }
 
-            // Last column
-            for (int i = 0; i < m; i++)
-                grid[i][n - 1] = '.';
-
-            return grid;
+            return ans;
         }
 
-        // If n >= k, construct using first two rows.
-        //
-        // Example k = 3:
-        //
-        // ....
-        // #...
-        // ###
-        // ###
-        //
-        // Then extend the last column downward.
-        if (n >= k && m >= 2) {
+        if(m >= k && n >= 2){
+            vector<string> ans(n , string(m , '#'));
 
-            vector<string> grid(m, string(n, '#'));
+            for(int i=0 ; i<m ; i++){
+                ans[0][i] = '.';
+            }
 
-            // First row is completely free
-            for (int j = 0; j < n; j++)
-                grid[0][j] = '.';
+            for(int i=m - k ; i<m ; i++){
+                ans[1][i] = '.';
+            }
 
-            // Last k cells of second row are free
-            for (int j = n - k; j < n; j++)
-                grid[1][j] = '.';
+            for(int i=0 ; i<n ; i++){
+                ans[i][m - 1] = '.';
+            }
 
-            // From (1,n-1) to bottom-right, only one path
-            for (int i = 2; i < m; i++)
-                grid[i][n - 1] = '.';
-
-            return grid;
+            return ans;
         }
 
-        // If m >= k, do the same construction vertically.
-        if (m >= k && n >= 2) {
+        if(n >= k && m >= 2){
+            vector<string> ans(n , string(m , '#'));
 
-            vector<string> grid(m, string(n, '#'));
+            for(int i=0 ; i<m ; i++){
+                ans[0][i] = '.';
+            }
 
-            // First column is completely free
-            for (int i = 0; i < m; i++)
-                grid[i][0] = '.';
+            for(int i=1 ; i<k ; i++){
+                ans[i][m - 2] = '.';
+            }
 
-            // Last k cells of second column are free
-            for (int i = m - k; i < m; i++)
-                grid[i][1] = '.';
+            for(int i=0 ; i<n ; i++){
+                ans[i][m - 1] = '.';
+            }
 
-            // From (m-1,1) to bottom-right, only one path
-            for (int j = 2; j < n; j++)
-                grid[m - 1][j] = '.';
-
-            return grid;
+            return ans;
         }
 
-        // The only remaining possible case for k = 4:
-        // m = n = 3
-        //
-        // ..#
-        // ...
-        // #..
-        //
-        // This gives exactly 4 paths.
-        if (m == 3 && n == 3 && k == 4) {
+        if(n == 3 && m == 3 && k == 4){
             return {
                 "..#",
                 "...",
@@ -84,7 +59,6 @@ public:
             };
         }
 
-        // No construction possible.
         return {};
     }
 };
