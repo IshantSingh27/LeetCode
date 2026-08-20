@@ -134,6 +134,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2149-rearrange-array-elements-by-sign](https://github.com/IshantSingh27/LeetCode/tree/master/2149-rearrange-array-elements-by-sign) |
 | [2271-rearrange-array-elements-by-sign](https://github.com/IshantSingh27/LeetCode/tree/master/2271-rearrange-array-elements-by-sign) |
 | [2558-take-gifts-from-the-richest-pile](https://github.com/IshantSingh27/LeetCode/tree/master/2558-take-gifts-from-the-richest-pile) |
+| [3984-divisible-game](https://github.com/IshantSingh27/LeetCode/tree/master/3984-divisible-game) |
 ## Hash Table
 |  |
 | ------- |
@@ -284,6 +285,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1922-count-good-numbers](https://github.com/IshantSingh27/LeetCode/tree/master/1922-count-good-numbers) |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/IshantSingh27/LeetCode/tree/master/1993-sum-of-all-subset-xor-totals) |
 | [2032-largest-odd-number-in-string](https://github.com/IshantSingh27/LeetCode/tree/master/2032-largest-odd-number-in-string) |
+| [3984-divisible-game](https://github.com/IshantSingh27/LeetCode/tree/master/3984-divisible-game) |
 ## Simulation
 |  |
 | ------- |
@@ -717,6 +719,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1669-minimum-cost-to-cut-a-stick](https://github.com/IshantSingh27/LeetCode/tree/master/1669-minimum-cost-to-cut-a-stick) |
 | [1976-number-of-ways-to-arrive-at-destination](https://github.com/IshantSingh27/LeetCode/tree/master/1976-number-of-ways-to-arrive-at-destination) |
 | [2090-number-of-ways-to-arrive-at-destination](https://github.com/IshantSingh27/LeetCode/tree/master/2090-number-of-ways-to-arrive-at-destination) |
+| [3984-divisible-game](https://github.com/IshantSingh27/LeetCode/tree/master/3984-divisible-game) |
 ## Shortest Path
 |  |
 | ------- |
@@ -858,6 +861,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/IshantSingh27/LeetCode/tree/master/1993-sum-of-all-subset-xor-totals) |
+| [3984-divisible-game](https://github.com/IshantSingh27/LeetCode/tree/master/3984-divisible-game) |
 ## Trie
 |  |
 | ------- |
@@ -1010,4 +1014,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0347-top-k-frequent-elements](https://github.com/IshantSingh27/LeetCode/tree/master/0347-top-k-frequent-elements) |
+## Number Theory
+|  |
+| ------- |
+| [3984-divisible-game](https://github.com/IshantSingh27/LeetCode/tree/master/3984-divisible-game) |
 <!---LeetCode Topics End-->
