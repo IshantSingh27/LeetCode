@@ -15,19 +15,16 @@ public:
             if(s1[i] == s2[i]) continue;
             else{
                 if(s1[i] == '1'){
-                    if(i < n - 1 && s1[i + 1] == '1'){
+                    if(s1[i + 1] == '1'){
                         ans++;
-                        s1[i] = '0';
                         s1[i + 1] = '0';
                     }
                     else{
                         ans += 2;
-                        s1[i] = '0';
                     }
                 }
                 else{
                     ans++;
-                    s1[i] = '1';
                 }
             }
         }
