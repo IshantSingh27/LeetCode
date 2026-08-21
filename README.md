@@ -134,6 +134,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2149-rearrange-array-elements-by-sign](https://github.com/IshantSingh27/LeetCode/tree/master/2149-rearrange-array-elements-by-sign) |
 | [2271-rearrange-array-elements-by-sign](https://github.com/IshantSingh27/LeetCode/tree/master/2271-rearrange-array-elements-by-sign) |
 | [2558-take-gifts-from-the-richest-pile](https://github.com/IshantSingh27/LeetCode/tree/master/2558-take-gifts-from-the-richest-pile) |
+| [3975-filter-occupied-intervals](https://github.com/IshantSingh27/LeetCode/tree/master/3975-filter-occupied-intervals) |
 | [3979-maximum-valid-pair-sum](https://github.com/IshantSingh27/LeetCode/tree/master/3979-maximum-valid-pair-sum) |
 | [3984-divisible-game](https://github.com/IshantSingh27/LeetCode/tree/master/3984-divisible-game) |
 ## Hash Table
@@ -239,6 +240,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1547-minimum-cost-to-cut-a-stick](https://github.com/IshantSingh27/LeetCode/tree/master/1547-minimum-cost-to-cut-a-stick) |
 | [1669-minimum-cost-to-cut-a-stick](https://github.com/IshantSingh27/LeetCode/tree/master/1669-minimum-cost-to-cut-a-stick) |
 | [1838-frequency-of-the-most-frequent-element](https://github.com/IshantSingh27/LeetCode/tree/master/1838-frequency-of-the-most-frequent-element) |
+| [3975-filter-occupied-intervals](https://github.com/IshantSingh27/LeetCode/tree/master/3975-filter-occupied-intervals) |
 ## Matrix
 |  |
 | ------- |
