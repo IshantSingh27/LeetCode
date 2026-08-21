@@ -134,6 +134,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2149-rearrange-array-elements-by-sign](https://github.com/IshantSingh27/LeetCode/tree/master/2149-rearrange-array-elements-by-sign) |
 | [2271-rearrange-array-elements-by-sign](https://github.com/IshantSingh27/LeetCode/tree/master/2271-rearrange-array-elements-by-sign) |
 | [2558-take-gifts-from-the-richest-pile](https://github.com/IshantSingh27/LeetCode/tree/master/2558-take-gifts-from-the-richest-pile) |
+| [3979-maximum-valid-pair-sum](https://github.com/IshantSingh27/LeetCode/tree/master/3979-maximum-valid-pair-sum) |
 | [3984-divisible-game](https://github.com/IshantSingh27/LeetCode/tree/master/3984-divisible-game) |
 ## Hash Table
 |  |
@@ -861,6 +862,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/IshantSingh27/LeetCode/tree/master/1993-sum-of-all-subset-xor-totals) |
+| [3979-maximum-valid-pair-sum](https://github.com/IshantSingh27/LeetCode/tree/master/3979-maximum-valid-pair-sum) |
 | [3984-divisible-game](https://github.com/IshantSingh27/LeetCode/tree/master/3984-divisible-game) |
 ## Trie
 |  |
