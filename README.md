@@ -345,6 +345,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1838-frequency-of-the-most-frequent-element](https://github.com/IshantSingh27/LeetCode/tree/master/1838-frequency-of-the-most-frequent-element) |
 | [1903-largest-odd-number-in-string](https://github.com/IshantSingh27/LeetCode/tree/master/1903-largest-odd-number-in-string) |
 | [2032-largest-odd-number-in-string](https://github.com/IshantSingh27/LeetCode/tree/master/2032-largest-odd-number-in-string) |
+| [3980-minimum-operations-to-transform-binary-string](https://github.com/IshantSingh27/LeetCode/tree/master/3980-minimum-operations-to-transform-binary-string) |
 ## Divide and Conquer
 |  |
 | ------- |
@@ -720,6 +721,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1669-minimum-cost-to-cut-a-stick](https://github.com/IshantSingh27/LeetCode/tree/master/1669-minimum-cost-to-cut-a-stick) |
 | [1976-number-of-ways-to-arrive-at-destination](https://github.com/IshantSingh27/LeetCode/tree/master/1976-number-of-ways-to-arrive-at-destination) |
 | [2090-number-of-ways-to-arrive-at-destination](https://github.com/IshantSingh27/LeetCode/tree/master/2090-number-of-ways-to-arrive-at-destination) |
+| [3980-minimum-operations-to-transform-binary-string](https://github.com/IshantSingh27/LeetCode/tree/master/3980-minimum-operations-to-transform-binary-string) |
 | [3984-divisible-game](https://github.com/IshantSingh27/LeetCode/tree/master/3984-divisible-game) |
 ## Shortest Path
 |  |
@@ -781,6 +783,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1781-sum-of-beauty-of-all-substrings](https://github.com/IshantSingh27/LeetCode/tree/master/1781-sum-of-beauty-of-all-substrings) |
 | [1903-largest-odd-number-in-string](https://github.com/IshantSingh27/LeetCode/tree/master/1903-largest-odd-number-in-string) |
 | [2032-largest-odd-number-in-string](https://github.com/IshantSingh27/LeetCode/tree/master/2032-largest-odd-number-in-string) |
+| [3980-minimum-operations-to-transform-binary-string](https://github.com/IshantSingh27/LeetCode/tree/master/3980-minimum-operations-to-transform-binary-string) |
 ## Memoization
 |  |
 | ------- |
