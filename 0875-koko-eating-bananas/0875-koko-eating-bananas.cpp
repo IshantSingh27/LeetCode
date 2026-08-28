@@ -1,30 +1,26 @@
 class Solution {
 public:
-    int sol(int mid , int h , vector<int>& arr){
-        int ind = 0;
-        while(ind < arr.size() && h > 0){
-            int cur = 0;
-            // cout<<"arr[ind] : "<<arr[ind];
-            if(arr[ind] % mid == 0) cur += arr[ind] / mid;
-            else cur += (arr[ind] / mid) + 1;
-            // cout<<" cur : "<<cur<<endl;;
+    bool sol(long long mid , long long h , vector<int>& arr){
+        long long n = arr.size();
+        for(long long i=0 ; i<n ; i++){
+            long long cur = 0;
+            if(arr[i] % mid == 0) cur = arr[i] / mid;
+            else cur = (arr[i] / mid) + 1;
+
             h -= cur;
-            if(h >= 0) ind++;
+            if(h < 0) return false;
         }
-        return ind == arr.size();
+        return true;
     }
     int minEatingSpeed(vector<int>& arr, int h) {
-        int s = 1 , e = *max_element(arr.begin() , arr.end()) , ans = INT_MAX;
+        long long ans = 0 , s = 1 , e = *max_element(arr.begin() , arr.end());
         while(s <= e){
-            int mid = s + (e - s) / 2;
-            // cout<<"mid : "<<mid<<endl;
-            if(!sol(mid , h , arr)){
-                s = mid + 1;
-            }
-            else{
-                ans = min(ans , mid);
+            long long mid = s + (e - s) / 2;
+            if(sol(mid , h , arr)){
+                ans = mid;
                 e = mid - 1;
             }
+            else s = mid + 1;
         }
         return ans;
     }
