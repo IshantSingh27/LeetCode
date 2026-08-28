@@ -3,11 +3,7 @@ public:
     bool sol(long long mid , long long h , vector<int>& arr){
         long long n = arr.size();
         for(long long i=0 ; i<n ; i++){
-            long long cur = 0;
-            if(arr[i] % mid == 0) cur = arr[i] / mid;
-            else cur = (arr[i] / mid) + 1;
-
-            h -= cur;
+            h -= (arr[i] + mid - 1) / mid;
             if(h < 0) return false;
         }
         return true;
