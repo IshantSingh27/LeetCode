@@ -1,46 +1,41 @@
 class Solution {
 public:
-    int minOperations(vector<int>& nums, int sum) {
-        vector<int> dp(sum + 1 , INT_MAX);
-        dp[0] = 0;
+    int sol(int ind , int sum , vector<int>& nums , vector<vector<int>>& dp){
+        if(sum == 0) return 0;
+        if(ind == nums.size() || sum < 0) return INT_MAX;
 
-        for(int x : nums){
-            vector<pair<int , int>> options;
+        if(dp[ind][sum] != -1) return dp[ind][sum];
 
-            options.push_back({x , 0});
+        int ops = sol(ind + 1 , sum , nums , dp);
 
-            int cost = 0 , val = x;
-            while(val > 0){
-                val = val / 2;
-                cost++;
+        int cur = nums[ind] , cnt = 0 , res;
+        while(cur <= sum){
+            res = sol(ind + 1 , sum - cur , nums , dp);
 
-                if(val == 0) break;
+            if(res != INT_MAX) ops = min(ops , cnt + res);
 
-                options.push_back({val , cost});
-            }
-
-            cost = 0 ; val = x;
-            while(val <= sum / 2){
-                val = val * 2;
-                cost++;
-
-                options.push_back({val , cost});
-            }
-
-            vector<int> ndp = dp;
-            for(int s=0 ; s<=sum ; s++){
-                if(dp[s] == INT_MAX) continue;
-
-                for(auto [value , operations] : options){
-                    if(s + value > sum) continue;
-
-                    ndp[s + value] = min(ndp[s + value] , dp[s] + operations);
-                }
-            }
-            dp = ndp;
+            cur = cur * 2;
+            cnt++;
         }
 
-        return dp[sum] == INT_MAX ? -1 : dp[sum];
+        cur = nums[ind] , cnt = 0;
+        while(cur > 0){
+            res = sol(ind + 1 , sum - cur , nums , dp);
 
+            if(res != INT_MAX) ops = min(ops , cnt + res);
+            
+            cur = cur / 2;
+            cnt++;
+        }
+
+        return dp[ind][sum] = ops;
+    }
+    int minOperations(vector<int>& nums, int sum) {
+        int n = nums.size();
+        vector<vector<int>> dp(n , vector<int>(sum + 1 , -1));
+
+        int res = sol(0 , sum , nums , dp);
+        if(res == INT_MAX) return -1;
+        else return res;
     }
 };
