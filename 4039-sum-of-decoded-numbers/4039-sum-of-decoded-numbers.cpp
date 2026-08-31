@@ -23,13 +23,17 @@ public:
             long long width = nums[i] % 10;
             long long d = nums[i] / 10;
 
-            string s = to_string(d);
+            long long digits = 0 , temp = d;
 
-            string sx = s.substr(0 , width);
-            string sy = s.substr(width);
+            while(temp > 0){
+                digits++;
+                temp = temp / 10;
+            }
 
-            long long x = stoll(sx);
-            long long y = stoll(sy);
+            long long div = power(10 , digits - width);
+
+            long long x = d / div;
+            long long y = d % div;
 
             ans = (ans + power(x , y)) % mod;
         }
