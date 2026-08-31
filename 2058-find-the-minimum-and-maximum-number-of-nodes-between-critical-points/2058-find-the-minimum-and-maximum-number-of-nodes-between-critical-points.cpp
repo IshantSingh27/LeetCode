@@ -33,7 +33,7 @@ public:
             nxt = nxt->next;
             i++;
         }
-        cout<<"minind : "<<minind<<" mostmin: "<<mostmin<<endl;
+        // cout<<"minind : "<<minind<<" mostmin: "<<mostmin<<endl;
         if(mini == INT_MAX || minind == mostmin) return {-1 , -1};
 
         return {mini , minind - mostmin};
