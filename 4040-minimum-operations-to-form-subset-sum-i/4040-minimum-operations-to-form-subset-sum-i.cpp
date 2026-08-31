@@ -6,13 +6,13 @@ public:
 
         if(dp[ind][sum] != -1) return dp[ind][sum];
 
-        int ops = sol(ind + 1 , sum , nums , dp);
+        int nottake = sol(ind + 1 , sum , nums , dp);
 
-        int cur = nums[ind] , cnt = 0 , res;
+        int cur = nums[ind] , cnt = 0 , res , take = INT_MAX;
         while(cur <= sum){
             res = sol(ind + 1 , sum - cur , nums , dp);
 
-            if(res != INT_MAX) ops = min(ops , cnt + res);
+            if(res != INT_MAX) take = min(take , cnt + res);
 
             cur = cur * 2;
             cnt++;
@@ -22,13 +22,13 @@ public:
         while(cur > 0){
             res = sol(ind + 1 , sum - cur , nums , dp);
 
-            if(res != INT_MAX) ops = min(ops , cnt + res);
+            if(res != INT_MAX) take = min(take , cnt + res);
             
             cur = cur / 2;
             cnt++;
         }
 
-        return dp[ind][sum] = ops;
+        return dp[ind][sum] = min(take , nottake);
     }
     int minOperations(vector<int>& nums, int sum) {
         int n = nums.size();
