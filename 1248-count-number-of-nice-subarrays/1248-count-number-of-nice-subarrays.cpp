@@ -1,28 +1,21 @@
 class Solution {
 public:
-    int sol(vector<int>& arr, int k){
-        if(k < 0) return 0;
+    int numberOfSubarrays(vector<int>& nums, int k) {
+        unordered_map<int , int> mp;
+        mp[0] = 1;
+        int n = nums.size() , cnt = 0 , ans = 0;
 
-        int cntodd = 0 , r = 0 , l = 0 , cnt = 0;
-        while(r < arr.size()){
-            if(arr[r] % 2 != 0) cntodd++;
+        for(int i=0 ; i<n ; i++){
+            if(nums[i] % 2 == 1) cnt++;
 
-            while(cntodd > k){
-                if(arr[l] % 2 != 0) cntodd--;
-                l++;
+            int need = cnt - k;
+            if(mp.find(need) != mp.end()){
+                ans += mp[need];
             }
 
-            if(cntodd <= k){
-                cnt += r - l + 1;
-            }
-
-            r++;
+            mp[cnt]++;
         }
 
-        return cnt;
-    }
-
-    int numberOfSubarrays(vector<int>& arr, int k) {
-        return sol(arr , k) - sol(arr , k - 1);
+        return ans;
     }
 };
