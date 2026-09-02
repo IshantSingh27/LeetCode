@@ -1,27 +1,21 @@
 class Solution {
 public:
-    int sol(vector<int>& arr, int k){
-        if(k < 0) return 0;
-        int l = 0 , r = 0 , cnt = 0 , sum = 0;
+    int numSubarraysWithSum(vector<int>& nums, int k) {
+        unordered_map<int , int> mp;
+        mp[0] = 1;
+        int n = nums.size() , sum = 0 , ans = 0;
 
-        while(r < arr.size()){
-            sum += arr[r];
+        for(int i=0 ; i<n ; i++){
+            sum += nums[i];
 
-            while(sum > k){
-                sum -= arr[l];
-                l++;
+            int need = sum - k;
+            if(mp.find(need) != mp.end()){
+                ans += mp[need];
             }
 
-            if(sum <= k){
-                cnt += r - l + 1;
-            }
-
-            r++;
+            mp[sum]++;
         }
 
-        return cnt;
-    }
-    int numSubarraysWithSum(vector<int>& arr, int k) {
-        return sol(arr , k) - sol(arr , k - 1);
+        return ans;
     }
 };
