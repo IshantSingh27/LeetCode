@@ -1,39 +1,34 @@
 class Solution {
 public:
-    bool search(vector<int>& nums, int t) {
-        int s = 0, e = nums.size() - 1;
+    bool search(vector<int>& nums, int tar) {
+        int s = 0 , e = nums.size() - 1;
 
-        while (s <= e) {
+        while(s <= e){
             int mid = s + (e - s) / 2;
+            cout<<"mid : "<<mid<<" nums : "<<nums[mid]<<endl;
 
-            // If found target, return true
-            if (nums[mid] == t) return true;
+            if(tar == nums[mid]) return true;
 
-            // Handle duplicates: shrink search space
-            if (nums[s] == nums[mid] && nums[mid] == nums[e]) {
+            if(nums[s] == nums[mid] && nums[e] == nums[mid]){
                 s++;
                 e--;
                 continue;
             }
 
-            // If left half is sorted
-            if (nums[s] <= nums[mid]) {
-                if (t >= nums[s] && t < nums[mid]) {
-                    e = mid - 1;  // Search in the left half
-                } else {
-                    s = mid + 1;  // Search in the right half
+            if((nums[e] >= nums[mid])){
+                if(tar > nums[mid] && tar <= nums[e]){
+                    s = mid + 1;
                 }
-            } 
-            // If right half is sorted
-            else {
-                if (t > nums[mid] && t <= nums[e]) {
-                    s = mid + 1;  // Search in the right half
-                } else {
-                    e = mid - 1;  // Search in the left half
+                else e = mid - 1;
+            }
+            else{
+                if(tar < nums[mid] && tar >= nums[s]){
+                    e = mid - 1;
                 }
+                else s = mid + 1;
             }
         }
 
-        return false;  // Target not found
+        return false;
     }
 };
