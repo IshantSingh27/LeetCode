@@ -1,13 +1,13 @@
 class Solution {
 public:
-    bool check(vector<int>& arr) {
-        int cnt = 0 , n = arr.size();
+    bool check(vector<int>& nums) {
+        int n = nums.size() , cnt = 0;
+        
         for(int i=1 ; i<n ; i++){
-            if(arr[i] < arr[i - 1]) cnt++;
+            if(nums[i] < nums[i - 1]) cnt++;
         }
-        if(arr[0] < arr[n - 1]) cnt++;
+        if(nums[n - 1] > nums[0]) cnt++;
 
-        if(cnt > 1) return false;
-        return true;
+        return cnt < 2;
     }
 };
