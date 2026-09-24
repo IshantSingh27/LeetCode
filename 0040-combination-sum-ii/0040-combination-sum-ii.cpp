@@ -1,26 +1,27 @@
 class Solution {
 public:
-    void sol(int ind , int k , vector<int>& arr , vector<int>& temp , vector<vector<int>>& ans){
-        if(k == 0){
+    void sol(int i , int tar , vector<int>& arr , vector<int>& temp , vector<vector<int>>& ans){
+        if(tar == 0){
             ans.push_back(temp);
             return;
         }
+        if(tar < 0){
+            return;
+        }
 
-        for(int i=ind ; i<arr.size() ; i++){
-            if(i > ind && arr[i] == arr[i - 1]) continue;
-            if(arr[i] > k) break;
+        for(int j=i ; j<arr.size() ; j++){
+            if(j != i && arr[j] == arr[j - 1]) continue;
 
-                temp.push_back(arr[i]);
-                sol(i + 1 , k - arr[i] , arr , temp , ans);
-                temp.pop_back();
-            
+            temp.push_back(arr[j]);
+            sol(j + 1 , tar - arr[j] , arr , temp , ans);
+            temp.pop_back();
         }
     }
     vector<vector<int>> combinationSum2(vector<int>& arr, int tar) {
         sort(arr.begin() , arr.end());
         vector<vector<int>> ans;
         vector<int> temp;
-
+        
         sol(0 , tar , arr , temp , ans);
 
         return ans;
