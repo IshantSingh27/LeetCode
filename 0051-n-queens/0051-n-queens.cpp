@@ -1,40 +1,38 @@
 class Solution {
 public:
-    bool chk(int row , int col , vector<string>& temp){
-        int i = row , j = col;
-        while(i >= 0){
-            if(temp[i][j] == 'Q') return false;
-            i--;
+    bool chk(int i ,int j , vector<string>& temp){
+        int row = i , col = j;
+        while(row >= 0){
+            if(temp[row][col] == 'Q') return false;
+            row--;
         }
-
-        i = row;
-        while(i >=0  && j >= 0){
-            if(temp[i][j] == 'Q') return false;
-            i--;
-            j--;
+        row = i;
+        while(row >= 0 && col >= 0){
+            if(temp[row][col] == 'Q') return false;
+            row--;
+            col--;
         }
-
-        i = row;
-        j = col;
-        while(i >= 0 && j >= 0){
-            if(temp[i][j] == 'Q') return false;
-            i--;
-            j++;
+        row = i;
+        col = j;
+        while(row >= 0 && col < temp.size()){
+            if(temp[row][col] == 'Q') return false;
+            row--;
+            col++;
         }
 
         return true;
     }
-    void sol(int row , int n , vector<string>& temp , vector<vector<string>>& ans){
-        if(row == n){
+    void sol(int n , vector<string>& temp , vector<vector<string>>& ans){
+        if(n == temp.size()){
             ans.push_back(temp);
             return;
         }
 
-        for(int i=0 ; i<n ; i++){
-            if(chk(row , i , temp)){
-                temp[row][i] = 'Q';
-                sol(row + 1 , n , temp , ans);
-                temp[row][i] = '.';
+        for(int i=0 ; i<temp.size() ; i++){
+            if(chk(n , i , temp)){
+                temp[n][i] = 'Q';
+                sol(n + 1 , temp , ans);
+                temp[n][i] = '.';
             }
         }
 
@@ -42,17 +40,11 @@ public:
     }
     vector<vector<string>> solveNQueens(int n) {
         vector<vector<string>> ans;
-        vector<string> temp;
+        string s(n , '.');
+        vector<string> temp(n , s);
 
-        for(int i=0 ; i<n ; i++){
-            string s;
-            for(int i=0 ; i<n ; i++){
-                s.push_back('.');
-            }
-            temp.push_back(s);
-        }
+        sol(0 , temp , ans);
 
-        sol(0 , n , temp , ans);
         return ans;
     }
 };
