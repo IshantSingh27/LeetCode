@@ -1066,4 +1066,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0523-continuous-subarray-sum](https://github.com/IshantSingh27/LeetCode/tree/master/0523-continuous-subarray-sum) |
+## Algorithm X
+|  |
+| ------- |
+| [0051-n-queens](https://github.com/IshantSingh27/LeetCode/tree/master/0051-n-queens) |
 <!---LeetCode Topics End-->
