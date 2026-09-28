@@ -21,7 +21,7 @@ public:
             }
         }
 
-        int len = lps.back();
+        int len = lps[n - 1];
         string add = s.substr(len);
         reverse(add.begin() , add.end());
 
