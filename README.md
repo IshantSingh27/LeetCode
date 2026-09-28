@@ -789,6 +789,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0151-reverse-words-in-a-string](https://github.com/IshantSingh27/LeetCode/tree/master/0151-reverse-words-in-a-string) |
 | [0205-isomorphic-strings](https://github.com/IshantSingh27/LeetCode/tree/master/0205-isomorphic-strings) |
 | [0208-implement-trie-prefix-tree](https://github.com/IshantSingh27/LeetCode/tree/master/0208-implement-trie-prefix-tree) |
+| [0214-shortest-palindrome](https://github.com/IshantSingh27/LeetCode/tree/master/0214-shortest-palindrome) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/IshantSingh27/LeetCode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0402-remove-k-digits](https://github.com/IshantSingh27/LeetCode/tree/master/0402-remove-k-digits) |
 | [0424-longest-repeating-character-replacement](https://github.com/IshantSingh27/LeetCode/tree/master/0424-longest-repeating-character-replacement) |
@@ -1016,6 +1017,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/IshantSingh27/LeetCode/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
+| [0214-shortest-palindrome](https://github.com/IshantSingh27/LeetCode/tree/master/0214-shortest-palindrome) |
 | [0796-rotate-string](https://github.com/IshantSingh27/LeetCode/tree/master/0796-rotate-string) |
 | [1392-longest-happy-prefix](https://github.com/IshantSingh27/LeetCode/tree/master/1392-longest-happy-prefix) |
 ## Bucket Sort
@@ -1050,10 +1052,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Rolling Hash
 |  |
 | ------- |
+| [0214-shortest-palindrome](https://github.com/IshantSingh27/LeetCode/tree/master/0214-shortest-palindrome) |
 | [1392-longest-happy-prefix](https://github.com/IshantSingh27/LeetCode/tree/master/1392-longest-happy-prefix) |
 ## Hash Function
 |  |
 | ------- |
+| [0214-shortest-palindrome](https://github.com/IshantSingh27/LeetCode/tree/master/0214-shortest-palindrome) |
 | [1392-longest-happy-prefix](https://github.com/IshantSingh27/LeetCode/tree/master/1392-longest-happy-prefix) |
 ## Quickselect
 |  |
@@ -1075,4 +1079,16 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0051-n-queens](https://github.com/IshantSingh27/LeetCode/tree/master/0051-n-queens) |
+## Manacher
+|  |
+| ------- |
+| [0214-shortest-palindrome](https://github.com/IshantSingh27/LeetCode/tree/master/0214-shortest-palindrome) |
+## Z Algorithm
+|  |
+| ------- |
+| [0214-shortest-palindrome](https://github.com/IshantSingh27/LeetCode/tree/master/0214-shortest-palindrome) |
+## Knuth–Morris–Pratt Algorithm
+|  |
+| ------- |
+| [0214-shortest-palindrome](https://github.com/IshantSingh27/LeetCode/tree/master/0214-shortest-palindrome) |
 <!---LeetCode Topics End-->
