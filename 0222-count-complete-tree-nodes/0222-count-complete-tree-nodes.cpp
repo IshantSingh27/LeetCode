@@ -16,6 +16,7 @@ public:
 
         while(root){
             cnt++;
+
             root = root->left;
         }
 
@@ -26,9 +27,10 @@ public:
 
         while(root){
             cnt++;
+
             root = root->right;
         }
-
+        
         return cnt;
     }
     int countNodes(TreeNode* root) {
@@ -38,7 +40,11 @@ public:
         int right = rh(root);
 
         if(left == right) return pow(2 , left) - 1;
+        else{
+            int l = countNodes(root->left);
+            int r = countNodes(root->right);
 
-        else return 1 + countNodes(root->left) + countNodes(root->right);
+            return 1 + l + r;
+        }
     }
 };
