@@ -12,26 +12,14 @@
 class Solution {
 public:
     int lh(TreeNode* root){
-        int cnt = 0;
+        if(root == NULL) return 0;
 
-        while(root){
-            cnt++;
-
-            root = root->left;
-        }
-
-        return cnt;
+        return 1 + lh(root->left);
     }
     int rh(TreeNode* root){
-        int cnt = 0;
+        if(root == NULL) return 0;
 
-        while(root){
-            cnt++;
-
-            root = root->right;
-        }
-        
-        return cnt;
+        return 1 + rh(root->right);
     }
     int countNodes(TreeNode* root) {
         if(root == NULL) return 0;
