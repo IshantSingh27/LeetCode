@@ -17,8 +17,23 @@ int sol(int ind , bool can , vector<int>& arr , vector<vector<int>>& dp){
     }
     int rob(vector<int>& arr) {
         int n = arr.size();
-        vector<vector<int>> dp(n , vector<int>(2, -1));
+        // vector<vector<int>> dp(n , vector<int>(2, -1));
         
-        return sol(n - 1 , true , arr , dp);
+        // return sol(n - 1 , true , arr , dp);
+
+        vector<vector<int>> dp(n + 1 , vector<int>(2, 0));
+
+        for(int i=1 ; i<=n ; i++){
+            for(int can=0 ; can<=1 ; can++){
+                int nottake = dp[i - 1][true];
+        
+                int take = 0;
+                if(can) take = arr[i - 1] + dp[i - 1][false];
+        
+                dp[i][can] = max(take , nottake);
+            }
+        }
+
+        return dp[n][1];
     }
 };
