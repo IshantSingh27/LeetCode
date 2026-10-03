@@ -11,23 +11,22 @@
  */
 class Solution {
 public:
-    TreeNode* sol(int prestart, int preend, vector<int>& pre, int instart, int inend, vector<int>& in, unordered_map<int , int>& inmap){
+    TreeNode* sol(int prestart , int preend , vector<int>& pre , int instart , int inend ,
+    vector<int>& in , unordered_map<int , int>& inmap){
         if(prestart > preend || instart > inend) return NULL;
 
-        int rv = pre[prestart];
-        int ind = inmap[rv];
-        int rem = ind - instart;
+        TreeNode* root = new TreeNode(pre[prestart]);
+        int ind = inmap[pre[prestart]] , left = ind - instart;
 
-        TreeNode* root = new TreeNode(rv);
-
-        root->left = sol(prestart + 1 , prestart + rem , pre , instart , ind - 1 , in , inmap);
-        root->right = sol(prestart + rem + 1 , preend , pre , ind + 1 , inend , in , inmap);
+        root->left = sol(prestart + 1 , prestart + left , pre , instart , ind - 1 , in , inmap);
+        root->right = sol(prestart + left + 1 , preend , pre , ind + 1 , inend , in , inmap);
 
         return root;
     }
     TreeNode* buildTree(vector<int>& pre, vector<int>& in) {
-        int n = in.size();
         unordered_map<int , int> inmap;
+        int n = in.size();
+
         for(int i=0 ; i<n ; i++){
             inmap[in[i]] = i;
         }
