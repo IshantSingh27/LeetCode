@@ -15,19 +15,23 @@ public:
         // vector<long long> dp(n + 1 , -1);
         // return sol(n , dp);
 
-        vector<long long> dp(n + 1 , 0);
-        dp[0] = 1;
+        // vector<long long> dp(n + 1 , 0);
+        // dp[0] = 1;
+
+        int pre1 = 1 , pre2 = 1;
 
         for(long long i=1 ; i<=n ; i++){
-            long long one = dp[i - 1];
+            long long one = pre1;
             long long two = 0;
             if(i >= 2){
-                two = dp[i - 2];
+                two = pre2;
             }
 
-            dp[i] = one + two;
+            pre2 = pre1;
+
+            pre1 = one + two;
         }
 
-        return dp[n];
+        return pre1;
     }
 };
