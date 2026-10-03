@@ -1,30 +1,18 @@
 class Solution {
 public:
-    int climb(int ind , int n , vector<int>& dp){
-        if(ind == n) return 1;
-        if(ind > n) return 0;
-        
-        if(dp[ind] != -1) return dp[ind];
+    int sol(int n , vector<int>& dp){
+        if(n <= 0) return 1;
 
-        int one = climb(ind + 1 , n , dp);
-        int two = climb(ind + 2 , n , dp);
+        if(dp[n] != -1) return dp[n];
 
-        return dp[ind] = one + two;
+        int one = sol(n - 1 , dp);
+        int two = 0;
+        if(n >= 2) two = sol(n - 2 , dp);
+
+        return dp[n] = one + two;
     }
     int climbStairs(int n) {
         vector<int> dp(n + 1 , -1);
-        // int ans = climb(0 , n , dp); //MEMOIZATION
-        // return ans;
-
-        // dp[n] = 1; dp[n-1] = 1;
-        int prev = 1 , prev1 = 1;
-        for(int i=n-2 ; i>=0 ; i--){
-            // dp[i] = dp[i+1] + dp[i+2];  //TABULATION
-            int curi = prev + prev1;   //SPACE OPTIMISATION
-            prev1 = prev;
-            prev = curi;
-        }
-        // return dp[0];
-        return prev;
+        return sol(n , dp);
     }
 };
