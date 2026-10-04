@@ -19,8 +19,23 @@ public:
         unordered_set<string> mp(arr.begin() , arr.end());
 
         int n = s.size();
-        vector<int> dp(n , -1);
+        // vector<int> dp(n , -1);
 
-        return sol(0 , s , mp , dp);
+        // return sol(0 , s , mp , dp);
+
+        vector<int> dp(n + 1 , 0);
+        dp[n] = 1;
+
+        for(int ind=n - 1 ; ind>=0 ; ind--){
+            for(int i=ind ; i<s.size() ; i++){
+                string temp = s.substr(ind , i - ind + 1);
+
+                if(mp.count(temp)){
+                    if(dp[i + 1]) dp[ind] = true;
+                }
+            }
+        }
+
+        return dp[0];
     }
 };
