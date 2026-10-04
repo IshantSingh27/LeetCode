@@ -1,22 +1,20 @@
 class Solution {
 public:
-    bool sol(vector<int>& arr , int k){
-        int n = arr.size();
-        vector<vector<int>> dp(n , vector<int>(k + 1 , 0));
-        for(int i=0 ; i<n ; i++){
-            dp[i][0] = 1;
+    bool sol(int ind ,int k , vector<int>& arr , vector<vector<int>>& dp){
+        if(ind == 0){
+            if(arr[ind] == k || k == 0) return true;
+            else return false;
         }
-        if(arr[0] <= k) dp[0][arr[0]] = 1;
 
-        for(int i=1 ; i<n ; i++){
-            for(int j=0 ; j<=k ; j++){
-                bool nottake = dp[i - 1][j];
-                bool take = 0;
-                if(arr[i] <= j) take = dp[i - 1][j - arr[i]];
-                dp[i][j] = take || nottake;
-            }
+        if(dp[ind][k] != -1) return dp[ind][k];
+
+        int nottake = sol(ind - 1 , k , arr , dp);
+        int take = 0;
+        if(arr[ind] <= k){
+            take = sol(ind - 1 , k - arr[ind] , arr , dp);
         }
-        return dp[n - 1][k];
+
+        return dp[ind][k] = take || nottake;
     }
     bool canPartition(vector<int>& arr) {
         int n = arr.size() , sum = 0;
@@ -24,6 +22,10 @@ public:
             sum += arr[i];
         }
         if(sum % 2 == 1) return false;
-        else return sol(arr , sum / 2);
+        int k = sum / 2;
+
+        vector<vector<int>> dp(n , vector<int>(k + 1 , -1));
+
+        return sol(n - 1 , k , arr , dp);
     }
 };
