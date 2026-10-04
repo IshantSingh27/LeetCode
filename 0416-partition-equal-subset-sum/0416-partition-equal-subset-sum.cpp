@@ -28,24 +28,29 @@ public:
 
         // return sol(n - 1 , k , arr , dp);
 
-        vector<vector<int>> dp(n + 1 , vector<int>(k + 1 , 0));
+        // vector<vector<int>> dp(n + 1 , vector<int>(k + 1 , 0));
 
-        for(int i=0 ; i<=n ; i++){
-            dp[i][0] = 1;
-        }
+        // for(int i=0 ; i<=n ; i++){
+        //     dp[i][0] = 1;
+        // }
+
+        vector<int> prev(k + 1 , 0) , cur(k + 1 , 0);
+        prev[0] = 1;
+        cur[0] = 1;
 
         for(int ind = 1 ; ind <= n ; ind++){
             for(int tar=1 ; tar<=k ; tar++){
-                int nottake = dp[ind - 1][tar];
+                int nottake = prev[tar];
                 int take = 0;
                 if(arr[ind - 1] <= tar){
-                    take = dp[ind - 1][tar - arr[ind - 1]];
+                    take = prev[tar - arr[ind - 1]];
                 }
 
-                dp[ind][tar] = take || nottake;
+                cur[tar] = take || nottake;
             }
+            prev = cur;
         }
 
-        return dp[n][k];
+        return prev[k];
     }
 };
