@@ -24,8 +24,28 @@ public:
         if(sum % 2 == 1) return false;
         int k = sum / 2;
 
-        vector<vector<int>> dp(n , vector<int>(k + 1 , -1));
+        // vector<vector<int>> dp(n , vector<int>(k + 1 , -1));
 
-        return sol(n - 1 , k , arr , dp);
+        // return sol(n - 1 , k , arr , dp);
+
+        vector<vector<int>> dp(n + 1 , vector<int>(k + 1 , 0));
+
+        for(int i=0 ; i<=n ; i++){
+            dp[i][0] = 1;
+        }
+
+        for(int ind = 1 ; ind <= n ; ind++){
+            for(int tar=1 ; tar<=k ; tar++){
+                int nottake = dp[ind - 1][tar];
+                int take = 0;
+                if(arr[ind - 1] <= tar){
+                    take = dp[ind - 1][tar - arr[ind - 1]];
+                }
+
+                dp[ind][tar] = take || nottake;
+            }
+        }
+
+        return dp[n][k];
     }
 };
