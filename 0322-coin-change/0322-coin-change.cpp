@@ -22,23 +22,27 @@ public:
         // if(ans == 1e9) return -1;
         // else return ans;
 
-        vector<vector<int>> dp(n + 1 , vector<int>(k + 1 , 1e9));
-        for(int i=0 ; i<=n ; i++) dp[i][0] = 0;
+        // vector<vector<int>> dp(n + 1 , vector<int>(k + 1 , 1e9));
+
+        vector<int> prev(k + 1 , 1e9) , cur(k + 1 , 1e9);
+        prev[0] = 0;
+        cur[0] = 0;
         for(int i=1 ; i<=k ; i++){
-            if(i % arr[0] == 0) dp[0][i] = i / arr[0];
+            if(i % arr[0] == 0) prev[i] = i / arr[0];
         }
 
         for(int i=1 ; i<=n ; i++){
             for(int j=0 ; j<=k ; j++){
-                int nottake = dp[i - 1][j];
+                int nottake = prev[j];
                 int take = 1e9;
-                if(arr[i - 1] <= j) take = 1 + dp[i][j - arr[i - 1]];
+                if(arr[i - 1] <= j) take = 1 + cur[j - arr[i - 1]];
 
-                dp[i][j] = min(take , nottake);
+                cur[j] = min(take , nottake);
             }
+            prev = cur;
         }
 
-        if(dp[n][k] == 1e9) return -1;
-        else return dp[n][k];
+        if(cur[k] == 1e9) return -1;
+        else return cur[k];
     }
 };
