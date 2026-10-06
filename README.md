@@ -96,6 +96,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0721-accounts-merge](https://github.com/IshantSingh27/LeetCode/tree/master/0721-accounts-merge) |
 | [0733-flood-fill](https://github.com/IshantSingh27/LeetCode/tree/master/0733-flood-fill) |
 | [0735-asteroid-collision](https://github.com/IshantSingh27/LeetCode/tree/master/0735-asteroid-collision) |
+| [0746-min-cost-climbing-stairs](https://github.com/IshantSingh27/LeetCode/tree/master/0746-min-cost-climbing-stairs) |
 | [0792-binary-search](https://github.com/IshantSingh27/LeetCode/tree/master/0792-binary-search) |
 | [0846-hand-of-straights](https://github.com/IshantSingh27/LeetCode/tree/master/0846-hand-of-straights) |
 | [0854-making-a-large-island](https://github.com/IshantSingh27/LeetCode/tree/master/0854-making-a-large-island) |
@@ -735,6 +736,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0673-number-of-longest-increasing-subsequence](https://github.com/IshantSingh27/LeetCode/tree/master/0673-number-of-longest-increasing-subsequence) |
 | [0678-valid-parenthesis-string](https://github.com/IshantSingh27/LeetCode/tree/master/0678-valid-parenthesis-string) |
 | [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/IshantSingh27/LeetCode/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
+| [0746-min-cost-climbing-stairs](https://github.com/IshantSingh27/LeetCode/tree/master/0746-min-cost-climbing-stairs) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/IshantSingh27/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
 | [0803-cheapest-flights-within-k-stops](https://github.com/IshantSingh27/LeetCode/tree/master/0803-cheapest-flights-within-k-stops) |
 | [0907-sum-of-subarray-minimums](https://github.com/IshantSingh27/LeetCode/tree/master/0907-sum-of-subarray-minimums) |
