@@ -16,15 +16,17 @@ public:
 
         // return min(sol(n - 1 , arr , dp) , sol(n - 2 , arr , dp));
 
-        vector<int> dp(n + 1 , 0);
+        // vector<int> dp(n + 1 , 0);
+        int prev = 0 , cur = 0;
 
         for(int i=2 ; i<=n ; i++){
-            int one = arr[i - 1] + dp[i - 1];
-            int two = arr[i - 2] + dp[i - 2];
+            int one = arr[i - 1] + cur;
+            int two = arr[i - 2] + prev;
 
-            dp[i] = min(one , two);
+            prev = cur;
+            cur = min(one , two);
         }
 
-        return dp[n];
+        return cur;
     }
 };
