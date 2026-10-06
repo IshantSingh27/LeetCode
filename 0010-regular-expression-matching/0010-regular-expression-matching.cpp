@@ -36,31 +36,35 @@ public:
 
         // return sol(n - 1 , m - 1 , s , p , dp);
 
-        vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0));
+        // vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0));
 
-        dp[0][0] = true;
+        vector<int> prev(m + 1 , 0);
+
+        prev[0] = true;
         for (int j = 2; j <= m; j += 2) {
             if (p[j - 1] == '*') {
-                dp[0][j] = dp[0][j - 2];
+                prev[j] = prev[j - 2];
             }
         }
 
         for (int i = 1; i <= n; i++) {
+            vector<int> cur(m + 1 , 0);
             for (int j = 1; j <= m; j++) {
                 if (s[i - 1] == p[j - 1] || p[j - 1] == '.') {
-                    if (dp[i - 1][j - 1])
-                        dp[i][j] = true;
+                    if (prev[j - 1])
+                        cur[j] = true;
                 } else if (p[j - 1] == '*') {
-                    bool zero = dp[i][j - 2];
+                    bool zero = cur[j - 2];
                     bool one = false;
                     if (p[j - 2] == '.' || p[j - 2] == s[i - 1]) {
-                        one = dp[i - 1][j];
+                        one = prev[j];
                     }
-                    dp[i][j] = one || zero;
+                    cur[j] = one || zero;
                 }
             }
+            prev = cur;
         }
 
-        return dp[n][m];
+        return prev[m];
     }
 };
