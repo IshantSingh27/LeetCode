@@ -31,29 +31,31 @@ public:
 
         // return sol(n - 1 , m - 1 , s1 , s2 , dp);
 
-        vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0));
+        // vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0));
+
+        vector<int> prev(m + 1 , 0);
 
         for (int i = 1; i <= m; i++) {
-            dp[0][i] = i;
-        }
-        for (int i = 1; i <= n; i++) {
-            dp[i][0] = i;
+            prev[i] = i;
         }
 
         for (int i = 1; i <= n; i++) {
+            vector<int> cur(m + 1 , 0);
+            cur[0] = i;
             for (int j = 1; j <= m; j++) {
                 if (s1[i - 1] == s2[j - 1])
-                    dp[i][j] = dp[i - 1][j - 1];
+                    cur[j] = prev[j - 1];
                 else {
-                    int ins = 1 + dp[i][j - 1];
-                    int del = 1 + dp[i - 1][j];
-                    int rep = 1 + dp[i - 1][j - 1];
+                    int ins = 1 + cur[j - 1];
+                    int del = 1 + prev[j];
+                    int rep = 1 + prev[j - 1];
 
-                    dp[i][j] = min({ins, del, rep});
+                    cur[j] = min({ins, del, rep});
                 }
             }
+            prev = cur;
         }
 
-        return dp[n][m];
+        return prev[m];
     }
 };
