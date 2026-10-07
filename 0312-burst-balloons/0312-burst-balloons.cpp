@@ -1,28 +1,46 @@
 class Solution {
 public:
-    int sol(int i , int j , vector<int>& arr , vector<vector<int>>& dp){
-        if(i > j) return 0;
+    int sol(int i, int j, vector<int>& arr, vector<vector<int>>& dp) {
+        if (i > j)
+            return 0;
 
-        if(dp[i][j] != -1) return dp[i][j];
-
+        if (dp[i][j] != -1)
+            return dp[i][j];
 
         int maxi = -1e9;
-        for(int k = i ; k<=j ; k++){
-            int ans = arr[i - 1] * arr[k] * arr[j + 1] + sol(i , k - 1 , arr , dp) + 
-            sol(k + 1 , j , arr , dp);
+        for (int k = i; k <= j; k++) {
+            int ans = arr[i - 1] * arr[k] * arr[j + 1] +
+                      sol(i, k - 1, arr, dp) + sol(k + 1, j, arr, dp);
 
-            maxi = max(maxi , ans);
+            maxi = max(maxi, ans);
         }
 
         return dp[i][j] = maxi;
     }
-    int maxCoins(vector<int>& nums) {
-        nums.insert(nums.begin() , 1);
-        nums.push_back(1);
-        int n = nums.size();
+    int maxCoins(vector<int>& arr) {
+        arr.insert(arr.begin(), 1);
+        arr.push_back(1);
+        int n = arr.size();
 
-        vector<vector<int>> dp(n , vector<int>(n , -1));
+        // vector<vector<int>> dp(n , vector<int>(n , -1));
 
-        return sol(1 , n - 2 , nums , dp);
+        // return sol(1 , n - 2 , arr , dp);
+
+        vector<vector<int>> dp(n + 1, vector<int>(n + 1, 0));
+
+        for (int i = n - 2; i > 0; i--) {
+            for (int j = i; j <= n - 2; j++) {
+                int maxi = -1e9;
+                for (int k = i; k <= j; k++) {
+                    int ans = arr[i - 1] * arr[k] * arr[j + 1] + dp[i][k - 1] + dp[k + 1][j];
+
+                    maxi = max(maxi, ans);
+                }
+
+                dp[i][j] = maxi;
+            }
+        }
+
+        return dp[1][n - 2];
     }
 };
