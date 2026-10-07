@@ -25,23 +25,29 @@ public:
 
         // return sol(n - 1 , m - 1 , s , t , dp);
 
-        vector<vector<long long>> dp(n + 1, vector<long long>(m + 1, 0));
-        dp[0][0] = 1;
-        for (long long i = 1; i <= n; i++) {
-            dp[i][0] = 1;
-        }
+        // vector<vector<long long>> dp(n + 1, vector<long long>(m + 1, 0));
+        // dp[0][0] = 1;
+        // for (long long i = 1; i <= n; i++) {
+        //     dp[i][0] = 1;
+        // }
+
+        vector<long long> prev(m + 1 , 0);
+        prev[0] = 1;
 
         for (long long i = 1; i <= n; i++) {
+            vector<long long> cur(m + 1 , 0);
+            cur[0] = 1;
             for (long long j = 1; j <= m; j++) {
                 long long move = 0;
                 if (s[i - 1] == t[j - 1])
-                    move = dp[i - 1][j - 1];
-                long long skip = dp[i - 1][j];
+                    move = prev[j - 1];
+                long long skip = prev[j];
 
-                dp[i][j] = (skip + move) % mod;
+                cur[j] = (skip + move) % mod;
             }
+            prev = cur;
         }
 
-        return dp[n][m];
+        return (int)prev[m];
     }
 };
