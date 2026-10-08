@@ -1,55 +1,25 @@
 class Solution {
 public:
     int sol(int ind , int buy , vector<int>& arr , vector<vector<int>>& dp){
-        if(ind >= arr.size()){
-            return 0;
-        }
+        if(ind >= arr.size()) return 0;
 
         if(dp[ind][buy] != -1) return dp[ind][buy];
 
-        int profit = 0;
+        int take = 0 , nottake = 0;;
         if(buy){
-            profit =  max(sol(ind + 1 , buy , arr , dp) , sol(ind + 1 , 0 , arr , dp) - arr[ind]);
+            take = sol(ind + 1 , 0 , arr , dp) - arr[ind];
         }
-        else{
-            profit = max(sol(ind + 2 , 1 , arr , dp) + arr[ind] , sol(ind + 1 , buy , arr , dp));
+        if(!buy){
+            nottake = arr[ind] + sol(ind + 2 , 1 , arr , dp);
         }
+        int skip = sol(ind + 1 , buy , arr , dp);
 
-        return dp[ind][buy] = profit;
+        return dp[ind][buy] = max({take , nottake , skip});
     }
     int maxProfit(vector<int>& arr) {
         int n = arr.size();
-        // vector<vector<int>> dp(n , vector<int>(2 , -1));
-        // return sol(0 , 1 , arr , dp);
+        vector<vector<int>> dp(n , vector<int>(2 , -1));
 
-        // vector<vector<int>> dp(n + 2 , vector<int>(2 , 0));
-
-        // for(int i=n-1 ; i>=0 ; i--){
-        //     for(int j=0 ; j<2 ; j++){
-        //         int profit = 0;
-        //         if(j){
-        //             profit = max(dp[i + 1][j] , dp[i + 1][0] - arr[i]);
-        //         }
-        //         else profit = max(dp[i + 1][j] , dp[i + 2][1] + arr[i]);
-        //         dp[i][j] = profit;
-        //     }
-        // }
-        // return dp[0][1];
-
-        vector<int> prev2(2 , 0) , prev1(2 , 0) , cur(2 , 0);
-
-        for(int i=n-1 ; i>=0 ; i--){
-            for(int j=0 ; j<2 ; j++){
-                int profit = 0;
-                if(j){
-                    profit = max(prev1[j] , prev1[0] - arr[i]);
-                }
-                else profit = max(prev1[j] , prev2[1] + arr[i]);
-                cur[j] = profit;
-            }
-            prev2 = prev1;
-            prev1 = cur;
-        }
-        return prev1[1];
+        return sol(0 , 1 , arr , dp);
     }
 };
