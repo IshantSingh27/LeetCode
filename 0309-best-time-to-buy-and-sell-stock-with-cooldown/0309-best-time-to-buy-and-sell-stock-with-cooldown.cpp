@@ -28,7 +28,7 @@ public:
         vector<vector<int>> dp(n + 2, vector<int>(2, 0));
 
         for (int ind = n - 1; ind >= 0; ind--) {
-            for (int buy = 1; buy >= 0; buy--) {
+            for (int buy = 0 ; buy <= 1; buy++) {
                 int take = 0, nottake = 0;
                 if (buy) {
                     take = dp[ind + 1][0] - arr[ind];
