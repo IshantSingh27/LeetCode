@@ -25,23 +25,27 @@ public:
 
         // return sol(0 , 1 , arr , dp);
 
-        vector<vector<int>> dp(n + 2, vector<int>(2, 0));
+        // vector<vector<int>> dp(n + 2, vector<int>(2, 0));
+
+        vector<int> prev1(2 , 0) , prev2(2 , 0) , cur(2 , 0);
 
         for (int ind = n - 1; ind >= 0; ind--) {
             for (int buy = 0 ; buy <= 1; buy++) {
                 int take = 0, nottake = 0;
                 if (buy) {
-                    take = dp[ind + 1][0] - arr[ind];
+                    take = prev1[0] - arr[ind];
                 }
                 if (!buy) {
-                    nottake = arr[ind] + dp[ind + 2][1];
+                    nottake = arr[ind] + prev2[1];
                 }
-                int skip = dp[ind + 1][buy];
+                int skip = prev1[buy];
 
-                dp[ind][buy] = max({take, nottake, skip});
+                cur[buy] = max({take, nottake, skip});
             }
+            prev2 = prev1;
+            prev1 = cur;
         }
 
-        return dp[0][1];
+        return cur[1];
     }
 };
