@@ -1,24 +1,25 @@
 class Solution {
 public:
+    int sol(int ind , int k , vector<int>& arr , vector<vector<int>>& dp){
+        if(ind == 0){
+            if(k == 0) return 1;
+            else if(k % arr[ind] == 0) return 1;
+            else return 0;
+        }
+
+        if(dp[ind][k] != -1) return dp[ind][k];
+
+        int nottake = sol(ind - 1 , k , arr , dp);
+        int take = 0;
+        if(arr[ind] <= k) take = sol(ind , k - arr[ind] , arr , dp);
+
+        return dp[ind][k] = take + nottake;
+    }
     int change(int k, vector<int>& arr) {
-        long long n = arr.size() , mod = 1e18 + 7;
-        vector<long long> prev(k + 1 , 0);
-        for(long long i=0 ; i<=k ; i++){
-            if(i % arr[0] == 0) prev[i] = 1; 
-        }
+        int n = arr.size();
 
-        for(long long i=1 ; i<n ; i++){
-            for(long long j=0 ; j<=k ; j++){
-                long long nottake = prev[j];
-                long long take = 0;
-                if(arr[i] <= j){
-                    take = prev[j - arr[i]];
-                }
+        vector<vector<int>> dp(n , vector<int>(k + 1 , -1));
 
-                prev[j] = (take + nottake) % mod;
-            }
-        }
-
-        return prev[k] % mod;
+        return sol(n - 1 , k , arr , dp);
     }
 };
