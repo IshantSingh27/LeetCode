@@ -8,21 +8,21 @@ public:
         queue<pair<int , pair<int , int>>> q;
         q.push({0 , {0 , src}});
         vector<int> dist(n , 1e9);
-        dist[src] = 0;
 
         while(!q.empty()){
             int stops = q.front().first;
-            int cost = q.front().second.first;
+            int wt = q.front().second.first;
             int node = q.front().second.second;
             q.pop();
+
             if(stops > k) continue;
 
             for(auto it : adj[node]){
                 int adjnode = it.first;
-                int adjcost = it.second;
+                int adjwt = it.second;
 
-                if(cost + adjcost < dist[adjnode]){
-                    dist[adjnode] = cost + adjcost;
+                if(dist[adjnode] > adjwt + wt){
+                    dist[adjnode] = adjwt + wt;
                     q.push({stops + 1 , {dist[adjnode] , adjnode}});
                 }
             }
