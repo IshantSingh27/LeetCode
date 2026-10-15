@@ -1,24 +1,24 @@
 class Solution {
 public:
-    void nextPermutation(vector<int>& arr) {
-        int n = arr.size() , ind = -1;
-        for(int i=n - 1 ; i>0 ; i--){
-            if(arr[i] > arr[i - 1]){
-                ind = i - 1;
-                break;
-            }
+    void nextPermutation(vector<int>& nums) {
+        int n = nums.size() , i = n - 2 , j = n - 1;
+
+        while(i >= 0 && nums[i] >= nums[i + 1]){
+            i--;
         }
-        if(ind == -1){
-            reverse(arr.begin() , arr.end());
+
+        if(i < 0){
+            reverse(nums.begin() , nums.end());
             return;
         }
-        for(int i=n - 1 ; i>=0 ; i--){
-            if(arr[i] > arr[ind]){
-                swap(arr[i] , arr[ind]);
-                break;
-            }
+
+        while(j > i){
+            if(nums[j] > nums[i]) break;
+            j--;
         }
-        reverse(arr.begin() + ind + 1 , arr.end());
-        return;
+
+        swap(nums[i] , nums[j]);
+
+        reverse(nums.begin() + i + 1 , nums.end());
     }
 };
