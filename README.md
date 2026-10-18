@@ -1143,6 +1143,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Bracket Sequences
 |  |
 | ------- |
+| [0678-valid-parenthesis-string](https://github.com/IshantSingh27/LeetCode/tree/master/0678-valid-parenthesis-string) |
 | [0921-minimum-add-to-make-parentheses-valid](https://github.com/IshantSingh27/LeetCode/tree/master/0921-minimum-add-to-make-parentheses-valid) |
 ## DP on Trees
 |  |
