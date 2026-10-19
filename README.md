@@ -143,6 +143,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1752-check-if-array-is-sorted-and-rotated](https://github.com/IshantSingh27/LeetCode/tree/master/1752-check-if-array-is-sorted-and-rotated) |
 | [1753-path-with-minimum-effort](https://github.com/IshantSingh27/LeetCode/tree/master/1753-path-with-minimum-effort) |
 | [1838-frequency-of-the-most-frequent-element](https://github.com/IshantSingh27/LeetCode/tree/master/1838-frequency-of-the-most-frequent-element) |
+| [1899-merge-triplets-to-form-target-triplet](https://github.com/IshantSingh27/LeetCode/tree/master/1899-merge-triplets-to-form-target-triplet) |
 | [1993-sum-of-all-subset-xor-totals](https://github.com/IshantSingh27/LeetCode/tree/master/1993-sum-of-all-subset-xor-totals) |
 | [2104-sum-of-subarray-ranges](https://github.com/IshantSingh27/LeetCode/tree/master/2104-sum-of-subarray-ranges) |
 | [2149-rearrange-array-elements-by-sign](https://github.com/IshantSingh27/LeetCode/tree/master/2149-rearrange-array-elements-by-sign) |
@@ -389,6 +390,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0921-minimum-add-to-make-parentheses-valid](https://github.com/IshantSingh27/LeetCode/tree/master/0921-minimum-add-to-make-parentheses-valid) |
 | [1448-maximum-69-number](https://github.com/IshantSingh27/LeetCode/tree/master/1448-maximum-69-number) |
 | [1838-frequency-of-the-most-frequent-element](https://github.com/IshantSingh27/LeetCode/tree/master/1838-frequency-of-the-most-frequent-element) |
+| [1899-merge-triplets-to-form-target-triplet](https://github.com/IshantSingh27/LeetCode/tree/master/1899-merge-triplets-to-form-target-triplet) |
 | [1903-largest-odd-number-in-string](https://github.com/IshantSingh27/LeetCode/tree/master/1903-largest-odd-number-in-string) |
 | [2032-largest-odd-number-in-string](https://github.com/IshantSingh27/LeetCode/tree/master/2032-largest-odd-number-in-string) |
 | [3980-minimum-operations-to-transform-binary-string](https://github.com/IshantSingh27/LeetCode/tree/master/3980-minimum-operations-to-transform-binary-string) |
