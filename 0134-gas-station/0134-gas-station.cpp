@@ -1,33 +1,19 @@
 class Solution {
 public:
     int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {
-        int n = gas.size() , sum = 0 , sind = -1;
-        vector<int> dif(n);
-
+        int n = gas.size() , extra = 0 , req = 0 , sind = 0;
+        
         for(int i=0 ; i<n ; i++){
-            sum += gas[i] - cost[i];
+            extra += gas[i] - cost[i];
 
-            if(sum >= 0 && sind == -1) sind = i;
-
-            if(sum < 0){
-                sind = -1;
-                sum = 0;
+            if(extra < 0){
+                sind = i + 1;
+                req += extra;
+                extra = 0;
             }
         }
 
-        if(sind == -1) return -1;
-
-        sum = 0;
-        for(int i=sind ; i<sind + n ; i++){
-            sum += gas[i % n] - cost[i % n];
-
-            // cout<<sum<<endl;
-
-            if(sum < 0){
-                return -1;
-            }
-        }
-
-        return sind;
+        if(req + extra >= 0) return sind;
+        else return -1;
     }
 };
