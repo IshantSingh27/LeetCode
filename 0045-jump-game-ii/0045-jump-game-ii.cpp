@@ -1,28 +1,26 @@
 class Solution {
 public:
     int jump(vector<int>& arr) {
-        int i = 0 , n = arr.size() , ans = 0;
-        if(n == 1) return 0;
+        int n = arr.size() , i = 0 , cnt = 0;
+        if(arr[0] == 0 || n == 1) return 0;
 
         while(i < n){
-            int jump = i + arr[i] , j = i , maxi = 0 , pos = i;
-            ans++;
+            cnt++;
+            if(i + arr[i] >= n - 1) return cnt;
+            // cout<<arr[i]<<endl;
 
-            if(jump >= n - 1){
-                return ans;
-            }
-
-            while(j <= jump){
-                if(j + arr[j] >= maxi){
-                    maxi = j + arr[j];
-                    pos = j;
+            int jump = 0 , fin = i + 1 , j = i + 1;
+            while(j <= i + arr[i]){
+                if(j + arr[j] >= jump){
+                    fin = j;
+                    jump = j + arr[j];
                 }
                 j++;
             }
-            // cout<<"i : "<<i<<" maxi : "<<maxi<<" pos : "<<pos<<" ans : "<<ans<<endl;
-            if(pos == i) return -1;
-            i = pos;
+
+            i = fin;
         }
-        return -1;
+
+        return cnt;
     }
 };
