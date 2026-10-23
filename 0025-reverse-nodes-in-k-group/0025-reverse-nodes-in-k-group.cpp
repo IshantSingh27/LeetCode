@@ -10,45 +10,30 @@
  */
 class Solution {
 public:
-ListNode* sol(ListNode* head, int k){
-    k--;
-    while(head != NULL && k > 0){
-        head = head->next;
-        k--;
-    }
-    if(k > 0) return NULL;
-    else return head;
-}
-void reverse(ListNode* head){
-    ListNode* temp = head->next , *prev = NULL;
-    while(temp != NULL){
-        head->next = prev;
-        prev = head;
-        head = temp;
-        temp = temp->next;
-    }
-    head->next = prev;
-
-}
     ListNode* reverseKGroup(ListNode* head, int k) {
-        if(k == 1) return head;
-        ListNode *pre = NULL , *temp = head;
-        while(temp != NULL){
-            ListNode* kn = sol(temp , k);
-            if(kn == NULL){
-                if(pre) pre->next = temp;
-                break;
+        if(head == NULL || k == 1) return head;
+        ListNode* cur = head , *temp = head;
+
+        while(cur != NULL){
+            int cnt = k - 1;
+            vector<int> arr(k , 0);
+
+            while(cnt >= 0 && cur != NULL){
+                arr[cnt] = cur->val;
+                cur = cur->next;
+                cnt--;
             }
-            ListNode* nn = kn->next;
-            kn->next = NULL;
 
-            reverse(temp);
+            if(cnt >= 0) break;
 
-            if(temp == head) head = kn;
-            else pre->next = kn;
-            pre = temp;
-            temp = nn;
+            int ind = 0;
+            while(temp != cur){
+                temp->val = arr[ind];
+                ind++;
+                temp = temp->next;
+            }
         }
+
         return head;
     }
 };
